@@ -20,7 +20,7 @@ class CreateUsers extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->date('birth_date');
-            $table->integer('telephone');
+            $table->string('telephone', 9);
         });
     }
 
