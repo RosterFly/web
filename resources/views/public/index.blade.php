@@ -44,8 +44,8 @@ URI     : https://colorlib.com
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"> <a class="nav-link active" href="#home">INICIO <span class="sr-only">(current)</span></a> </li>
                             <li class="nav-item"> <a class="nav-link" href="#features">NOVEDADES </a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#gallery">GALLERY</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="#pricing">PLANES </a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#faq"> FAQ</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="#contact">CONTACTO</a> </li>
                             <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
@@ -67,7 +67,7 @@ URI     : https://colorlib.com
 
 <header class="bg-gradient" id="home">
     <div class="container mt-5">
-        <h1>FlyRoster, gestiona tus vuelos, fuera y dentro del avión</h1>
+        <h1><b>Roster</b>Fly, gestiona tus vuelos, fuera y dentro del avión</h1>
         <p class="tagline">La aplicación necesaria para el control diario de tus vuelos y los datos de estos. ¡Registrate y disfruta de las novedades! </p>
     </div>
     &nbsp;
@@ -138,14 +138,13 @@ URI     : https://colorlib.com
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-6">
-                <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
-                <h2>Discover our App</h2>
+                <h2>¡Descubre nuestra aplicación!</h2>
                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel exercitationem eveniet vero maxime ratione </p>
-                <a href="#" class="btn btn-primary">Read more</a>
+                <a href="#pricing" class="btn btn-primary">Consulta nuestros planes</a>
             </div>
         </div>
         <div class="perspective-phone">
-            <img src="images/perspective.png" alt="perspective phone" class="img-fluid">
+            <img src="{{asset('resources/images/paper-airplane.png')}}" alt="perspective phone" height="400">
         </div>
     </div>
 
@@ -303,66 +302,7 @@ URI     : https://colorlib.com
     </div>
 
 </div>
-<!-- // end .section -->
-
-
-<div class="section">
-    <div class="container">
-        <div class="section-title">
-            <small>TESTIMONIALS</small>
-            <h3>What our Customers Says</h3>
-        </div>
-
-        <div class="testimonials owl-carousel">
-            <div class="testimonials-single">
-                <img src="images/client.png" alt="client" class="client-img">
-                <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                <p class="text-primary">United States</p>
-            </div>
-            <div class="testimonials-single">
-                <img src="images/client.png" alt="client" class="client-img">
-                <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                <p class="text-primary">United States</p>
-            </div>
-            <div class="testimonials-single">
-                <img src="images/client.png" alt="client" class="client-img">
-                <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                <p class="text-primary">United States</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-<!-- // end .section -->
-
-
-<div class="section light-bg" id="gallery">
-    <div class="container">
-        <div class="section-title">
-            <small>GALLERY</small>
-            <h3>App Screenshots</h3>
-        </div>
-
-        <div class="img-gallery owl-carousel owl-theme">
-            <img src="images/screen1.jpg" alt="image">
-            <img src="images/screen2.jpg" alt="image">
-            <img src="images/screen3.jpg" alt="image">
-            <img src="images/screen1.jpg" alt="image">
-        </div>
-
-    </div>
-
-</div>
-<!-- // end .section -->
-
-
-
-
-
+<!-- Sección Planes -->
 <div class="section" id="pricing">
     <div class="container">
         <div class="section-title">
@@ -420,17 +360,12 @@ URI     : https://colorlib.com
                 </div>
             </div>
         </div>
-        <!-- // end .pricing -->
-
-
     </div>
-
 </div>
-<!-- // end .section -->
-
-
-<div class="section pt-0">
+<!-- Sección FAQ -->
+<div class="section light-bg pt-0" id="faq">
     <div class="container">
+        &nbsp;&nbsp;&nbsp;
         <div class="section-title">
             <small>FAQ</small>
             <h3>Frequently Asked Questions</h3>
@@ -455,45 +390,30 @@ URI     : https://colorlib.com
     </div>
 
 </div>
-<!-- // end .section -->
-
-
-
+<!-- Sección descarga -->
 <div class="section bg-gradient">
     <div class="container">
-        <div class="call-to-action">
-
-            <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
+        <div class="call-to-action"</div>
             <h2>Download Anywhere</h2>
             <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment. </p>
             <div class="my-4">
 
-                <a href="#" class="btn btn-light"><img src="images/appleicon.png" alt="icon"> App Store</a>
-                <a href="#" class="btn btn-light"><img src="images/playicon.png" alt="icon"> Google play</a>
+                <a href="#" class="btn btn-light"><img src="{{asset('resources/images/appleicon.png')}}" alt="icon"> App Store</a>
+                <a href="#" class="btn btn-light"><img src="{{asset('resources/images/playicon.png')}}" alt="icon"> Google play</a>
             </div>
             <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p>
         </div>
     </div>
 
 </div>
-<!-- // end .section -->
-
-<div class="light-bg py-5" id="contact">
+<!-- Sección Contacto -->
+<div class="py-5" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 text-center text-lg-left">
                 <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
-                <div class=" d-block d-sm-inline-block">
-                    <p class="mb-2">
-                        <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:support@mobileapp.com">support@mobileapp.com</a>
-                    </p>
-                </div>
-                <div class="d-block d-sm-inline-block">
-                    <p class="mb-0">
-                        <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">518-3636-2800</a>
-                    </p>
-                </div>
-
+                <p class="mb-2" href="mailto:support@mobileapp.com"><span class="ti-email mr-2"></span> support@mobileapp.com</p>
+                 <p class="mb-2" href="tel:51836362800"><span class="ti-headphone-alt mr-2"></span> 518-3636-2800</p>
             </div>
             <div class="col-lg-6">
                 <div class="social-icons">
@@ -503,20 +423,12 @@ URI     : https://colorlib.com
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- // end .section -->
-<footer class="my-5 text-center">
-    <!-- Copyright removal is not prohibited! -->
-    <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
 
-    <small>
-        <a href="#" class="m-2">PRESS</a>
-        <a href="#" class="m-2">TERMS</a>
-        <a href="#" class="m-2">PRIVACY</a>
-    </small>
+<!-- Footer -->
+<footer class="my-5 text-center">
+    <p class="mb-2"><small>© 2022 RosterFly - Todos los Derechos Reservados.</a></small></p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
