@@ -1,16 +1,9 @@
 <!doctype html>
 <html lang="en">
-<!--
-
-Page    : index / MobApp
-Version : 1.0
-Author  : Colorlib
-URI     : https://colorlib.com
-
- -->
 
 <head>
     <title>Inicio | RosterFly</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('favicon.png')}}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
