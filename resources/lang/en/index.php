@@ -12,5 +12,5 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'main'=>'Test',
 ];

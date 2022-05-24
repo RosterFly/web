@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Inicio | RosterFly</title>
+    <title>@lang('index.main')</title>
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
@@ -37,17 +37,19 @@
                     <a class="navbar-brand" href="{{route('public.index')}}"><img src="{{asset('resources/logos/white-logo-navbar.png')}}" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"> <a class="nav-link active" href="#home">INICIO <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#features">NOVEDADES </a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#pricing">PLANES </a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#faq"> FAQ</a> </li>
+                            <li class="nav-item"> <a class="nav-link active" href="#home">INICIO<span class="sr-only">(current)</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#features">NOVEDADES</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#pricing">PLANES</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#faq">FAQ</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="#contact">CONTACTO</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('public.status')}}">HEARTBEAT</a> </li>
                             <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-es"> </span>
                                     </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdown09">
-                                    <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-us"></span> English</a>
+                                    <a class="dropdown-item" href="{{url('locale/en')}}"><span class="flag-icon flag-icon-us"></span>English</a>
+                                    <a class="dropdown-item" href="{{url('locale/es')}}"><span class="flag-icon flag-icon-es"></span>Español</a>
                                 </div>
                             </div>
                             <li class="nav-item"><a href="{{route('login')}}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Iniciar Sesión</a></li>

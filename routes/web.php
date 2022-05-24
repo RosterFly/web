@@ -24,3 +24,12 @@ Route::get('/login', function () {
 Route::get('/password-reminder', function () {
     return view('reminder');
 })->name('password-reminder');
+
+Route::get('/status', function (){
+    return view('public.status');
+})->name('public.status');
+
+Route::get('locale/{lang}', function ($locale){
+    session()->put('locale', $locale);
+    return Redirect::back();
+});
