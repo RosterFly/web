@@ -13,12 +13,12 @@ return [
     |
     */
     'main'=>'Test',
-    'manuStart' => 'Start',
-    'manuNews' => 'News',
-    'manuPlans' => 'Plans',
-    'manuFaq' => 'Faq',
-    'manuContact' => 'Contact Us',
-    'btnLogin' => 'Login',
+    'manuStart' => 'HOME',
+    'manuNews' => 'FEATURES',
+    'manuPlans' => 'PRICING',
+    'manuFaq' => 'FAQ',
+    'manuContact' => 'CONTACT US',
+    'btnLogin' => 'LOGIN',
     'header' => 'RosterFly, manage your flights, on and off the plane',
     'headerDespription' => 'The necessary application for the daily control of your flights and their data. Register and enjoy the news!',
     'highlights' => 'News',

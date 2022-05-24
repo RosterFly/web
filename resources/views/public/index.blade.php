@@ -37,11 +37,11 @@
                     <a class="navbar-brand" href="{{route('public.index')}}"><img src="{{asset('resources/logos/white-logo-navbar.png')}}" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"> <a class="nav-link active" href="#home">INICIO<span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#features">NOVEDADES</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#pricing">PLANES</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#faq">FAQ</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#contact">CONTACTO</a> </li>
+                            <li class="nav-item"> <a class="nav-link active" href="#home">@lang('index.manuStart')<span class="sr-only">(current)</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#features">@lang('index.manuNews')</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#pricing">@lang('index.manuPlans')</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#faq">@lang('index.manuFaq')</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#contact">@lang('index.manuContact')</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="{{route('public.status')}}">HEARTBEAT</a> </li>
                             <div class="nav-item dropdown">
                                 @if(app()->getLocale()=='es')
@@ -60,7 +60,7 @@
                                 @endif
                                     </div>
                             </div>
-                            <li class="nav-item"><a href="{{route('login')}}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Iniciar Sesión</a></li>
+                            <li class="nav-item"><a href="{{route('login')}}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">@lang('index.btnLogin')</a></li>
                             </ul>
                     </div>
                 </nav>
@@ -416,9 +416,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 text-center text-lg-left">
-                <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
                 <p class="mb-2" href="mailto:support@mobileapp.com"><span class="ti-email mr-2"></span> support@mobileapp.com</p>
-                 <p class="mb-2" href="tel:51836362800"><span class="ti-headphone-alt mr-2"></span> 518-3636-2800</p>
             </div>
             <div class="col-lg-6">
                 <div class="social-icons">

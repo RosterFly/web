@@ -14,12 +14,12 @@ return [
     */
 
 'main'=>'Prueba',
-    'manuStart' => 'Inicio',
-    'manuNews' => 'Novedades',
-    'manuPlans' => 'Planes',
-    'manuFaq' => 'Faq',
-    'manuContact' => 'Contactanos',
-    'btnLogin' => 'Iniciar Sesión',
+    'manuStart' => 'INICIO',
+    'manuNews' => 'NOVEDADES',
+    'manuPlans' => 'PLANES',
+    'manuFaq' => 'FAQ',
+    'manuContact' => 'CONTACTO',
+    'btnLogin' => 'INICIAR SESIÓN',
     'header' => 'RosterFly, gestiona tus vuelos, fuera y dentro del avión',
     'headerDespription' => 'La aplicación necesaria para el control diario de tus vuelos y los datos de estos. ¡Registrate y disfruta de las novedades!',
     'highlights' => 'Novedades',
