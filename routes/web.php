@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('public.index');
 })->name('public.index');
 
+Route::get('/{language}', function ($language) {
+    Session::put('language',$language);
+    return redirect()->back();
+})->name('lang');
+
 Route::get('/login', function () {
     return view('login');
-})->name('login');
+})->name('login')->middleware('translate');
 
 Route::get('/password-reminder', function () {
     return view('reminder');
