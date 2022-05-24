@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+    <title>Recordatorio de Contraseña | RosterFly</title>
 
     <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- Open Graph Meta -->
     <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
     <meta property="og:site_name" content="Dashmix">
     <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -18,21 +17,13 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <!-- Icons -->
-    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
-    <!-- END Icons -->
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
 
-    <!-- Stylesheets -->
-    <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+    <link rel="stylesheet" id="css-main" href="{{asset('resources/user/user.min.css')}}">
 
-    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
-    <!-- END Stylesheets -->
 </head>
 <body>
 <!-- Page Container -->
@@ -92,18 +83,13 @@
     'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
 -->
 <div id="page-container">
-
-    <!-- Main Container -->
     <main id="main-container">
-        <!-- Page Content -->
         <div class="bg-image" style="background-image: url('assets/media/photos/photo17@2x.jpg');">
-            <div class="row g-0 bg-gd-fruit-op">
-                <!-- Main Section -->
+            <div class="row g-0 bg-primary-op">
                 <div class="hero-static col-md-6 d-flex align-items-center bg-body-extra-light">
                     <div class="p-3 w-100">
-                        <!-- Header -->
                         <div class="text-center">
-                            <a class="link-fx fw-bold fs-1" href="index.html">
+                            <a class="link-fx fw-bold fs-1" href="{{route('public.index')}}">
                                 <span class="text-dark">Dash</span><span class="text-primary">mix</span>
                             </a>
                             <p class="text-uppercase fw-bold fs-sm text-muted">Password Reminder</p>

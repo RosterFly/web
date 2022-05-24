@@ -3,7 +3,9 @@
 
 <head>
     <title>Inicio | RosterFly</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -48,7 +50,7 @@
                                     <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-us"></span> English</a>
                                 </div>
                             </div>
-                            <li class="nav-item"><a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Iniciar Sesión</a></li>
+                            <li class="nav-item"><a href="{{route('login')}}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Iniciar Sesión</a></li>
                             </ul>
                     </div>
                 </nav>
