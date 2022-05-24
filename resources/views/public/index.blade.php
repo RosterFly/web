@@ -44,13 +44,21 @@
                             <li class="nav-item"> <a class="nav-link" href="#contact">CONTACTO</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="{{route('public.status')}}">HEARTBEAT</a> </li>
                             <div class="nav-item dropdown">
+                                @if(app()->getLocale()=='es')
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-es"> </span>
                                     </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown09">
-                                    <a class="dropdown-item" href="{{url('locale/en')}}"><span class="flag-icon flag-icon-us"></span>English</a>
-                                    <a class="dropdown-item" href="{{url('locale/es')}}"><span class="flag-icon flag-icon-es"></span>Español</a>
-                                </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+
+                                        <a class="dropdown-item" href="{{url('locale/en')}}"><span class="flag-icon flag-icon-us"></span> English</a>
+                                @elseif(app()->getLocale()=='en')
+                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-us"> </span>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                        <a class="dropdown-item" href="{{url('locale/es')}}"><span class="flag-icon flag-icon-es"></span> Español</a>
+                                @endif
+                                    </div>
                             </div>
                             <li class="nav-item"><a href="{{route('login')}}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Iniciar Sesión</a></li>
                             </ul>
