@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+    <title>@lang('pages-name.pass-reminder')</title>
 
     <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
@@ -18,17 +18,17 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <!-- Icons -->
-    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+      <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+      <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
+      <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
     <!-- END Icons -->
 
     <!-- Stylesheets -->
     <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <link rel="stylesheet" id="css-main" href="{{asset('resources/user/user.min.css')}}">
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
@@ -96,24 +96,24 @@
       <!-- Main Container -->
       <main id="main-container">
         <!-- Page Content -->
-        <div class="bg-image" style="background-image: url('assets/media/photos/photo24@2x.jpg');">
+        <div class="bg-image" style="background-image: url({{asset('resources/images/plane-background.jpg')}});">
           <div class="hero bg-black-90">
             <div class="hero-inner">
               <div class="content content-full">
                 <div class="px-3 py-5 text-center">
                   <div class="mb-3">
-                    <a class="link-fx fw-bold fs-1" href="index.html">
-                      <span class="text-white">Dash</span><span class="text-primary">mix</span>
+                    <a class="link-fx fw-bold fs-1" href="{{route('public.index')}}">
+                      <span class="text-white">Roster</span><span class="text-primary">Fly</span>
                     </a>
                     <p class="text-uppercase fw-bold fs-sm text-muted">Maintenance Mode</p>
                   </div>
                   <h1 class="text-white fw-bold mt-5 mb-3">Working on some stuff..</h1>
                   <h2 class="h3 text-white-75 fw-normal text-muted mb-5">Don’t worry though, we’ll be back soon!</h2>
-                  <a class="btn btn-hero btn-primary mb-3" href="op_status.html">
+                  <a class="btn btn-hero btn-primary mb-3" href="{{route('status')}}">
                     <i class="fa fa-flask opacity-50 me-1"></i> Check out Status Page
                   </a>
                   <br>
-                  <a class="btn btn-sm btn-secondary" href="be_pages_generic_blank.html">
+                  <a class="btn btn-sm btn-secondary" href="{{url()->previous()}}">
                     <i class="fa fa-arrow-left opacity-50 me-1"></i> Go Back
                   </a>
                 </div>
@@ -121,18 +121,8 @@
             </div>
           </div>
         </div>
-        <!-- END Page Content -->
       </main>
-      <!-- END Main Container -->
     </div>
-    <!-- END Page Container -->
-
-    <!--
-      Dashmix JS
-
-      Core libraries and functionality
-      webpack is putting everything together at assets/_js/main/app.js
-    -->
-    <script src="assets/js/dashmix.app.min.js"></script>
+    <script src="{{asset('resources/user/user.min.js')}}"></script>
   </body>
 </html>

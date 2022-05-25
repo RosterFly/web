@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>@lang('heartbeat.title')</title>
+    <title>@lang('pages-name.heartbeat')</title>
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">

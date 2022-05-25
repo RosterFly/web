@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>@lang('index.main')</title>
+    <title>@lang('pages-name.index')</title>
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">

@@ -23,74 +23,19 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" id="css-main" href="{{asset('resources/user/user.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>
 <body>
-<!-- Page Container -->
-<!--
-  Available classes for #page-container:
-
-  GENERIC
-
-    'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
-                                                - Theme helper buttons [data-toggle="theme"],
-                                                - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
-                                                - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
-
-  SIDEBAR & SIDE OVERLAY
-
-    'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
-    'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
-    'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
-    'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
-    'sidebar-dark'                              Dark themed sidebar
-
-    'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
-    'side-overlay-o'                            Visible Side Overlay by default
-
-    'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
-
-    'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
-
-  HEADER
-
-    ''                                          Static Header if no class is added
-    'page-header-fixed'                         Fixed Header
-
-
-  FOOTER
-
-    ''                                          Static Footer if no class is added
-    'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
-
-  HEADER STYLE
-
-    ''                                          Classic Header style if no class is added
-    'page-header-dark'                          Dark themed Header
-    'page-header-glass'                         Light themed Header with transparency by default
-                                                (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
-    'page-header-glass page-header-dark'         Dark themed Header with transparency by default
-                                                (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
-
-  MAIN CONTENT LAYOUT
-
-    ''                                          Full width Main Content if no class is added
-    'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
-    'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
-
-  DARK MODE
-
-    'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
--->
 <div id="page-container">
     <main id="main-container">
-        <div class="bg-image" style="background-image: url('assets/media/photos/photo17@2x.jpg');">
+        <div class="bg-image" style="background-image: url({{asset('resources/images/flight-background.jpg')}});">
             <div class="row g-0 bg-primary-op">
                 <div class="hero-static col-md-6 d-flex align-items-center bg-body-extra-light">
                     <div class="p-3 w-100">
                         <div class="text-center">
                             <a class="link-fx fw-bold fs-1" href="{{route('public.index')}}">
-                                <span class="text-dark">Dash</span><span class="text-primary">mix</span>
+                                <span class="text-dark">Roster</span><span class="text-primary">Fly</span>
                             </a>
                             <p class="text-uppercase fw-bold fs-sm text-muted">Password Reminder</p>
                         </div>
@@ -110,10 +55,10 @@
                                             <i class="fa fa-fw fa-reply opacity-50 me-1"></i> Password Reminder
                                         </button>
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
-                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="op_auth_signin.html">
+                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('login')}}">
                                                 <i class="fa fa-sign-in-alt opacity-50 me-1"></i> Sign In
                                             </a>
-                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="op_auth_signup.html">
+                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('signup')}}">
                                                 <i class="fa fa-plus opacity-50 me-1"></i> New Account
                                             </a>
                                         </p>

@@ -13,7 +13,6 @@ return [
     |
     */
 
-'main'=>'Prueba',
     'manuStart' => 'INICIO',
     'manuNews' => 'NOVEDADES',
     'manuPlans' => 'PLANES',

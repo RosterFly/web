@@ -18,21 +18,14 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <!-- Icons -->
-    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
-    <!-- END Icons -->
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
 
-    <!-- Stylesheets -->
-    <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" id="css-main" href="{{asset('resources/user/user.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
-    <!-- END Stylesheets -->
 </head>
 <body>
 <!-- Page Container -->
@@ -96,7 +89,7 @@
     <!-- Main Container -->
     <main id="main-container">
         <!-- Page Content -->
-        <div class="bg-image" style="background-image: url('assets/media/photos/photo12@2x.jpg');">
+        <div class="bg-image" style="background-image: url({{asset('resources/images/flight-background.jpg')}});">
             <div class="row g-0 justify-content-center bg-black-75">
                 <!-- Main Section -->
                 <div class="hero-static col-md-6 d-flex align-items-center bg-body-extra-light">
@@ -104,7 +97,7 @@
                         <!-- Header -->
                         <div class="mb-3 text-center">
                             <a class="link-fx fw-bold fs-1" href="index.html">
-                                <span class="text-dark">Dash</span><span class="text-primary">mix</span>
+                                <span class="text-dark">Roster</span><span class="text-primary">Fly</span>
                             </a>
                             <p class="text-uppercase fw-bold fs-sm text-muted">Create New Account</p>
                         </div>
@@ -115,19 +108,31 @@
                         <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                         <div class="row g-0 justify-content-center">
                             <div class="col-sm-8 col-xl-6">
-                                <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                                <form action="/register" method="POST">
                                     <div class="py-3">
                                         <div class="mb-4">
-                                            <input type="text" class="form-control form-control-lg form-control-alt" id="signup-username" name="signup-username" placeholder="Username">
+                                            <input type="text" class="form-control form-control-lg form-control-alt" id="id" name="id" placeholder="DNI" maxlength="8">
                                         </div>
                                         <div class="mb-4">
-                                            <input type="email" class="form-control form-control-lg form-control-alt" id="signup-email" name="signup-email" placeholder="Email">
+                                            <input type="text" class="form-control form-control-lg form-control-alt" id="name" name="name" placeholder="Nombre">
                                         </div>
                                         <div class="mb-4">
-                                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password" name="signup-password" placeholder="Password">
+                                            <input type="text" class="form-control form-control-lg form-control-alt" id="surname" name="surname" placeholder="Apellido">
                                         </div>
                                         <div class="mb-4">
-                                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password-confirm" name="signup-password-confirm" placeholder="Password Confirm">
+                                            <input type="email" class="form-control form-control-lg form-control-alt" id="email" name="email" placeholder="Correo Electrónico">
+                                        </div>
+                                        <div class="mb-4">
+                                            <input type="date" class="form-control form-control-lg form-control-alt" id="birthdate" name="birthdate" placeholder="Fecha de Nacimiento">
+                                        </div>
+                                        <div class="mb-4">
+                                            <input type="text" class="form-control form-control-lg form-control-alt" id="telephone" name="telephone" placeholder="Teléfono" minlength="9" maxlength="9">
+                                        </div>
+                                        <div class="mb-4">
+                                            <input type="password" class="form-control form-control-lg form-control-alt" id="password" name="password" placeholder="Password">
+                                        </div>
+                                        <div class="mb-4">
+                                            <input type="password" class="form-control form-control-lg form-control-alt" id="password-confirm" name="password-confirm" placeholder="Password Confirm">
                                         </div>
                                         <div class="mb-4">
                                             <div class="form-check">
@@ -141,7 +146,7 @@
                                             <i class="fa fa-fw fa-plus opacity-50 me-1"></i> Sign Up
                                         </button>
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
-                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="op_auth_signin.html">
+                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('login')}}">
                                                 <i class="fa fa-sign-in-alt opacity-50 me-1"></i> Sign In
                                             </a>
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="#" data-bs-toggle="modal" data-bs-target="#modal-terms">
@@ -185,29 +190,13 @@
                     </div>
                 </div>
             </div>
-            <!-- END Terms Modal -->
         </div>
-        <!-- END Page Content -->
     </main>
-    <!-- END Main Container -->
 </div>
-<!-- END Page Container -->
 
-<!--
-  Dashmix JS
-
-  Core libraries and functionality
-  webpack is putting everything together at assets/_js/main/app.js
--->
-<script src="assets/js/dashmix.app.min.js"></script>
-
-<!-- jQuery (required for jQuery Validation plugin) -->
-<script src="assets/js/lib/jquery.min.js"></script>
-
-<!-- Page JS Plugins -->
-<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-
-<!-- Page JS Code -->
+<script src="{{asset('resources/user/user.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
 <script src="assets/js/pages/op_auth_signup.min.js"></script>
 </body>
 </html>
