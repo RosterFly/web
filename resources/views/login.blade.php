@@ -116,7 +116,7 @@
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('password-reminder')}}">
                                                 ¿Olvidaste tu contraseña?
                                             </a>
-                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="op_auth_signup.html">
+                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('signup')}}">
                                                 Crear Cuenta
                                             </a>
                                         </p>

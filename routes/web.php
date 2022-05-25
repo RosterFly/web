@@ -19,6 +19,7 @@ Route::get('/', function () {return view('public.index');})->name('public.index'
 Route::get('/login', function () {return view('login');})->name('login');
 Route::get('/password-reminder', function () {return view('reminder');})->name('password-reminder');
 Route::get('/status', function (){return view('status');})->name('status');
+Route::get('/signup', function (){return view('signup');})->name('signup');
 
 //Ruta cambio de lenguaje
 Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale);return Redirect::back();});
