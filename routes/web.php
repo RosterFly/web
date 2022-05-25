@@ -26,8 +26,8 @@ Route::get('/password-reminder', function () {
 })->name('password-reminder');
 
 Route::get('/status', function (){
-    return view('public.status');
-})->name('public.status');
+    return view('status');
+})->name('status');
 
 Route::get('locale/{lang}', function ($locale){
     session()->put('locale', $locale);
