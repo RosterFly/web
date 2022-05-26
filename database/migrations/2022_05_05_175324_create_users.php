@@ -18,9 +18,10 @@ class CreateUsers extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email')->unique();
-            $table->string('password');
             $table->date('birth_date');
             $table->string('telephone', 9);
+            $table->string('password');
+            $table->timestamp('crated_at');
         });
     }
 
