@@ -21,7 +21,7 @@ class CreateUsers extends Migration
             $table->date('birth_date');
             $table->string('telephone', 9);
             $table->string('password');
-            $table->timestamp('crated_at');
+            $table->timestamp('created_at');
         });
     }
 
