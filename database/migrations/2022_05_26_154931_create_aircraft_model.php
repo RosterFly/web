@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateAircraftModel extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('aircraft_model', function (Blueprint $table) {
+            $table->string('wing_type');
+            $table->string('aircraft_model');
+            $table->string('manufacturer');
+            $table->string('IATACode');
+            $table->string('ICAOCode');
+            $table->string('type');
+            $table->timestamp('created_at');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('aircraft_model');
+    }
+}
