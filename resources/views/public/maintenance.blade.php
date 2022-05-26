@@ -10,7 +10,6 @@
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- Open Graph Meta -->
     <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
     <meta property="og:site_name" content="Dashmix">
     <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -21,18 +20,11 @@
       <link rel="shortcut icon" href="{{asset('favicon.png')}}">
       <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
       <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
-    <!-- END Icons -->
 
-    <!-- Stylesheets -->
-    <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
       <link rel="stylesheet" id="css-main" href="{{asset('resources/user/user.min.css')}}">
-
-    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
-    <!-- END Stylesheets -->
   </head>
   <body>
     <!-- Page Container -->
