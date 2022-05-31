@@ -39,7 +39,7 @@
                         <a class="link-fx fw-bold fs-1" href="{{route('public.index')}}">
                             <span class="text-dark">Roster</span><span class="text-primary">Fly</span>
                         </a>
-                        <p class="text-uppercase fw-bold fs-sm text-muted">Inicio Sesión</p>
+                        <p class="text-uppercase fw-bold fs-sm text-muted">@lang('login.logInTittle')</p>
                     </div>
 
                     <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
@@ -51,25 +51,25 @@
                                     <div class="mb-4">
                                         <input type="text" class="form-control form-control-lg form-control-alt"
                                                id="login-username" name="login-username"
-                                               placeholder="Correo Electrónico">
+                                               placeholder="@lang('login.emailText')">
                                     </div>
                                     <div class="mb-4">
                                         <input type="password" class="form-control form-control-lg form-control-alt"
-                                               id="login-password" name="login-password" placeholder="Contraseña">
+                                               id="login-password" name="login-password" placeholder="@lang('login.passwordText')">
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <button type="submit" class="btn w-100 btn-lg btn-hero btn-primary">
-                                        <i class="fa fa-sign-in" aria-hidden="true"></i> Iniciar Sesion
+                                        <i class="fa fa-sign-in" aria-hidden="true"></i> @lang('login.logInBtn')
                                     </button>
                                     <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                         <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
                                            href="{{route('password-reminder')}}">
-                                            ¿Olvidaste tu contraseña?
+                                            @lang('login.forgottenPassword')
                                         </a>
                                         <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
                                            href="{{route('signup')}}">
-                                            Crear Cuenta
+                                            @lang('login.createAccount')
                                         </a>
                                     </p>
                                 </div>
@@ -84,7 +84,7 @@
                 class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
                 <div class="p-3">
                     <p class="display-4 fw-bold text-white mb-3">
-                        Welcome to the future
+                        @lang('login.welcomeFuture')
                     </p>
                     <p class="fs-lg fw-semibold text-white-75 mb-0">
                         © 2022 RosterFly
