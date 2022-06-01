@@ -13,7 +13,7 @@ class CreateAircraftModel extends Migration
      */
     public function up()
     {
-        Schema::create('aircraft_model', function (Blueprint $table) {
+        Schema::create('aircraft_models', function (Blueprint $table) {
             $table->string('wing_type');
             $table->string('aircraft_model');
             $table->string('manufacturer');
@@ -31,6 +31,6 @@ class CreateAircraftModel extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aircraft_model');
+        Schema::dropIfExists('aircraft_models');
     }
 }

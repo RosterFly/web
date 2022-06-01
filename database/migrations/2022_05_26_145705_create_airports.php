@@ -13,7 +13,7 @@ class CreateAirport extends Migration
      */
     public function up()
     {
-        Schema::create('airport', function (Blueprint $table) {
+        Schema::create('airports', function (Blueprint $table) {
             $table->string('icao', 10);
             $table->string('iata', 10)->nullable();
             $table->string('name')->nullable();
@@ -34,6 +34,6 @@ class CreateAirport extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('airport');
+        Schema::dropIfExists('airports');
     }
 }

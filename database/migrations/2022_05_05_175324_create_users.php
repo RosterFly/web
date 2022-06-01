@@ -18,10 +18,12 @@ class CreateUsers extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->date('birth_date');
             $table->string('telephone', 9);
             $table->string('password');
-            $table->timestamp('created_at');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
