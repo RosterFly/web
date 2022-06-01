@@ -46,7 +46,7 @@
                     <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                     <div class="row g-0 justify-content-center">
                         <div class="col-sm-8 col-xl-6">
-                            <form class="js-validation-signin" action="be_pages_auth_all.html" method="POST">
+                            <form class="js-validation-signin" action="{{route('login')}}" method="POST">
                                 <div class="py-3">
                                     <div class="mb-4">
                                         <input type="text" class="form-control form-control-lg form-control-alt"
@@ -64,11 +64,11 @@
                                     </button>
                                     <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                         <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                           href="{{route('password-reminder')}}">
+                                           href="{{route('auth.password-reminder')}}">
                                             ¿Olvidaste tu contraseña?
                                         </a>
                                         <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                           href="{{route('signup')}}">
+                                           href="{{route('auth.signup')}}">
                                             Crear Cuenta
                                         </a>
                                     </p>
@@ -103,7 +103,6 @@
 <script src="{{asset('resources/user/user.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
-
 <!-- Page JS Code -->
 <script src="assets/js/pages/op_auth_signin.min.js"></script>
 </body>

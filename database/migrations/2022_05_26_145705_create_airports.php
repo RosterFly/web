@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAirport extends Migration
+class CreateAirports extends Migration
 {
     /**
      * Run the migrations.
@@ -23,7 +23,7 @@ class CreateAirport extends Migration
             $table->string('country-iso', 2)->nullable();
             $table->string('city')->nullable();
             $table->primary('icao');
-            $table->foreign('country-iso')->references('country_code')->on('country');
+            $table->foreign('country-iso')->references('country_code')->on('countries');
         });
     }
 

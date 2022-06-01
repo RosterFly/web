@@ -91,19 +91,9 @@
 </div>
 <!-- END Page Container -->
 
-<!--
-  Dashmix JS
-
-  Core libraries and functionality
-  webpack is putting everything together at assets/_js/main/app.js
--->
-<script src="assets/js/dashmix.app.min.js"></script>
-
-<!-- jQuery (required for jQuery Validation plugin) -->
-<script src="assets/js/lib/jquery.min.js"></script>
-
-<!-- Page JS Plugins -->
-<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="{{asset('resources/user/user.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
 
 <!-- Page JS Code -->
 <script src="assets/js/pages/op_auth_reminder.min.js"></script>
