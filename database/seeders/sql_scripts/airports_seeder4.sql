@@ -1,4 +1,4 @@
-INSERT INTO `airport` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
+INSERT INTO `airports` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
 ('LOKK', '', 'Hallegg Heliport', '46.64805603', '14.2458334', 1493, 'AT', 'Halleg'),
 ('LOKP', '', 'Deutsch-Ordens-Spital Heliport', '46.94722366', '14.41083336', 2113, 'AT', 'Friesach'),
 ('LOKS', '', 'St. Andrä Im Lavanttal Heliport', '46.7583313', '14.8255558', 1414, 'AT', 'St. Andrä'),

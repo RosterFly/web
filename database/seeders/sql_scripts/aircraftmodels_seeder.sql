@@ -1,4 +1,4 @@
-INSERT INTO `aircraft_model` (`wing_type`,`aircraft_model`,`manufacturer`,`IATACode`,`ICAOCode`,`type`) VALUES
+INSERT INTO `aircraft_models` (`wing_type`,`aircraft_model`,`manufacturer`,`IATACode`,`ICAOCode`,`type`) VALUES
     ('Fixed Wing', 'Airbus A350-1000', 'Airbus', '351', 'A35K', 'Airplane'),
     ('Fixed Wing', 'Antonov AN-124 Ruslan', 'Antonov', 'A4F', 'A124', 'Airplane'),
     ('Fixed Wing', 'Airbus A330-900neo', 'Airbus', '339', 'A339', 'Airplane'),

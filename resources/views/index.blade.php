@@ -1991,23 +1991,20 @@
                   </a>
                   <div role="separator" class="dropdown-divider"></div>
 
-                  <!-- Toggle Side Overlay -->
-                  <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
                   <a class="dropdown-item" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_toggle">
                     <i class="far fa-fw fa-building me-1"></i> Settings
                   </a>
-                  <!-- END Side Overlay -->
 
                   <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/op_auth_signin.html">
-                    <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> Sign Out
-                  </a>
+                    <form action="{{route('logout')}}" method="POST">
+                        @csrf
+                        <button class="dropdown-item" type="submit">
+                        <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> Sign Out
+                      </button>
+                    </form>
                 </div>
               </div>
             </div>
-            <!-- END User Dropdown -->
-
-            <!-- Notifications Dropdown -->
             <div class="dropdown d-inline-block">
               <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-fw fa-bell"></i>

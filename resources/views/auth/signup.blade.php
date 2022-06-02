@@ -110,7 +110,7 @@
                                     <div class="py-3">
                                         <div class="mb-4">
                                             <input type="text" class="form-control form-control-lg form-control-alt"
-                                                   id="id" name="id" placeholder="DNI" maxlength="8">
+                                                   id="id" name="id" placeholder="DNI" maxlength="9">
                                             @error('id')
                                             <script>window.alert({{$message}})</script>
                                             @enderror
@@ -138,7 +138,7 @@
                                         </div>
                                         <div class="mb-4">
                                             <input type="date" class="form-control form-control-lg form-control-alt"
-                                                   id="birthdate" name="birthdate" placeholder="Fecha de Nacimiento">
+                                                   id="birth_date" name="birth_date" placeholder="Fecha de Nacimiento">
                                             @error('birthdate')
                                             <script>window.alert({{$message}})</script>
                                             @enderror

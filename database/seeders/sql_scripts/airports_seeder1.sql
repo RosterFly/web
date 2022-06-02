@@ -1,4 +1,4 @@
-INSERT INTO `airport` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
+INSERT INTO `airports` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
 ('42CN', '', 'Peg Field', '36.70909882', '-119.4049988', 460, 'US', 'Reedley'),
 ('42CO', '', 'Ptarmigan Heliport', '39.6875', '-105.3960037', 8198, 'US', 'Evergreen'),
 ('42FD', '', 'Palm Beach Community College Heliport', '26.61070061', '-80.08760071', 13, 'US', 'Lake Worth'),

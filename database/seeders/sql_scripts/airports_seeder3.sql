@@ -1,4 +1,4 @@
-INSERT INTO `airport` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
+INSERT INTO `airports` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
 ('NGMN', 'MTK', 'Makin Island Airport', '3.374439955', '172.9920044', 0, 'KI', 'Makin Island'),
 ('MTU', 'MTU', 'Montepuez Airport', '-13.1218996', '39.05279922', 0, 'MZ', 'Montepuez'),
 ('NVSA', 'MTV', 'Mota Lava Airport', '-13.66600037', '167.7120056', 63, 'VU', 'Ablow'),
