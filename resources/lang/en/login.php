@@ -13,4 +13,12 @@ return [
     |
     */
 
+    'logInTittle' => 'LOG IN',
+    'emailText' => 'Email Address',
+    'passwordText' => 'Password',
+    'logInBtn' => 'LOG IN',
+    'forgottenPassword' => 'Did you forget your password?',
+    'createAccount' => 'Create Account',
+    'welcomeFuture' => 'Welcome to the future',
+
 ];
