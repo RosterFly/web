@@ -18,8 +18,8 @@
                                     <div class="py-3">
                                         <div class="mb-4">
                                             <input type="text" class="form-control form-control-lg form-control-alt"
-                                                   id="id" name="id" placeholder="DNI" maxlength="9">
-                                            @error('id')
+                                                   id="dni" name="dni" placeholder="DNI" maxlength="9">
+                                            @error('dni')
                                             <script>window.alert({{$message}})</script>
                                             @enderror
                                         </div>
