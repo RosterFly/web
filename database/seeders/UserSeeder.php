@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     {
         User::firstOrCreate(
             [
-                'id'=>'53903205Z',
+                'dni'=>'53903205Z',
                 'name'=>'Jaime',
                 'surname'=>'López',
                 'email' => 'jaimelopez27@outlook.es',
