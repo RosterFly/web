@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //Public Routes
 Route::get('/', function () {return view('public.index');})->name('public.index');
 //Route::get('/login', function () {return view('auth.login');})->name('auth.login');
-Route::get('/password-reminder', function () {return view('auth.reminder');})->name('auth.password-reminder');
+//Route::get('/password-reminder', function () {return view('auth.reminder');})->name('auth.password-reminder');
 Route::get('/status', function (){return view('status');})->name('status');
 Route::get('/signup', function (){return view('auth.signup');})->name('auth.signup');
 Route::get('/maintenance', function (){return view('public.maintenance');})->name('maintenance');
@@ -27,3 +27,4 @@ Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale)
 
 //User Routes
 Route::get('/home', function(){return view('index');})->name('user.index');
+Route::get('/edit-profile', function (){return view('profile_edit');})->name('edit.profile');

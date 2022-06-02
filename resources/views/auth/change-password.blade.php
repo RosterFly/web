@@ -32,7 +32,7 @@
                                         </button>
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                               href="{{route('password.request')}}">
+                                               href="{{route('auth.password-reminder')}}">
                                                 @lang('login.forgottenPassword')
                                             </a>
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"

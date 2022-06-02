@@ -6,16 +6,17 @@
                 <div class="hero-static col-md-6 d-flex align-items-center bg-body-extra-light">
                     <div class="p-3 w-100">
                         <div class="text-center">
-                            <a class="link-fx fw-bold fs-1" href="{{route('public.index')}}">
+                            <a class="link-fx fw-bold fs-1" href="{{route('password.email')}}">
                                 <span class="text-dark">Roster</span><span class="text-primary">Fly</span>
                             </a>
                             <p class="text-uppercase fw-bold fs-sm text-muted">Password Reminder</p>
                         </div>
                         <div class="row g-0 justify-content-center">
                             <div class="col-sm-8 col-xl-6">
-                                <form class="js-validation-reminder" action="be_pages_auth_all.html" method="POST">
+                                <form action="{{route('password.request')}}" method="POST">
+                                    @csrf
                                     <div class="py-3 mb-4">
-                                        <input type="text" class="form-control form-control-lg form-control-alt" id="reminder-credential" name="reminder-credential" placeholder="Username or Email">
+                                        <input type="email" class="form-control form-control-lg form-control-alt" id="email" name="email" placeholder="Correo Electrónico">
                                     </div>
                                     <div class="text-center mb-4">
                                         <button type="submit" class="btn w-100 btn-lg btn-hero btn-primary">
@@ -25,7 +26,7 @@
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('login')}}">
                                                 <i class="fa fa-sign-in-alt opacity-50 me-1"></i> Sign In
                                             </a>
-                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('signup')}}">
+                                            <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="{{route('auth.signup')}}">
                                                 <i class="fa fa-plus opacity-50 me-1"></i> New Account
                                             </a>
                                         </p>
@@ -33,6 +34,16 @@
                                 </form>
                             </div>
                         </div>
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul class="list-unstyled">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
