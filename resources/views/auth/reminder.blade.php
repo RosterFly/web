@@ -30,6 +30,29 @@
                                                 <i class="fa fa-plus opacity-50 me-1"></i> New Account
                                             </a>
                                         </p>
+                                        <center><div class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1">
+                                                @if(app()->getLocale()=='es')
+                                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09"
+                                                       data-toggle="dropdown"
+                                                       aria-haspopup="true" aria-expanded="false"><span
+                                                            class="flag-icon flag-icon-es"> </span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                                        <a class="dropdown-item" href="{{url('locale/en')}}"><span
+                                                                class="flag-icon flag-icon-us"></span> English</a>
+                                                        @elseif(app()->getLocale()=='en')
+                                                            <a class="nav-link dropdown-toggle" href="http://example.com"
+                                                               id="dropdown09" data-toggle="dropdown"
+                                                               aria-haspopup="true" aria-expanded="false"><span
+                                                                    class="flag-icon flag-icon-us"> </span>
+                                                            </a>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                                                <a class="dropdown-item" href="{{url('locale/es')}}"><span
+                                                                        class="flag-icon flag-icon-es"></span> Español</a>
+                                                                @endif
+                                                            </div>
+                                                    </div>
+                                            </div></center>
                                     </div>
                                 </form>
                             </div>
@@ -44,16 +67,6 @@
                                 </ul>
                             </div>
                         @endif
-                    </div>
-                </div>
-                <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
-                    <div class="p-3">
-                        <p class="display-4 fw-bold text-white mb-0">
-                            Be ready to fail..
-                        </p>
-                        <p class="fs-1 fw-semibold text-white-75 mb-0">
-                            ..to be able to succeed!
-                        </p>
                     </div>
                 </div>
             </div>
