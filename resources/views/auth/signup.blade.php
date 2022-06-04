@@ -92,7 +92,7 @@
                                         </button>
                                         <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                               href="">
+                                               href={{route('login')}}>
                                                 <i class="fa fa-sign-in-alt opacity-50 me-1"></i> Sign In
                                             </a>
                                             <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
@@ -100,6 +100,29 @@
                                                 <i class="fa fa-book opacity-50 me-1"></i> Read Terms
                                             </a>
                                         </p>
+                                        <center><div class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1">
+                                                @if(app()->getLocale()=='es')
+                                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09"
+                                                       data-toggle="dropdown"
+                                                       aria-haspopup="true" aria-expanded="false"><span
+                                                            class="flag-icon flag-icon-es"> </span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                                        <a class="dropdown-item" href="{{url('locale/en')}}"><span
+                                                                class="flag-icon flag-icon-us"></span> English</a>
+                                                        @elseif(app()->getLocale()=='en')
+                                                            <a class="nav-link dropdown-toggle" href="http://example.com"
+                                                               id="dropdown09" data-toggle="dropdown"
+                                                               aria-haspopup="true" aria-expanded="false"><span
+                                                                    class="flag-icon flag-icon-us"> </span>
+                                                            </a>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                                                <a class="dropdown-item" href="{{url('locale/es')}}"><span
+                                                                        class="flag-icon flag-icon-es"></span> Español</a>
+                                                                @endif
+                                                            </div>
+                                                    </div>
+                                            </div></center>
                                     </div>
                                     @if ($errors->any())
                                         <div class="alert alert-danger">

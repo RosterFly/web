@@ -1986,10 +1986,7 @@
                 </div>
               </div>
             </div>
-            <!-- END Notifications Dropdown -->
-
-            <!-- Toggle Side Overlay -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <!-- Cambio Lenguaje -->
               <div class="dropdown d-inline-block">
                   @if(app()->getLocale()=='es')
 
@@ -2018,11 +2015,8 @@
                               </div>
                   @endif
               </div>
-            <!-- END Toggle Side Overlay -->
           </div>
-          <!-- END Right Section -->
         </div>
-        <!-- END Header Content -->
 
         <!-- Header Search -->
         <div id="page-header-search" class="overlay-header bg-header-dark">
