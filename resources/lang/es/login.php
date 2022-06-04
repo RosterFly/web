@@ -13,4 +13,12 @@ return [
     |
     */
 
+    'logInTittle' => 'INICIO SESSIÓN',
+    'emailText' => 'Correo Electrónico',
+    'passwordText' => 'Contraseña',
+    'logInBtn' => 'INICIAR SESIÓN',
+    'forgottenPassword' => '¿Olvidaste tu contraseña?',
+    'createAccount' => 'Crear Cuenta',
+    'welcomeFuture' => 'Bienvenido al futuro',
+
 ];

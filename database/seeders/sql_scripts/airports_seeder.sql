@@ -1,4 +1,4 @@
-INSERT INTO `airport` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
+INSERT INTO `airports` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
 ('OM11', '', 'Abu Dhabi Northeast Airport', '24.51889992', '54.98009872', 88, 'AE', 'Abu Dhabi'),
 ('AGGH', 'HIR', 'Honiara International Airport', '-9.42800045', '160.0549927', 28, 'SB', 'Honiara'),
 ('AGGM', 'MUA', 'Munda Airport', '-8.327969551', '157.2630005', 10, 'SB', ''),

@@ -1,4 +1,4 @@
-INSERT INTO `country` (`country_code`, `name_en`, `full_name_en`, `continent_code`) VALUES
+INSERT INTO `countries` (`country_code`, `name_en`, `full_name_en`, `continent_code`) VALUES
 ('AD', 'Andorra', 'Principality of Andorra', 'EU'),
 ('AE', 'United Arab Emirates', 'United Arab Emirates', 'AS'),
 ('AF', 'Afghanistan', 'Islamic Republic of Afghanistan', 'AS'),

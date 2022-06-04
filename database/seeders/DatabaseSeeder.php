@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CountriesSeeder::class);
         $this->call(AirportsSeeder::class);
         $this->call(AircraftModelSeeder::class);
+        $this->call(UserSeeder::class);
 
     }
 }

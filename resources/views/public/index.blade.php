@@ -41,12 +41,12 @@
                             class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link active" href="#home">@lang('index.manuStart')<span
+                            <li class="nav-item"><a class="nav-link active" href="#home">@lang('index.menuStart')<span
                                         class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#features">@lang('index.manuNews')</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#pricing">@lang('index.manuPlans')</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#faq">@lang('index.manuFaq')</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">@lang('index.manuContact')</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#features">@lang('index.menuNews')</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pricing">@lang('index.menuPlans')</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#faq">@lang('index.menuFaq')</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">@lang('index.menuContact')</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{route('status')}}">HEARTBEAT</a></li>
                             <div class="nav-item dropdown">
                                 @if(app()->getLocale()=='es')
@@ -86,8 +86,7 @@
 <header class="bg-gradient" id="home">
     <div class="container mt-5">
         <h1><b>Roster</b>Fly, gestiona tus vuelos, fuera y dentro del avión</h1>
-        <p class="tagline">La aplicación necesaria para el control diario de tus vuelos y los datos de estos.
-            ¡Registrate y disfruta de las novedades! </p>
+        <p class="tagline">@lang('index.headerDespription')</p>
     </div>
     &nbsp;
     <div class="img-holder mt-3"><img src="{{asset('resources/images/qantas748.png')}}" alt="phone" height="450"></div>
@@ -99,8 +98,8 @@
     <div class="container">
 
         <div class="section-title">
-            <small>HIGHLIGHTS</small>
-            <h3>Features you love</h3>
+            <small>@lang('index.highlights')</small>
+            <h3>@lang('index.features')</h3>
         </div>
 
 
@@ -111,9 +110,8 @@
                         <div class="media">
                             <span class="ti-face-smile gradient-fill ti-3x mr-3"></span>
                             <div class="media-body">
-                                <h4 class="card-title">Simple</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    rutrum, urna eu pellentesque </p>
+                                <h4 class="card-title">@lang('index.features')</h4>
+                                <p class="card-text">@lang('index.simpleText')</p>
                             </div>
                         </div>
                     </div>
@@ -125,9 +123,8 @@
                         <div class="media">
                             <span class="ti-settings gradient-fill ti-3x mr-3"></span>
                             <div class="media-body">
-                                <h4 class="card-title">Customize</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    rutrum, urna eu pellentesque </p>
+                                <h4 class="card-title">@lang('index.customize')</h4>
+                                <p class="card-text">@lang('index.customizeText')</p>
                             </div>
                         </div>
                     </div>
@@ -139,60 +136,49 @@
                         <div class="media">
                             <span class="ti-lock gradient-fill ti-3x mr-3"></span>
                             <div class="media-body">
-                                <h4 class="card-title">Secure</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                                    rutrum, urna eu pellentesque </p>
+                                <h4 class="card-title">@lang('index.secure')</h4>
+                                <p class="card-text">@lang('index.secureText')</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </div>
-<!-- // end .section -->
 <div class="section">
-
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-6">
-                <h2>¡Descubre nuestra aplicación!</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel exercitationem
-                    eveniet vero maxime ratione </p>
-                <a href="#pricing" class="btn btn-primary">Consulta nuestros planes</a>
+                <h2>@lang('index.discoverApp')</h2>
+                <p class="mb-4">@lang('index.discoverAppText')</p>
+                <a href="#pricing" class="btn btn-primary">@lang('index.discoverAppBtn')</a>
             </div>
         </div>
         <div class="perspective-phone">
             <img src="{{asset('resources/images/paper-airplane.png')}}" alt="perspective phone" height="400">
         </div>
     </div>
-
 </div>
-<!-- // end .section -->
-
 
 <div class="section light-bg">
     <div class="container">
         <div class="section-title">
-            <small>FEATURES</small>
-            <h3>Do more with our app</h3>
+            <small>@lang('index.features2')</small>
+            <h3>@lang('index.doMore')</h3>
         </div>
-
         <ul class="nav nav-tabs nav-justified" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#communication">Communication</a>
+                <a class="nav-link active" data-toggle="tab" href="#communication">@lang('index.communication')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#schedule">Scheduling</a>
+                <a class="nav-link" data-toggle="tab" href="#schedule">@lang('index.scheduling')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#messages">Messages</a>
+                <a class="nav-link" data-toggle="tab" href="#messages">@lang('index.messages')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#livechat">Live Chat</a>
+                <a class="nav-link" data-toggle="tab" href="#livechat">@lang('index.lifeChat')</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -202,40 +188,20 @@
                          class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     <div>
 
-                        <h2>Communicate with ease</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                            pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                            mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis
-                            facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus
-                            justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet
-                            vulputate aliquam.
-                        </p>
+                        <h2>@lang('index.communicationTittle')</h2>
+                        <p class="lead">@lang('index.communicationSubtittle')</p>
+                        <p>@lang('index.communicationText')</p>
+                        <p>@lang('index.communicationText')</p>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="schedule">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Scheduling when you want</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                            pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                            mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis
-                            facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus
-                            justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet
-                            vulputate aliquam.
-                        </p>
+                        <h2>@lang('index.schedulingTittle')</h2>
+                        <p class="lead">@lang('index.schedulingTittle')</p>
+                        <p>@lang('index.schedulingText')</p>
+                        <p> @lang('index.schedulingText')</p>
                     </div>
                     <img src="images/graphic.png" alt="graphic"
                          class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
@@ -246,40 +212,20 @@
                     <img src="images/graphic.png" alt="graphic"
                          class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     <div>
-                        <h2>Realtime Messaging service</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                            pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                            mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis
-                            facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus
-                            justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet
-                            vulputate aliquam.
-                        </p>
+                        <h2>@lang('index.messagesTittle')</h2>
+                        <p class="lead">@lang('index.messagesSubtittle')</p>
+                        <p>@lang('index.messagesText')</p>
+                        <p> @lang('index.messagesText')</p>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="livechat">
                 <div class="d-flex flex-column flex-lg-row">
                     <div>
-                        <h2>Live chat when you needed</h2>
-                        <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                            pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                            mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis
-                            facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                        <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros.
-                            Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus
-                            justo sollicitudin. Mauris consectetur, tortor
-                            sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet
-                            vulputate aliquam.
-                        </p>
+                        <h2>@lang('index.lifeChatTittle')</h2>
+                        <p class="lead">@lang('index.lifeChatSubtittle')</p>
+                        <p>@lang('index.lifeChatText')</p>
+                        <p> @lang('index.lifeChatText')</p>
                     </div>
                     <img src="images/graphic.png" alt="graphic"
                          class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
@@ -302,21 +248,15 @@
             <div class="col-md-6 d-flex align-items-center">
                 <div>
                     <div class="box-icon"><span class="ti-rocket gradient-fill ti-3x"></span></div>
-                    <h2>Launch your App</h2>
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel
-                        exercitationem eveniet vero maxime ratione </p>
-                    <a href="#" class="btn btn-primary">Read more</a></div>
+                    <h2>@lang('index.launchApp')</h2>
+                    <p class="mb-4">@lang('index.launchAppText')</p>
+                    <a href="#" class="btn btn-primary">@lang('index.launchAppBtn')</a></div>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- // end .section -->
-
 
 <div class="section light-bg">
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 d-flex align-items-center">
@@ -324,25 +264,22 @@
                     <li class="media">
                         <div class="circle-icon mr-4">1</div>
                         <div class="media-body">
-                            <h5>Create an Account</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                                pellentesque pretium obcaecati vel exercitationem </p>
+                            <h5>@lang('index.createAccount')</h5>
+                            <p>@lang('index.createAccountText')</p>
                         </div>
                     </li>
                     <li class="media my-4">
                         <div class="circle-icon mr-4">2</div>
                         <div class="media-body">
-                            <h5>Share with friends</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                                pellentesque pretium obcaecati vel exercitationem eveniet</p>
+                            <h5>@lang('index.share')</h5>
+                            <p>@lang('index.shareText')</p>
                         </div>
                     </li>
                     <li class="media">
                         <div class="circle-icon mr-4">3</div>
                         <div class="media-body">
-                            <h5>Enjoy your life</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu
-                                pellentesque pretium obcaecati vel exercitationem </p>
+                            <h5>@lang('index.enjoyLife')</h5>
+                            <p>@lang('index.enjoyLifeText')</p>
                         </div>
                     </li>
                 </ul>
@@ -360,61 +297,61 @@
 <div class="section" id="pricing">
     <div class="container">
         <div class="section-title">
-            <small>PRICING</small>
-            <h3>Upgrade to Pro</h3>
+            <small>@lang('index.pricing')</small>
+            <h3>@lang('index.upgradeTo')</h3>
         </div>
 
         <div class="card-deck">
             <div class="card pricing">
                 <div class="card-head">
-                    <small class="text-primary">PERSONAL</small>
-                    <span class="price">$14<sub>/m</sub></span>
+                    <small class="text-primary">@lang('index.personal')</small>
+                    <span class="price">@lang('index.personalPrice')</span>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <div class="list-group-item">10 Projects</div>
-                    <div class="list-group-item">5 GB Storage</div>
-                    <div class="list-group-item">Basic Support</div>
+                    <div class="list-group-item">@lang('index.personal1')</div>
+                    <div class="list-group-item">@lang('index.personal2')</div>
+                    <div class="list-group-item">@lang('index.personal3')</div>
                     <div class="list-group-item">
-                        <del>Collaboration</del>
+                        <del>@lang('index.personal4')</del>
                     </div>
                     <div class="list-group-item">
-                        <del>Reports and analytics</del>
+                        <del>@lang('index.personal5')</del>
                     </div>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    <a href="#" class="btn btn-primary btn-lg btn-block">@lang('index.personalBtn')</a>
                 </div>
             </div>
             <div class="card pricing popular">
                 <div class="card-head">
-                    <small class="text-primary">FOR TEAMS</small>
-                    <span class="price">$29<sub>/m</sub></span>
+                    <small class="text-primary">@lang('index.forTeams')</small>
+                    <span class="price">@lang('index.forTeamsPrice')</span>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <div class="list-group-item">Unlimited Projects</div>
-                    <div class="list-group-item">100 GB Storage</div>
-                    <div class="list-group-item">Priority Support</div>
-                    <div class="list-group-item">Collaboration</div>
-                    <div class="list-group-item">Reports and analytics</div>
+                    <div class="list-group-item">@lang('index.forTeams1')</div>
+                    <div class="list-group-item">@lang('index.forTeams2')</div>
+                    <div class="list-group-item">@lang('index.forTeams3')</div>
+                    <div class="list-group-item">@lang('index.forTeams4')</div>
+                    <div class="list-group-item">@lang('index.forTeams5')</div>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    <a href="#" class="btn btn-primary btn-lg btn-block">@lang('index.forTeamsBtn')</a>
                 </div>
             </div>
             <div class="card pricing">
                 <div class="card-head">
-                    <small class="text-primary">ENTERPRISE</small>
-                    <span class="price">$249<sub>/m</sub></span>
+                    <small class="text-primary">@lang('index.enterprise')</small>
+                    <span class="price">@lang('index.enterprisePrice')</span>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <div class="list-group-item">Unlimited Projects</div>
-                    <div class="list-group-item">Unlimited Storage</div>
-                    <div class="list-group-item">Collaboration</div>
-                    <div class="list-group-item">Reports and analytics</div>
-                    <div class="list-group-item">Web hooks</div>
+                    <div class="list-group-item">@lang('index.enterprise1')</div>
+                    <div class="list-group-item">@lang('index.enterprise2')</div>
+                    <div class="list-group-item">@lang('index.enterprise3')</div>
+                    <div class="list-group-item">@lang('index.enterprise4')</div>
+                    <div class="list-group-item">@lang('index.enterprise5')</div>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                    <a href="#" class="btn btn-primary btn-lg btn-block">@lang('index.enterpriseBtn')</a>
                 </div>
             </div>
         </div>
@@ -426,30 +363,22 @@
         &nbsp;&nbsp;&nbsp;
         <div class="section-title">
             <small>FAQ</small>
-            <h3>Frequently Asked Questions</h3>
+            <h3>@lang('index.frecuentlyQuestions')</h3>
         </div>
 
         <div class="row pt-4">
             <div class="col-md-6">
-                <h4 class="mb-3">Can I try before I buy?</h4>
-                <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna
-                    eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum
-                    sit amet mattis ante. </p>
-                <h4 class="mb-3">What payment methods do you accept?</h4>
-                <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna
-                    eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum
-                    sit amet mattis ante. </p>
+                <h4 class="mb-3">@lang('index.canITry')</h4>
+                <p class="light-font mb-5">@lang('index.canITryText')</p>
+                <h4 class="mb-3">@lang('index.paymentMethods')</h4>
+                <p class="light-font mb-5">@lang('index.paymentMethodsText')</p>
 
             </div>
             <div class="col-md-6">
-                <h4 class="mb-3">Can I change my plan later?</h4>
-                <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna
-                    eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum
-                    sit amet mattis ante. </p>
-                <h4 class="mb-3">Do you have a contract?</h4>
-                <p class="light-font mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna
-                    eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum
-                    sit amet mattis ante. </p>
+                <h4 class="mb-3">@lang('index.changePlan')</h4>
+                <p class="light-font mb-5">@lang('index.changePlanText')</p>
+                <h4 class="mb-3">@lang('index.contract')</h4>
+                <p class="light-font mb-5">@lang('index.contractText')</p>
 
             </div>
         </div>
@@ -461,16 +390,15 @@
     <div class="container">
         <div class="call-to-action">
     </div>
-    <h2>Download Anywhere</h2>
-    <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather
-        than enterprise-wide methods of empowerment. </p>
+    <h2>@lang('index.download')</h2>
+    <p class="tagline">@lang('index.downloadText')</p>
     <div class="my-4">
 
         <a href="#" class="btn btn-light"><img src="{{asset('resources/images/appleicon.png')}}" alt="icon"> App
             Store</a>
         <a href="#" class="btn btn-light"><img src="{{asset('resources/images/playicon.png')}}" alt="icon"> Google play</a>
     </div>
-    <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p>
+    <p class="text-primary"><small><i>@lang('index.downloadVersion')</i></small></p>
 </div>
 </div>
 
@@ -481,7 +409,7 @@
         <div class="row">
             <div class="col-lg-6 text-center text-lg-left">
                 <p class="mb-2" href="mailto:support@mobileapp.com"><span class="ti-email mr-2"></span>
-                    support@mobileapp.com</p>
+                    @lang('index.email')</p>
             </div>
             <div class="col-lg-6">
                 <div class="social-icons">
@@ -496,7 +424,7 @@
 
 <!-- Footer -->
 <footer class="my-5 text-center">
-    <p class="mb-2"><small>© 2022 RosterFly - Todos los Derechos Reservados.</a></small></p>
+    <p class="mb-2"><small>@lang('index.copyright')</a></small></p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

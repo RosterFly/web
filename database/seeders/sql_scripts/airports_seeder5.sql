@@ -1,4 +1,4 @@
-INSERT INTO `airport` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
+INSERT INTO `airports` (`icao`, `iata`, `name`, `latitude`, `longitude`, `elevation`, `country-iso`, `city`) VALUES
 ('MX-0505', '', 'Marte R. Gomez Airport', '14.905922', '-92.4465', 84, 'MX', 'Mazatan'),
 ('MX-0506', '', 'Santa Maria Paras Airstrip', '26.446838', '-99.666483', 922, 'MX', 'Paras'),
 ('MX-0507', '', 'El Aguila Ranch Airport', '27.986694', '-100.225724', 899, 'MX', 'Guerrero'),
