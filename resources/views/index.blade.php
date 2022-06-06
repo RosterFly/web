@@ -9,29 +9,21 @@
               <a class="img-link me-1" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
                 <img class="img-avatar img-avatar48" src="{{asset('resources/images/user_icon.png')}}" alt="">
               </a>
-              <!-- END User Avatar -->
 
-              <!-- User Info -->
               <div class="ms-2">
                 <a class="text-white fw-semibold" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">George Taylor</a>
                 <div class="text-white-75 fs-sm">Full Stack Developer</div>
               </div>
-              <!-- END User Info -->
 
-              <!-- Close Side Overlay -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
               <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
                 <i class="fa fa-times-circle"></i>
               </a>
-              <!-- END Close Side Overlay -->
+
             </div>
           </div>
         </div>
-        <!-- END Side Header -->
 
-        <!-- Side Content -->
         <div class="content-side">
-          <!-- Side Overlay Tabs -->
           <div class="block block-transparent pull-x pull-t mb-0">
             <ul class="nav nav-tabs nav-tabs-block nav-justified" role="tablist">
               <li class="nav-item" role="presentation">
@@ -51,11 +43,9 @@
               </li>
             </ul>
             <div class="block-content tab-content overflow-hidden">
-              <!-- Settings Tab -->
               <div class="tab-pane pull-x fade fade-up show active" id="so-settings" role="tabpanel" aria-labelledby="so-settings-tab">
                 <div class="block mb-0">
-                  <!-- Color Themes -->
-                  <!-- Toggle Themes functionality initialized in Template._uiHandleTheme() -->
+
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Color Themes</span>
                   </div>
@@ -111,9 +101,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- END Color Themes -->
 
-                  <!-- Sidebar -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Sidebar</span>
                   </div>
@@ -127,9 +115,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- END Sidebar -->
 
-                  <!-- Header -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Header</span>
                   </div>
@@ -149,9 +135,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- END Header -->
 
-                  <!-- Content -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Content</span>
                   </div>
@@ -168,23 +152,17 @@
                       </div>
                     </div>
                   </div>
-                  <!-- END Content -->
 
-                  <!-- Layout API -->
                   <div class="block-content block-content-full border-top">
                     <a class="btn w-100 btn-alt-primary" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_layout_api.html">
                       <i class="fa fa-fw fa-flask me-1"></i> Layout API
                     </a>
                   </div>
-                  <!-- END Layout API -->
                 </div>
               </div>
-              <!-- END Settings Tab -->
 
-              <!-- People -->
               <div class="tab-pane pull-x fade fade-up" id="so-people" role="tabpanel" aria-labelledby="so-people-tab">
                 <div class="block mb-0">
-                  <!-- Online -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Online</span>
                   </div>
@@ -228,9 +206,7 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- Online -->
 
-                  <!-- Busy -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Busy</span>
                   </div>
@@ -250,9 +226,7 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- END Busy -->
 
-                  <!-- Away -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Away</span>
                   </div>
@@ -284,9 +258,7 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- END Away -->
 
-                  <!-- Offline -->
                   <div class="block-content block-content-sm block-content-full bg-body">
                     <span class="text-uppercase fs-sm fw-bold">Offline</span>
                   </div>
@@ -342,20 +314,15 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- END Offline -->
 
-                  <!-- Add People -->
                   <div class="block-content block-content-full border-top">
                     <a class="btn w-100 btn-alt-primary" href="javascript:void(0)">
                       <i class="fa fa-fw fa-plus me-1 opacity-50"></i> Add People
                     </a>
                   </div>
-                  <!-- END Add People -->
                 </div>
               </div>
-              <!-- END People -->
 
-              <!-- Profile -->
               <div class="tab-pane pull-x fade fade-up" id="so-profile" role="tabpanel" aria-labelledby="so-profile-tab">
                 <form action="be_pages_dashboard.html" method="POST" onsubmit="return false;">
                   <div class="block mb-0">
@@ -377,9 +344,7 @@
                         <input type="email" class="form-control" id="so-profile-email" name="so-profile-email" value="g.taylor@example.com">
                       </div>
                     </div>
-                    <!-- END Personal -->
 
-                    <!-- Password Update -->
                     <div class="block-content block-content-sm block-content-full bg-body">
                       <span class="text-uppercase fs-sm fw-bold">Password Update</span>
                     </div>
@@ -397,9 +362,7 @@
                         <input type="password" class="form-control" id="so-profile-new-password-confirm" name="so-profile-new-password-confirm">
                       </div>
                     </div>
-                    <!-- END Password Update -->
 
-                    <!-- Options -->
                     <div class="block-content block-content-sm block-content-full bg-body">
                       <span class="text-uppercase fs-sm fw-bold">Options</span>
                     </div>
@@ -426,44 +389,23 @@
                         If enabled, we will keep all your applications and servers up to date with the most recent features automatically
                       </p>
                     </div>
-                    <!-- END Options -->
 
-                    <!-- Submit -->
                     <div class="block-content block-content-full border-top">
                       <button type="submit" class="btn w-100 btn-alt-primary">
                         <i class="fa fa-fw fa-save me-1 opacity-50"></i> Save
                       </button>
                     </div>
-                    <!-- END Submit -->
                   </div>
                 </form>
               </div>
-              <!-- END Profile -->
             </div>
           </div>
-          <!-- END Side Overlay Tabs -->
         </div>
-        <!-- END Side Content -->
       </aside>
-      <!-- END Side Overlay -->
 
-      <!-- Sidebar -->
-      <!--
-        Sidebar Mini Mode - Display Helper classes
-
-        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
-        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
-          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
-
-        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
-        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
-        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
-      -->
       <nav id="sidebar" aria-label="Main Navigation">
-        <!-- Side Header -->
         <div class="bg-header-dark">
           <div class="content-header bg-white-5">
-            <!-- Logo -->
             <a class="fw-semibold text-white tracking-wide" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/index.html">
               <span class="smini-visible">
                 D<span class="opacity-75">x</span>
@@ -472,40 +414,25 @@
                 Dash<span class="opacity-75">mix</span>
               </span>
             </a>
-            <!-- END Logo -->
 
-            <!-- Options -->
             <div>
-              <!-- Toggle Sidebar Style -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-              <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+
               <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#sidebar-style-toggler" data-class="fa-toggle-off fa-toggle-on" onclick="Dashmix.layout('sidebar_style_toggle');Dashmix.layout('header_style_toggle');">
                 <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>
               </button>
-              <!-- END Toggle Sidebar Style -->
 
-              <!-- Dark Mode -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
               <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#dark-mode-toggler" data-class="far fa" onclick="Dashmix.layout('dark_mode_toggle');">
                 <i class="far fa-moon" id="dark-mode-toggler"></i>
               </button>
-              <!-- END Dark Mode -->
 
-              <!-- Close Sidebar, Visible only on mobile screens -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
               <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
                 <i class="fa fa-times-circle"></i>
               </button>
-              <!-- END Close Sidebar -->
             </div>
-            <!-- END Options -->
           </div>
         </div>
-        <!-- END Side Header -->
 
-        <!-- Sidebar Scrolling -->
         <div class="js-sidebar-scroll">
-          <!-- Side Navigation -->
           <div class="content-side">
             <ul class="nav-main">
               <li class="nav-main-item">
@@ -1843,37 +1770,23 @@
               </li>
             </ul>
           </div>
-          <!-- END Side Navigation -->
         </div>
-        <!-- END Sidebar Scrolling -->
       </nav>
-      <!-- END Sidebar -->
 
-      <!-- Header -->
       <header id="page-header">
-        <!-- Header Content -->
         <div class="content-header">
-          <!-- Left Section -->
           <div class="space-x-1">
-            <!-- Toggle Sidebar -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+ 
             <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
               <i class="fa fa-fw fa-bars"></i>
             </button>
-            <!-- END Toggle Sidebar -->
 
-            <!-- Open Search Section -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
             <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
               <i class="fa fa-fw opacity-50 fa-search"></i> <span class="ms-1 d-none d-sm-inline-block">Search</span>
             </button>
-            <!-- END Open Search Section -->
           </div>
-          <!-- END Left Section -->
 
-          <!-- Right Section -->
           <div class="space-x-1">
-            <!-- User Dropdown -->
             <div class="dropdown d-inline-block">
               <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-fw fa-user d-sm-none"></i>
@@ -1983,7 +1896,6 @@
                 </div>
               </div>
             </div>
-            <!-- Cambio Lenguaje -->
               <div class="dropdown d-inline-block">
                   @if(app()->getLocale()=='es')
 
@@ -2015,13 +1927,11 @@
           </div>
         </div>
 
-        <!-- Header Search -->
         <div id="page-header-search" class="overlay-header bg-header-dark">
           <div class="bg-white-10">
             <div class="content-header">
               <form class="w-100" action="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_search.html" method="POST">
                 <div class="input-group">
-                  <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
                   <button type="button" class="btn btn-alt-primary" data-toggle="layout" data-action="header_search_off">
                     <i class="fa fa-fw fa-times-circle"></i>
                   </button>
@@ -2031,10 +1941,7 @@
             </div>
           </div>
         </div>
-        <!-- END Header Search -->
 
-        <!-- Header Loader -->
-        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
         <div id="page-header-loader" class="overlay-header bg-header-dark">
           <div class="bg-white-10">
             <div class="content-header">
@@ -2044,14 +1951,10 @@
             </div>
           </div>
         </div>
-        <!-- END Header Loader -->
       </header>
-      <!-- END Header -->
 
-      <!-- Main Container -->
       <main id="main-container">
 
-        <!-- Hero -->
         <div class="content">
           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
             <div>
@@ -2081,11 +1984,8 @@
             </div>
           </div>
         </div>
-        <!-- END Hero -->
 
-        <!-- Page Content -->
         <div class="content">
-          <!-- Overview -->
           <div class="row items-push">
             <div class="col-sm-6 col-xl-3">
               <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
@@ -2172,9 +2072,7 @@
               </div>
             </div>
           </div>
-          <!-- END Overview -->
 
-          <!-- Store Growth -->
           <div class="block block-rounded">
             <div class="block-header block-header-default">
               <h3 class="block-title">
@@ -2221,21 +2119,16 @@
                 </div>
                 <div class="col-md-7 col-xl-8 d-md-flex align-items-md-center">
                   <div class="p-md-2 p-lg-3 w-100">
-                    <!-- Bars Chart Container -->
-                    <!-- Chart.js Chart is initialized in js/pages/be_pages_dashboard.min.js which was auto compiled from _js/pages/be_pages_dashboard.js -->
-                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
+
                     <canvas id="js-chartjs-analytics-bars"></canvas>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- END Store Growth -->
 
-          <!-- Latest Orders + Stats -->
           <div class="row">
             <div class="col-md-8">
-              <!--  Latest Orders -->
               <div class="block block-rounded block-mode-loading-refresh">
                 <div class="block-header block-header-default">
                   <h3 class="block-title">
@@ -2441,10 +2334,8 @@
                   </a>
                 </div>
               </div>
-              <!-- END Latest Orders -->
             </div>
             <div class="col-md-4 d-flex flex-column">
-              <!-- Stats -->
               <div class="block block-rounded">
                 <div class="block-content block-content-full d-flex justify-content-between align-items-center flex-grow-1">
                   <div class="me-3">
@@ -2486,14 +2377,10 @@
                   </a>
                 </div>
               </div>
-              <!-- END Stats -->
             </div>
           </div>
-          <!-- END Latest Orders + Stats -->
         </div>
-        <!-- END Page Content -->
       </main>
-      <!-- END Main Container -->
 
       <footer id="page-footer" class="bg-body-light">
         <div class="content py-0">
