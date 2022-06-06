@@ -1396,11 +1396,7 @@
       <header id="page-header">
         <div class="content-header">
           <div class="space-x-1">
-            <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
-              <i class="fa fa-fw fa-bars"></i>
-            </button>
           </div>
-
           <div class="space-x-1">
             <div class="dropdown d-inline-block">
               <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1570,26 +1566,26 @@
                   @csrf
                   @method('PUT')
                 <h2 class="content-heading pt-0">
-                  <i class="fa fa-fw fa-user-circle text-muted me-1"></i> User Profile
+                  <i class="fa fa-fw fa-user-circle text-muted me-1"></i> @lang('edit-profile.UsrPText')
                 </h2>
                 <div class="row push">
                   <div class="col-lg-4">
                     <p class="text-muted">
-                      Your account’s vital info. Your username will be publicly visible.
+                      @lang('edit-profile.txtEP')
                     </p>
                   </div>
                   <div class="col-lg-8 col-xl-5">
                     <div class="mb-4">
-                      <label class="form-label" for="dni">DNI</label>
-                      <input type="text" class="form-control" id="dni" name="dni" placeholder="Enter your username.." value="{{Auth::user()->dni}}" readonly>
+                      <label class="form-label" for="dni">@lang('edit-profile.DniText')</label>
+                      <input type="text" class="form-control" id="dni" name="dni" value="{{Auth::user()->dni}}" readonly>
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="name">Name</label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name.." value="{{Auth::user()->name}}" readonly>
+                      <input type="text" class="form-control" id="name" name="name" value="{{Auth::user()->name}}" readonly>
                     </div>
                       <div class="mb-4">
                           <label class="form-label" for="name">Surname</label>
-                          <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter your name.." value="{{Auth::user()->surname}}" readonly>
+                          <input type="text" class="form-control" id="surname" name="surname" value="{{Auth::user()->surname}}" readonly>
                       </div>
                     <div class="mb-4">
                       <label class="form-label" for="email">Email Address</label>
@@ -1597,7 +1593,7 @@
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="birth_date">Birth Date</label>
-                      <input type="text" class="form-control" id="birth_date" name="birth_date" placeholder="Add your job title.." value="{{Auth::user()->birth_date}}" readonly>
+                      <input type="text" class="form-control" id="birth_date" name="birth_date" value="{{Auth::user()->birth_date}}" readonly>
                     </div>
                       <div class="mb-4">
                           <label class="form-label" for="telephone">Telephone Number</label>
