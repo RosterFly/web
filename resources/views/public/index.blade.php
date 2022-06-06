@@ -6,17 +6,14 @@
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon.png')}}">
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Mobland - Mobile App Landing Page Template">
     <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
 
-    <!-- Font -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
@@ -27,7 +24,6 @@
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
-<!-- Menu Navegación -->
 
 <div class="nav-menu fixed-top">
     <div class="container">
@@ -236,7 +232,6 @@
 
     </div>
 </div>
-<!-- // end .section -->
 
 <div class="section">
 
@@ -293,7 +288,6 @@
     </div>
 
 </div>
-<!-- Sección Planes -->
 <div class="section" id="pricing">
     <div class="container">
         <div class="section-title">
@@ -357,7 +351,6 @@
         </div>
     </div>
 </div>
-<!-- Sección FAQ -->
 <div class="section light-bg pt-0" id="faq">
     <div class="container">
         &nbsp;&nbsp;&nbsp;
@@ -385,7 +378,6 @@
     </div>
 
 </div>
-<!-- Sección descarga -->
 <div class="section bg-gradient">
     <div class="container">
         <div class="call-to-action">
@@ -403,7 +395,6 @@
 </div>
 
 </div>
-<!-- Sección Contacto -->
 <div class="py-5" id="contact">
     <div class="container">
         <div class="row">
@@ -422,7 +413,6 @@
     </div>
 </div>
 
-<!-- Footer -->
 <footer class="my-5 text-center">
     <p class="mb-2"><small>@lang('index.copyright')</a></small></p>
 </footer>
