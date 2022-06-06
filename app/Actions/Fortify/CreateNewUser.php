@@ -5,6 +5,7 @@ namespace App\Actions\Fortify;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 
@@ -35,6 +36,7 @@ class CreateNewUser implements CreatesNewUsers
             'telephone'=> ['required', 'string', 'max:255'],
             'password' => $this->passwordRules(),
             'signup-terms' => ['accepted'],
+            'remember_token' => Str::random(10),
         ])->validate();
 
         return User::create([
