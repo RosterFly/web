@@ -2,15 +2,12 @@
 
 @section('content')
     <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
-      <!-- Side Overlay-->
       <aside id="side-overlay">
-        <!-- Side Header -->
         <div class="bg-image" style="background-image: url('../../../../Downloads/dashmix-51/Dashmix 5.1 by pixelcave/01 - Dashmix Source (HTML)/src/assets/media/various/bg_side_overlay_header.jpg');">
           <div class="bg-primary-op">
             <div class="content-header">
-              <!-- User Avatar -->
               <a class="img-link me-1" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar10.jpg" alt="">
+                <img class="img-avatar img-avatar48" src="{{asset('resources/images/user_icon.png')}}" alt="">
               </a>
               <!-- END User Avatar -->
 
