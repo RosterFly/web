@@ -1603,10 +1603,6 @@
                           <label class="form-label" for="telephone">Telephone Number</label>
                           <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Add your job title.." value="{{Auth::user()->telephone}}">
                       </div>
-                    <!--<div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-company">Company</label>
-                      <input type="text" class="form-control" id="dm-profile-edit-company" name="dm-profile-edit-company" value="@ProXdesign" readonly>
-                    </div>-->
                   </div>
                 </div>
                   <div class="row push">
@@ -1622,7 +1618,7 @@
                 <form action="{{route('user-password.update')}}" method="POST">
                     @csrf
                     @method('PUT')
-                    @dd($errors)
+
                 <h2 class="content-heading pt-0">
                   <i class="fa fa-fw fa-asterisk text-muted me-1"></i> Change Password
                 </h2>
