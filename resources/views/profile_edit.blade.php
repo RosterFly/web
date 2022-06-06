@@ -2,466 +2,6 @@
 
 @section('content')
     <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
-      <!-- Side Overlay-->
-      <aside id="side-overlay">
-        <!-- Side Header -->
-        <div class="bg-image" style="background-image: url('assets/media/various/bg_side_overlay_header.jpg');">
-          <div class="bg-primary-op">
-            <div class="content-header">
-              <!-- User Avatar -->
-              <a class="img-link me-1" href="be_pages_generic_profile.html">
-                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar10.jpg" alt="">
-              </a>
-              <!-- END User Avatar -->
-
-              <!-- User Info -->
-              <div class="ms-2">
-                <a class="text-white fw-semibold" href="be_pages_generic_profile.html">George Taylor</a>
-                <div class="text-white-75 fs-sm">Full Stack Developer</div>
-              </div>
-              <!-- END User Info -->
-
-              <!-- Close Side Overlay -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-              <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
-                <i class="fa fa-times-circle"></i>
-              </a>
-              <!-- END Close Side Overlay -->
-            </div>
-          </div>
-        </div>
-        <!-- END Side Header -->
-
-        <!-- Side Content -->
-        <div class="content-side">
-          <!-- Side Overlay Tabs -->
-          <div class="block block-transparent pull-x pull-t mb-0">
-            <ul class="nav nav-tabs nav-tabs-block nav-justified" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="so-settings-tab" data-bs-toggle="tab" data-bs-target="#so-settings" role="tab" aria-controls="so-settings" aria-selected="true">
-                  <i class="fa fa-fw fa-cog"></i>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="so-people-tab" data-bs-toggle="tab" data-bs-target="#so-people" role="tab" aria-controls="so-people" aria-selected="false">
-                  <i class="far fa-fw fa-user-circle"></i>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="so-profile-tab" data-bs-toggle="tab" data-bs-target="#so-profile" role="tab" aria-controls="so-profile" aria-selected="false">
-                  <i class="far fa-fw fa-edit"></i>
-                </button>
-              </li>
-            </ul>
-            <div class="block-content tab-content overflow-hidden">
-              <!-- Settings Tab -->
-              <div class="tab-pane pull-x fade fade-up show active" id="so-settings" role="tabpanel" aria-labelledby="so-settings-tab">
-                <div class="block mb-0">
-                  <!-- Color Themes -->
-                  <!-- Toggle Themes functionality initialized in Template._uiHandleTheme() -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Color Themes</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-default" data-toggle="theme" data-theme="default" href="#">
-                          Default
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xwork" data-toggle="theme" data-theme="assets/css/themes/xwork.min.css" href="#">
-                          xWork
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xmodern" data-toggle="theme" data-theme="assets/css/themes/xmodern.min.css" href="#">
-                          xModern
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xeco" data-toggle="theme" data-theme="assets/css/themes/xeco.min.css" href="#">
-                          xEco
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xsmooth" data-toggle="theme" data-theme="assets/css/themes/xsmooth.min.css" href="#">
-                          xSmooth
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xinspire" data-toggle="theme" data-theme="assets/css/themes/xinspire.min.css" href="#">
-                          xInspire
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xdream" data-toggle="theme" data-theme="assets/css/themes/xdream.min.css" href="#">
-                          xDream
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xpro" data-toggle="theme" data-theme="assets/css/themes/xpro.min.css" href="#">
-                          xPro
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xplay" data-toggle="theme" data-theme="assets/css/themes/xplay.min.css" href="#">
-                          xPlay
-                        </a>
-                      </div>
-                      <div class="col-12">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" href="be_ui_color_themes.html">All Color Themes</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Color Themes -->
-
-                  <!-- Sidebar -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Sidebar</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="sidebar_style_dark" href="javascript:void(0)">Dark</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="sidebar_style_light" href="javascript:void(0)">Light</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Sidebar -->
-
-                  <!-- Header -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Header</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center mb-2">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_style_dark" href="javascript:void(0)">Dark</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_style_light" href="javascript:void(0)">Light</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_mode_fixed" href="javascript:void(0)">Fixed</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_mode_static" href="javascript:void(0)">Static</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Header -->
-
-                  <!-- Content -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Content</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_boxed" href="javascript:void(0)">Boxed</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_narrow" href="javascript:void(0)">Narrow</a>
-                      </div>
-                      <div class="col-12 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_full_width" href="javascript:void(0)">Full Width</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END Content -->
-
-                  <!-- Layout API -->
-                  <div class="block-content block-content-full border-top">
-                    <a class="btn w-100 btn-alt-primary" href="be_layout_api.html">
-                      <i class="fa fa-fw fa-flask me-1"></i> Layout API
-                    </a>
-                  </div>
-                  <!-- END Layout API -->
-                </div>
-              </div>
-              <!-- END Settings Tab -->
-
-              <!-- People -->
-              <div class="tab-pane pull-x fade fade-up" id="so-people" role="tabpanel" aria-labelledby="so-people-tab">
-                <div class="block mb-0">
-                  <!-- Online -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Online</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar1.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Carol Ray</div>
-                            <div class="fs-sm text-muted">Photographer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar16.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Jose Parker</div>
-                            <div class="fw-normal fs-sm text-muted">Web Designer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar4.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Carol White</div>
-                            <div class="fw-normal fs-sm text-muted">Web Developer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Online -->
-
-                  <!-- Busy -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Busy</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar7.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-danger"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Megan Fuller</div>
-                            <div class="fw-normal fs-sm text-muted">UI Designer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- END Busy -->
-
-                  <!-- Away -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Away</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar12.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Ralph Murray</div>
-                            <div class="fw-normal fs-sm text-muted">Copywriter</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar4.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Helen Jacobs</div>
-                            <div class="fw-normal fs-sm text-muted">Writer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- END Away -->
-
-                  <!-- Offline -->
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Offline</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar11.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Ralph Murray</div>
-                            <div class="fw-normal fs-sm text-muted">Teacher</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar5.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Amber Harvey</div>
-                            <div class="fw-normal fs-sm text-muted">Photographer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar1.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Laura Carr</div>
-                            <div class="fw-normal fs-sm text-muted">Front-end Developer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar10.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Ralph Murray</div>
-                            <div class="fw-normal fs-sm text-muted">UX Specialist</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- END Offline -->
-
-                  <!-- Add People -->
-                  <div class="block-content block-content-full border-top">
-                    <a class="btn w-100 btn-alt-primary" href="javascript:void(0)">
-                      <i class="fa fa-fw fa-plus me-1 opacity-50"></i> Add People
-                    </a>
-                  </div>
-                  <!-- END Add People -->
-                </div>
-              </div>
-              <!-- END People -->
-
-              <!-- Profile -->
-              <div class="tab-pane pull-x fade fade-up" id="so-profile" role="tabpanel" aria-labelledby="so-profile-tab">
-                <form action="be_pages_dashboard.html" method="POST" onsubmit="return false;">
-                  <div class="block mb-0">
-                    <!-- Personal -->
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Personal</span>
-                    </div>
-                    <div class="block-content block-content-full">
-                      <div class="mb-4">
-                        <label class="form-label">Username</label>
-                        <input type="text" readonly class="form-control" id="so-profile-username-static" value="Admin">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-name">Name</label>
-                        <input type="text" class="form-control" id="so-profile-name" name="so-profile-name" value="George Taylor">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-email">Email</label>
-                        <input type="email" class="form-control" id="so-profile-email" name="so-profile-email" value="g.taylor@example.com">
-                      </div>
-                    </div>
-                    <!-- END Personal -->
-
-                    <!-- Password Update -->
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Password Update</span>
-                    </div>
-                    <div class="block-content block-content-full">
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-password">Current Password</label>
-                        <input type="password" class="form-control" id="so-profile-password" name="so-profile-password">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-new-password">New Password</label>
-                        <input type="password" class="form-control" id="so-profile-new-password" name="so-profile-new-password">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-new-password-confirm">Confirm New Password</label>
-                        <input type="password" class="form-control" id="so-profile-new-password-confirm" name="so-profile-new-password-confirm">
-                      </div>
-                    </div>
-                    <!-- END Password Update -->
-
-                    <!-- Options -->
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Options</span>
-                    </div>
-                    <div class="block-content">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-status" name="so-settings-status">
-                        <label class="form-check-label fw-semibold" for="so-settings-status">Online Status</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        Make your online status visible to other users of your app
-                      </p>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-notifications" name="so-settings-notifications">
-                        <label class="form-check-label fw-semibold" for="so-settings-notifications">Notifications</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        Receive desktop notifications regarding your projects and sales
-                      </p>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-updates" name="so-settings-updates">
-                        <label class="form-check-label fw-semibold" for="so-settings-updates">Auto Updates</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        If enabled, we will keep all your applications and servers up to date with the most recent features automatically
-                      </p>
-                    </div>
-                    <!-- END Options -->
-
-                    <!-- Submit -->
-                    <div class="block-content block-content-full border-top">
-                      <button type="submit" class="btn w-100 btn-alt-primary">
-                        <i class="fa fa-fw fa-save me-1 opacity-50"></i> Save
-                      </button>
-                    </div>
-                    <!-- END Submit -->
-                  </div>
-                </form>
-              </div>
-              <!-- END Profile -->
-            </div>
-          </div>
-          <!-- END Side Overlay Tabs -->
-        </div>
-        <!-- END Side Content -->
-      </aside>
-      <!-- END Side Overlay -->
-
-      <!-- Sidebar -->
-      <!--
-        Sidebar Mini Mode - Display Helper classes
-
-        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
-        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
-          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
-
-        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
-        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
-        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
-      -->
       <nav id="sidebar" aria-label="Main Navigation">
         <!-- Side Header -->
         <div class="bg-header-dark">
@@ -1873,25 +1413,10 @@
                   User Options
                 </div>
                 <div class="p-2">
-                  <a class="dropdown-item" href="be_pages_generic_profile.html">
-                    <i class="far fa-fw fa-user me-1"></i> Profile
+                  <a class="dropdown-item" href="{{route('edit.profile')}}">
+                    <i class="far fa-fw fa-user me-1"></i> Edit Profile
                   </a>
-                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_inbox.html">
-                    <span><i class="far fa-fw fa-envelope me-1"></i> Inbox</span>
-                    <span class="badge bg-primary rounded-pill">3</span>
-                  </a>
-                  <a class="dropdown-item" href="be_pages_generic_invoice.html">
-                    <i class="far fa-fw fa-file-alt me-1"></i> Invoices
-                  </a>
-                  <div role="separator" class="dropdown-divider"></div>
-
-                  <!-- Toggle Side Overlay -->
-                  <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                  <a class="dropdown-item" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_toggle">
-                    <i class="far fa-fw fa-building me-1"></i> Settings
-                  </a>
-                  <!-- END Side Overlay -->
-
+                    <!--Logout button-->
                   <div role="separator" class="dropdown-divider"></div>
                     <form action="{{route('logout')}}" method="POST">
                         @csrf
@@ -2008,25 +1533,6 @@
               </div>
           </div>
         </div>
-
-        <!-- Header Search -->
-        <div id="page-header-search" class="overlay-header bg-header-dark">
-          <div class="bg-white-10">
-            <div class="content-header">
-              <form class="w-100" action="be_pages_generic_search.html" method="POST">
-                <div class="input-group">
-                  <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                  <button type="button" class="btn btn-alt-primary" data-toggle="layout" data-action="header_search_off">
-                    <i class="fa fa-fw fa-times-circle"></i>
-                  </button>
-                  <input type="text" class="form-control border-0" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- END Header Search -->
-
         <!-- Header Loader -->
         <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
         <div id="page-header-loader" class="overlay-header bg-header-dark">
@@ -2038,21 +1544,14 @@
             </div>
           </div>
         </div>
-        <!-- END Header Loader -->
       </header>
-      <!-- END Header -->
 
-      <!-- Main Container -->
       <main id="main-container">
-
-        <!-- Hero -->
         <div class="bg-image" style="background-image: url('{{asset('resources/images/flight-background.jpg')}}');">
           <div class="bg-black-75">
             <div class="content content-full">
               <div class="py-5 text-center">
-                <a class="img-link" href="be_pages_generic_profile.html">
                   <img class="img-avatar img-avatar96 img-avatar-thumb" src="{{asset('resources/images/user_icon.png')}}" alt="">
-                </a>
                 <h1 class="fw-bold my-2 text-white">Edit Profile</h1>
                 <h2 class="h4 fw-bold text-white-75">
                     {{ Auth::user()->name }} {{Auth::user()->surname}}
@@ -2064,14 +1563,12 @@
             </div>
           </div>
         </div>
-        <!-- END Hero -->
-
-        <!-- Page Content -->
         <div class="content content-full content-boxed">
           <div class="block block-rounded">
             <div class="block-content">
-              <form action="be_pages_projects_edit.html" method="POST" enctype="multipart/form-data" onsubmit="return false;">
-                <!-- User Profile -->
+              <form action="{{route('user-profile-information.update')}}" method="POST">
+                  @csrf
+                  @method('PUT')
                 <h2 class="content-heading pt-0">
                   <i class="fa fa-fw fa-user-circle text-muted me-1"></i> User Profile
                 </h2>
@@ -2083,80 +1580,93 @@
                   </div>
                   <div class="col-lg-8 col-xl-5">
                     <div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-username">Username</label>
-                      <input type="text" class="form-control" id="dm-profile-edit-username" name="dm-profile-edit-username" placeholder="Enter your username.." value="john.doe">
+                      <label class="form-label" for="dni">DNI</label>
+                      <input type="text" class="form-control" id="dni" name="dni" placeholder="Enter your username.." value="{{Auth::user()->dni}}" readonly>
                     </div>
                     <div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-name">Name</label>
-                      <input type="text" class="form-control" id="dm-profile-edit-name" name="dm-profile-edit-name" placeholder="Enter your name.." value="John Doe">
+                      <label class="form-label" for="name">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name.." value="{{Auth::user()->name}}" readonly>
+                    </div>
+                      <div class="mb-4">
+                          <label class="form-label" for="name">Surname</label>
+                          <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter your name.." value="{{Auth::user()->surname}}" readonly>
+                      </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email.." value="{{Auth::user()->email}}">
                     </div>
                     <div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-email">Email Address</label>
-                      <input type="email" class="form-control" id="dm-profile-edit-email" name="dm-profile-edit-email" placeholder="Enter your email.." value="{{Auth::user()->telephone}}">
+                      <label class="form-label" for="birth_date">Birth Date</label>
+                      <input type="text" class="form-control" id="birth_date" name="birth_date" placeholder="Add your job title.." value="{{Auth::user()->birth_date}}" readonly>
                     </div>
-                    <div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-job-title">Job Title</label>
-                      <input type="text" class="form-control" id="dm-profile-edit-job-title" name="dm-profile-edit-job-title" placeholder="Add your job title.." value="Product Manager">
-                    </div>
-                    <div class="mb-4">
+                      <div class="mb-4">
+                          <label class="form-label" for="telephone">Telephone Number</label>
+                          <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Add your job title.." value="{{Auth::user()->telephone}}">
+                      </div>
+                    <!--<div class="mb-4">
                       <label class="form-label" for="dm-profile-edit-company">Company</label>
                       <input type="text" class="form-control" id="dm-profile-edit-company" name="dm-profile-edit-company" value="@ProXdesign" readonly>
-                    </div>
+                    </div>-->
                   </div>
                 </div>
-                <!-- END User Profile -->
-
-                <!-- Change Password -->
+                  <div class="row push">
+                      <div class="col-lg-8 col-xl-5 offset-lg-4">
+                          <div class="mb-4">
+                              <button type="submit" class="btn btn-alt-primary">
+                                  <i class="fa fa-check-circle opacity-50 me-1"></i> Update Profile
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+                <form action="{{route('user-password.update')}}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    @dd($errors)
                 <h2 class="content-heading pt-0">
                   <i class="fa fa-fw fa-asterisk text-muted me-1"></i> Change Password
                 </h2>
+
                 <div class="row push">
                   <div class="col-lg-4">
                     <p class="text-muted">
                       Changing your sign in password is an easy way to keep your account secure.
                     </p>
                   </div>
+
                   <div class="col-lg-8 col-xl-5">
                     <div class="mb-4">
-                      <label class="form-label" for="dm-profile-edit-password">Current Password</label>
-                      <input type="password" class="form-control" id="dm-profile-edit-password" name="dm-profile-edit-password">
+                      <label class="form-label" for="current_password">Current Password</label>
+                      <input type="password" class="form-control" id=current_password" name="current_password">
                     </div>
                     <div class="row mb-4">
                       <div class="col-12">
-                        <label class="form-label" for="dm-profile-edit-password-new">New Password</label>
-                        <input type="password" class="form-control" id="dm-profile-edit-password-new" name="dm-profile-edit-password-new">
+                        <label class="form-label" for="password">New Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
                       </div>
                     </div>
                     <div class="row mb-4">
                       <div class="col-12">
-                        <label class="form-label" for="dm-profile-edit-password-new-confirm">Confirm New Password</label>
-                        <input type="password" class="form-control" id="dm-profile-edit-password-new-confirm" name="dm-profile-edit-password-new-confirm">
+                        <label class="form-label" for="password-confirm">Confirm New Password</label>
+                        <input type="password" class="form-control" id="password-confirm" name="password-confirm">
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- END Change Password -->
-
-                <!-- Submit -->
                 <div class="row push">
                   <div class="col-lg-8 col-xl-5 offset-lg-4">
                     <div class="mb-4">
                       <button type="submit" class="btn btn-alt-primary">
-                        <i class="fa fa-check-circle opacity-50 me-1"></i> Update Profile
+                        <i class="fa fa-check-circle opacity-50 me-1"></i> Update Password
                       </button>
                     </div>
                   </div>
                 </div>
-                <!-- END Submit -->
               </form>
             </div>
           </div>
         </div>
-        <!-- END Page Content -->
       </main>
-      <!-- END Main Container -->
-
-      <!-- Footer -->
         <footer id="page-footer" class="bg-body-light">
             <div class="content py-0">
                 <div class="row fs-sm">
@@ -2166,6 +1676,5 @@
                 </div>
             </div>
         </footer>
-      <!-- END Footer -->
     </div>
 @endsection
