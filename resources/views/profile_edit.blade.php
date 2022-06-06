@@ -7,12 +7,9 @@
         <div class="bg-header-dark">
           <div class="content-header bg-white-5">
             <!-- Logo -->
-            <a class="fw-semibold text-white tracking-wide" href="index.html">
-              <span class="smini-visible">
-                D<span class="opacity-75">x</span>
-              </span>
+            <a class="fw-semibold text-white tracking-wide" href="{{route('user.index')}}">
               <span class="smini-hidden">
-                Dash<span class="opacity-75">mix</span>
+                Roster<span class="opacity-75">Fly</span>
               </span>
             </a>
             <!-- END Logo -->
@@ -33,12 +30,6 @@
                 <i class="far fa-moon" id="dark-mode-toggler"></i>
               </button>
               <!-- END Dark Mode -->
-
-              <!-- Close Sidebar, Visible only on mobile screens -->
-              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
-                <i class="fa fa-times-circle"></i>
-              </button>
               <!-- END Close Sidebar -->
             </div>
             <!-- END Options -->
@@ -1425,79 +1416,33 @@
             </div>
             <!-- END User Dropdown -->
 
-            <!-- Notifications Dropdown -->
-            <div class="dropdown d-inline-block">
-              <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-fw fa-bell"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
-                <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                  Notifications
-                </div>
-                <ul class="nav-items my-2">
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-check-circle text-success"></i>
+              <!-- Notifications Dropdown -->
+              <div class="dropdown d-inline-block">
+                  <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-fw fa-bell"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                      <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
+                          Notifications
                       </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">App was updated to v5.6!</div>
-                        <div class="text-muted">3 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-user-plus text-info"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">New Subscriber was added! You now have 2580!</div>
-                        <div class="text-muted">10 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-times-circle text-danger"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">Server backup failed to complete!</div>
-                        <div class="text-muted">30 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-exclamation-circle text-warning"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">You are running out of space. Please consider upgrading your plan.</div>
-                        <div class="text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-plus-circle text-primary"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">New Sale! + $30</div>
-                        <div class="text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <div class="p-2 border-top">
-                  <a class="btn btn-alt-primary w-100 text-center" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-eye opacity-50 me-1"></i> View All
-                  </a>
-                </div>
+                      <ul class="nav-items my-2">
+                          {{$notifications=DB::table('$notifications')->orderBy('created_at', 'desc')->limit(5)->get()}}
+                          @foreach($notifications as $notification)
+                              <li>
+                                  <a class="d-flex text-dark py-2">
+                                      <div class="flex-shrink-0 mx-3">
+                                          <i class="{{$notification->fa_icon}}"></i>
+                                      </div>
+                                      <div class="flex-grow-1 fs-sm pe-2">
+                                          <div class="fw-semibold">{{$notification->description}}</div>
+                                          <div class="text-muted">{{$notification->created_at->diffForHumanns()}}</div>
+                                      </div>
+                                  </a>
+                              </li>
+                          @endforeach
+                      </ul>
+                  </div>
               </div>
-            </div>
             <!-- Cambio Lenguaje -->
               <div class="dropdown d-inline-block">
                   @if(app()->getLocale()=='es')

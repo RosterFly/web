@@ -2,431 +2,20 @@
 
 @section('content')
     <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
-      <aside id="side-overlay">
-        <div class="bg-image" style="background-image: url('../../../../Downloads/dashmix-51/Dashmix 5.1 by pixelcave/01 - Dashmix Source (HTML)/src/assets/media/various/bg_side_overlay_header.jpg');">
-          <div class="bg-primary-op">
-            <div class="content-header">
-              <a class="img-link me-1" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                <img class="img-avatar img-avatar48" src="{{asset('resources/images/user_icon.png')}}" alt="">
-              </a>
-
-              <div class="ms-2">
-                <a class="text-white fw-semibold" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">George Taylor</a>
-                <div class="text-white-75 fs-sm">Full Stack Developer</div>
-              </div>
-
-              <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
-                <i class="fa fa-times-circle"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="content-side">
-          <div class="block block-transparent pull-x pull-t mb-0">
-            <ul class="nav nav-tabs nav-tabs-block nav-justified" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="so-settings-tab" data-bs-toggle="tab" data-bs-target="#so-settings" role="tab" aria-controls="so-settings" aria-selected="true">
-                  <i class="fa fa-fw fa-cog"></i>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="so-people-tab" data-bs-toggle="tab" data-bs-target="#so-people" role="tab" aria-controls="so-people" aria-selected="false">
-                  <i class="far fa-fw fa-user-circle"></i>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="so-profile-tab" data-bs-toggle="tab" data-bs-target="#so-profile" role="tab" aria-controls="so-profile" aria-selected="false">
-                  <i class="far fa-fw fa-edit"></i>
-                </button>
-              </li>
-            </ul>
-            <div class="block-content tab-content overflow-hidden">
-              <div class="tab-pane pull-x fade fade-up show active" id="so-settings" role="tabpanel" aria-labelledby="so-settings-tab">
-                <div class="block mb-0">
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Color Themes</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-default" data-toggle="theme" data-theme="default" href="#">
-                          Default
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xwork" data-toggle="theme" data-theme="assets/css/themes/xwork.min.css" href="#">
-                          xWork
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xmodern" data-toggle="theme" data-theme="assets/css/themes/xmodern.min.css" href="#">
-                          xModern
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xeco" data-toggle="theme" data-theme="assets/css/themes/xeco.min.css" href="#">
-                          xEco
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xsmooth" data-toggle="theme" data-theme="assets/css/themes/xsmooth.min.css" href="#">
-                          xSmooth
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xinspire" data-toggle="theme" data-theme="assets/css/themes/xinspire.min.css" href="#">
-                          xInspire
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xdream" data-toggle="theme" data-theme="assets/css/themes/xdream.min.css" href="#">
-                          xDream
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xpro" data-toggle="theme" data-theme="assets/css/themes/xpro.min.css" href="#">
-                          xPro
-                        </a>
-                      </div>
-                      <div class="col-4 mb-1">
-                        <a class="d-block py-3 text-white fs-sm fw-semibold bg-xplay" data-toggle="theme" data-theme="assets/css/themes/xplay.min.css" href="#">
-                          xPlay
-                        </a>
-                      </div>
-                      <div class="col-12">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_ui_color_themes.html">All Color Themes</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Sidebar</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="sidebar_style_dark" href="javascript:void(0)">Dark</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="sidebar_style_light" href="javascript:void(0)">Light</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Header</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center mb-2">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_style_dark" href="javascript:void(0)">Dark</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_style_light" href="javascript:void(0)">Light</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_mode_fixed" href="javascript:void(0)">Fixed</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="header_mode_static" href="javascript:void(0)">Static</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Content</span>
-                  </div>
-                  <div class="block-content block-content-full">
-                    <div class="row g-sm text-center">
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_boxed" href="javascript:void(0)">Boxed</a>
-                      </div>
-                      <div class="col-6 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_narrow" href="javascript:void(0)">Narrow</a>
-                      </div>
-                      <div class="col-12 mb-1">
-                        <a class="d-block py-3 bg-body-dark fw-semibold text-dark" data-toggle="layout" data-action="content_layout_full_width" href="javascript:void(0)">Full Width</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="block-content block-content-full border-top">
-                    <a class="btn w-100 btn-alt-primary" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_layout_api.html">
-                      <i class="fa fa-fw fa-flask me-1"></i> Layout API
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane pull-x fade fade-up" id="so-people" role="tabpanel" aria-labelledby="so-people-tab">
-                <div class="block mb-0">
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Online</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar4.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Marie Duncan</div>
-                            <div class="fs-sm text-muted">Photographer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar11.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Jose Mills</div>
-                            <div class="fw-normal fs-sm text-muted">Web Designer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar5.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Amanda Powell</div>
-                            <div class="fw-normal fs-sm text-muted">Web Developer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Busy</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar7.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-danger"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Laura Carr</div>
-                            <div class="fw-normal fs-sm text-muted">UI Designer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Away</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar14.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Carl Wells</div>
-                            <div class="fw-normal fs-sm text-muted">Copywriter</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar7.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Amber Harvey</div>
-                            <div class="fw-normal fs-sm text-muted">Writer</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="block-content block-content-sm block-content-full bg-body">
-                    <span class="text-uppercase fs-sm fw-bold">Offline</span>
-                  </div>
-                  <div class="block-content">
-                    <ul class="nav-items">
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar14.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Jose Mills</div>
-                            <div class="fw-normal fs-sm text-muted">Teacher</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar3.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Danielle Jones</div>
-                            <div class="fw-normal fs-sm text-muted">Photographer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar5.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Laura Carr</div>
-                            <div class="fw-normal fs-sm text-muted">Front-end Developer</div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="d-flex py-2" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_profile.html">
-                          <div class="flex-shrink-0 mx-3 overlay-container">
-                            <img class="img-avatar img-avatar48" src="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/assets/media/avatars/avatar15.jpg" alt="">
-                            <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-muted"></span>
-                          </div>
-                          <div class="flex-grow-1">
-                            <div class="fw-semibold">Jose Wagner</div>
-                            <div class="fw-normal fs-sm text-muted">UX Specialist</div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="block-content block-content-full border-top">
-                    <a class="btn w-100 btn-alt-primary" href="javascript:void(0)">
-                      <i class="fa fa-fw fa-plus me-1 opacity-50"></i> Add People
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane pull-x fade fade-up" id="so-profile" role="tabpanel" aria-labelledby="so-profile-tab">
-                <form action="be_pages_dashboard.html" method="POST" onsubmit="return false;">
-                  <div class="block mb-0">
-                    <!-- Personal -->
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Personal</span>
-                    </div>
-                    <div class="block-content block-content-full">
-                      <div class="mb-4">
-                        <label class="form-label">Username</label>
-                        <input type="text" readonly class="form-control" id="so-profile-username-static" value="Admin">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-name">Name</label>
-                        <input type="text" class="form-control" id="so-profile-name" name="so-profile-name" value="George Taylor">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-email">Email</label>
-                        <input type="email" class="form-control" id="so-profile-email" name="so-profile-email" value="g.taylor@example.com">
-                      </div>
-                    </div>
-
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Password Update</span>
-                    </div>
-                    <div class="block-content block-content-full">
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-password">Current Password</label>
-                        <input type="password" class="form-control" id="so-profile-password" name="so-profile-password">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-new-password">New Password</label>
-                        <input type="password" class="form-control" id="so-profile-new-password" name="so-profile-new-password">
-                      </div>
-                      <div class="mb-4">
-                        <label class="form-label" for="so-profile-new-password-confirm">Confirm New Password</label>
-                        <input type="password" class="form-control" id="so-profile-new-password-confirm" name="so-profile-new-password-confirm">
-                      </div>
-                    </div>
-
-                    <div class="block-content block-content-sm block-content-full bg-body">
-                      <span class="text-uppercase fs-sm fw-bold">Options</span>
-                    </div>
-                    <div class="block-content">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-status" name="so-settings-status">
-                        <label class="form-check-label fw-semibold" for="so-settings-status">Online Status</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        Make your online status visible to other users of your app
-                      </p>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-notifications" name="so-settings-notifications">
-                        <label class="form-check-label fw-semibold" for="so-settings-notifications">Notifications</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        Receive desktop notifications regarding your projects and sales
-                      </p>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="so-settings-updates" name="so-settings-updates">
-                        <label class="form-check-label fw-semibold" for="so-settings-updates">Auto Updates</label>
-                      </div>
-                      <p class="text-muted fs-sm">
-                        If enabled, we will keep all your applications and servers up to date with the most recent features automatically
-                      </p>
-                    </div>
-
-                    <div class="block-content block-content-full border-top">
-                      <button type="submit" class="btn w-100 btn-alt-primary">
-                        <i class="fa fa-fw fa-save me-1 opacity-50"></i> Save
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
       <nav id="sidebar" aria-label="Main Navigation">
         <div class="bg-header-dark">
           <div class="content-header bg-white-5">
-            <a class="fw-semibold text-white tracking-wide" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/index.html">
-              <span class="smini-visible">
-                D<span class="opacity-75">x</span>
-              </span>
+            <a class="fw-semibold text-white tracking-wide" href="{{route('user.index')}}">
               <span class="smini-hidden">
-                Dash<span class="opacity-75">mix</span>
+                Roster<span class="opacity-75">Fly</span>
               </span>
             </a>
-
             <div>
-
               <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#sidebar-style-toggler" data-class="fa-toggle-off fa-toggle-on" onclick="Dashmix.layout('sidebar_style_toggle');Dashmix.layout('header_style_toggle');">
                 <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>
               </button>
-
               <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#dark-mode-toggler" data-class="far fa" onclick="Dashmix.layout('dark_mode_toggle');">
                 <i class="far fa-moon" id="dark-mode-toggler"></i>
-              </button>
-
-              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
-                <i class="fa fa-times-circle"></i>
               </button>
             </div>
           </div>
@@ -1773,185 +1362,114 @@
         </div>
       </nav>
 
-      <header id="page-header">
-        <div class="content-header">
-          <div class="space-x-1">
- 
-            <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="sidebar_toggle">
-              <i class="fa fa-fw fa-bars"></i>
-            </button>
-
-            <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
-              <i class="fa fa-fw opacity-50 fa-search"></i> <span class="ms-1 d-none d-sm-inline-block">Search</span>
-            </button>
-          </div>
-
-          <div class="space-x-1">
-            <div class="dropdown d-inline-block">
-              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-fw fa-user d-sm-none"></i>
-                <span class="d-none d-sm-inline-block">{{ Auth::user()->name }} {{Auth::user()->surname}}</span>
-                <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
-                <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                  User Options
-                </div>
-                <div class="p-2">
-                  <a class="dropdown-item" href="{{route('edit.profile')}}">
-                    <i class="far fa-fw fa-user me-1"></i> Edit Profile
-                  </a>
-                  <a class="dropdown-item d-flex align-items-center justify-content-between" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_inbox.html">
-                    <span><i class="far fa-fw fa-envelope me-1"></i> Inbox</span>
-                    <span class="badge bg-primary rounded-pill">3</span>
-                  </a>
-                  <a class="dropdown-item" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_invoice.html">
-                    <i class="far fa-fw fa-file-alt me-1"></i> Invoices
-                  </a>
-                  <div role="separator" class="dropdown-divider"></div>
-
-                  <a class="dropdown-item" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_toggle">
-                    <i class="far fa-fw fa-building me-1"></i> Settings
-                  </a>
-
-                  <div role="separator" class="dropdown-divider"></div>
-                    <form action="{{route('logout')}}" method="POST">
-                        @csrf
-                        <button class="dropdown-item" type="submit">
-                        <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> Sign Out
-                      </button>
-                    </form>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown d-inline-block">
-              <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-fw fa-bell"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
-                <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                  Notifications
-                </div>
-                <ul class="nav-items my-2">
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-check-circle text-success"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">App was updated to v5.6!</div>
-                        <div class="text-muted">3 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-user-plus text-info"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">New Subscriber was added! You now have 2580!</div>
-                        <div class="text-muted">10 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-times-circle text-danger"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">Server backup failed to complete!</div>
-                        <div class="text-muted">30 min ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-exclamation-circle text-warning"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">You are running out of space. Please consider upgrading your plan.</div>
-                        <div class="text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="d-flex text-dark py-2" href="javascript:void(0)">
-                      <div class="flex-shrink-0 mx-3">
-                        <i class="fa fa-fw fa-plus-circle text-primary"></i>
-                      </div>
-                      <div class="flex-grow-1 fs-sm pe-2">
-                        <div class="fw-semibold">New Sale! + $30</div>
-                        <div class="text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <div class="p-2 border-top">
-                  <a class="btn btn-alt-primary w-100 text-center" href="javascript:void(0)">
-                    <i class="fa fa-fw fa-eye opacity-50 me-1"></i> View All
-                  </a>
-                </div>
-              </div>
-            </div>
-              <div class="dropdown d-inline-block">
-                  @if(app()->getLocale()=='es')
-
-                      <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="flag-icon flag-icon-es"></i>
-                          <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
-                          <div class="p-2">
-                              <a class="dropdown-item" href="{{url('locale/en')}}">
-                                  <i class="flag-icon flag-icon-us"></i> English
-                              </a>
-                          </div>
-                      </div>
-                  @elseif(app()->getLocale()=='en')
-                              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="flag-icon flag-icon-us"></i>
-                                  <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
-                                  <div class="p-2">
-                                      <a class="dropdown-item" href="{{url('locale/es')}}">
-                                          <i class="flag-icon flag-icon-es"></i> Español
-                                      </a>
-                                  </div>
-                              </div>
-                  @endif
-              </div>
-          </div>
-        </div>
-
-        <div id="page-header-search" class="overlay-header bg-header-dark">
-          <div class="bg-white-10">
+        <header id="page-header">
             <div class="content-header">
-              <form class="w-100" action="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_pages_generic_search.html" method="POST">
-                <div class="input-group">
-                  <button type="button" class="btn btn-alt-primary" data-toggle="layout" data-action="header_search_off">
-                    <i class="fa fa-fw fa-times-circle"></i>
-                  </button>
-                  <input type="text" class="form-control border-0" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                <div class="space-x-1">
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
+                <div class="space-x-1">
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-user d-sm-none"></i>
+                            <span class="d-none d-sm-inline-block">{{ Auth::user()->name }} {{Auth::user()->surname}}</span>
+                            <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                            <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
+                                Application Status
+                            </div>
+                            <div class="p-2">
+                                <a class="dropdown-item" href="{{route('status')}}">
+                                    <i class="fa-solid fa-flask"></i>&nbsp;&nbsp;Heartbeat
+                                </a>
+                            </div>
+                            <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
+                                User Options
+                            </div>
+                            <div class="p-2">
+                                <a class="dropdown-item" href="{{route('edit.profile')}}">
+                                    <i class="far fa-fw fa-user me-1"></i> Edit Profile
+                                </a>
+                                <!--Logout button-->
+                                <div role="separator" class="dropdown-divider"></div>
+                                <form action="{{route('logout')}}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item" type="submit">
+                                        <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> Sign Out
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END User Dropdown -->
 
-        <div id="page-header-loader" class="overlay-header bg-header-dark">
-          <div class="bg-white-10">
-            <div class="content-header">
-              <div class="w-100 text-center">
-                <i class="fa fa-fw fa-sun fa-spin text-white"></i>
-              </div>
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-bell"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
+                                Notifications
+                            </div>
+                            <ul class="nav-items my-2">
+                                {{$notifications=DB::table('$notifications')->orderBy('created_at', 'desc')->limit(5)->get()}}
+                                @foreach($notifications as $notification)
+                                <li>
+                                    <a class="d-flex text-dark py-2">
+                                        <div class="flex-shrink-0 mx-3">
+                                            <i class="{{$notification->fa_icon}}"></i>
+                                        </div>
+                                        <div class="flex-grow-1 fs-sm pe-2">
+                                            <div class="fw-semibold">{{$notification->description}}</div>
+                                            <div class="text-muted">{{$notification->created_at->diffForHumanns()}}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Cambio Lenguaje -->
+                    <div class="dropdown d-inline-block">
+                        @if(app()->getLocale()=='es')
+
+                            <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="flag-icon flag-icon-es"></i>
+                                <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                                <div class="p-2">
+                                    <a class="dropdown-item" href="{{url('locale/en')}}">
+                                        <i class="flag-icon flag-icon-us"></i> English
+                                    </a>
+                                </div>
+                            </div>
+                        @elseif(app()->getLocale()=='en')
+                            <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="flag-icon flag-icon-us"></i>
+                                <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                                <div class="p-2">
+                                    <a class="dropdown-item" href="{{url('locale/es')}}">
+                                        <i class="flag-icon flag-icon-es"></i> Español
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </header>
+            <div id="page-header-loader" class="overlay-header bg-header-dark">
+                <div class="bg-white-10">
+                    <div class="content-header">
+                        <div class="w-100 text-center">
+                            <i class="fa fa-fw fa-sun fa-spin text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
       <main id="main-container">
 
@@ -1959,16 +1477,13 @@
           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
             <div>
               <h1 class="h3 mb-1">
-                Dashboard
+                RosterFly
               </h1>
               <p class="fw-medium mb-0 text-muted">
-                Welcome, admin! You have <a class="fw-medium" href="javascript:void(0)">8 new notifications</a>.
+                Welcome, {{ Auth::user()->name }} {{Auth::user()->surname}}!
               </p>
             </div>
             <div class="mt-4 mt-md-0">
-              <a class="btn btn-sm btn-alt-primary" href="javascript:void(0)">
-                <i class="fa fa-cog"></i>
-              </a>
               <div class="dropdown d-inline-block">
                 <button type="button" class="btn btn-sm btn-alt-primary px-3" id="dropdown-analytics-overview" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Last 30 days <i class="fa fa-fw fa-angle-down"></i>
@@ -1984,52 +1499,39 @@
             </div>
           </div>
         </div>
-
         <div class="content">
           <div class="row items-push">
-            <div class="col-sm-6 col-xl-3">
+            <div class="col-sm-6 col-xl-4">
               <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
                 <div class="block-content block-content-full flex-grow-1">
                   <div class="item rounded-3 bg-body mx-auto my-3">
                     <i class="fa fa-users fa-lg text-primary"></i>
                   </div>
-                  <div class="fs-1 fw-bold">2,388</div>
+                  <div class="fs-1 fw-bold">{{DB::table('users')->count()}}</div>
                   <div class="text-muted mb-3">Registered Users</div>
                   <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-success bg-success-light">
                     <i class="fa fa-caret-up me-1"></i>
                     19.2%
                   </div>
                 </div>
-                <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
-                  <a class="fw-medium" href="javascript:void(0)">
-                    View all users
-                    <i class="fa fa-arrow-right ms-1 opacity-25"></i>
-                  </a>
-                </div>
               </div>
             </div>
-            <div class="col-sm-6 col-xl-3">
+            <div class="col-sm-6 col-xl-4">
               <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
                 <div class="block-content block-content-full flex-grow-1">
                   <div class="item rounded-3 bg-body mx-auto my-3">
                     <i class="fa fa-level-up-alt fa-lg text-primary"></i>
                   </div>
                   <div class="fs-1 fw-bold">14.6%</div>
-                  <div class="text-muted mb-3">Bounce Rate</div>
+                  <div class="text-muted mb-3">Managed Flights</div>
                   <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-danger bg-danger-light">
                     <i class="fa fa-caret-down me-1"></i>
                     2.3%
                   </div>
                 </div>
-                <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
-                  <a class="fw-medium" href="javascript:void(0)">
-                    Explore analytics
-                    <i class="fa fa-arrow-right ms-1 opacity-25"></i>
-                  </a>
-                </div>
               </div>
             </div>
-            <div class="col-sm-6 col-xl-3">
+            <div class="col-sm-6 col-xl-4">
               <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
                 <div class="block-content block-content-full flex-grow-1">
                   <div class="item rounded-3 bg-body mx-auto my-3">
@@ -2041,33 +1543,6 @@
                     <i class="fa fa-caret-up me-1"></i>
                     7.9%
                   </div>
-                </div>
-                <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
-                  <a class="fw-medium" href="javascript:void(0)">
-                    View all sales
-                    <i class="fa fa-arrow-right ms-1 opacity-25"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
-                <div class="block-content block-content-full">
-                  <div class="item rounded-3 bg-body mx-auto my-3">
-                    <i class="fa fa-wallet fa-lg text-primary"></i>
-                  </div>
-                  <div class="fs-1 fw-bold">$4,920</div>
-                  <div class="text-muted mb-3">Total Earnings</div>
-                  <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-danger bg-danger-light">
-                    <i class="fa fa-caret-down me-1"></i>
-                    0.3%
-                  </div>
-                </div>
-                <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
-                  <a class="fw-medium" href="javascript:void(0)">
-                    Withdrawal options
-                    <i class="fa fa-arrow-right ms-1 opacity-25"></i>
-                  </a>
                 </div>
               </div>
             </div>
