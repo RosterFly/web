@@ -1426,8 +1426,7 @@
                           Notifications
                       </div>
                       <ul class="nav-items my-2">
-                          {{$notifications=DB::table('$notifications')->orderBy('created_at', 'desc')->limit(5)->get()}}
-                          @foreach($notifications as $notification)
+                          @foreach($notifications=DB::table('notifications')->orderBy('created_at', 'desc')->limit(5)->get() as $notification)
                               <li>
                                   <a class="d-flex text-dark py-2">
                                       <div class="flex-shrink-0 mx-3">
@@ -1435,7 +1434,7 @@
                                       </div>
                                       <div class="flex-grow-1 fs-sm pe-2">
                                           <div class="fw-semibold">{{$notification->description}}</div>
-                                          <div class="text-muted">{{$notification->created_at->diffForHumanns()}}</div>
+                                          <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->addHours(-2)->diffForHumans()}}</div>
                                       </div>
                                   </a>
                               </li>
@@ -1559,47 +1558,45 @@
                 <form action="{{route('user-password.update')}}" method="POST">
                     @csrf
                     @method('PUT')
+                    <h2 class="content-heading pt-0">
+                      <i class="fa fa-fw fa-asterisk text-muted me-1"></i> Change Password
+                    </h2>
+                    <div class="row push">
+                      <div class="col-lg-4">
+                        <p class="text-muted">
+                          Changing your sign in password is an easy way to keep your account secure.
+                        </p>
+                      </div>
 
-                <h2 class="content-heading pt-0">
-                  <i class="fa fa-fw fa-asterisk text-muted me-1"></i> Change Password
-                </h2>
-
-                <div class="row push">
-                  <div class="col-lg-4">
-                    <p class="text-muted">
-                      Changing your sign in password is an easy way to keep your account secure.
-                    </p>
-                  </div>
-
-                  <div class="col-lg-8 col-xl-5">
-                    <div class="mb-4">
-                      <label class="form-label" for="current_password">Current Password</label>
-                      <input type="password" class="form-control" id=current_password" name="current_password">
-                    </div>
-                    <div class="row mb-4">
-                      <div class="col-12">
-                        <label class="form-label" for="password">New Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                      <div class="col-lg-8 col-xl-5">
+                        <div class="mb-4">
+                          <label class="form-label" for="current_password">Current Password</label>
+                          <input type="password" class="form-control" id=current_password" name="current_password">
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-12">
+                            <label class="form-label" for="password">New Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <div class="col-12">
+                            <label class="form-label" for="password-confirm">Confirm New Password</label>
+                            <input type="password" class="form-control" id="password-confirm" name="password-confirm">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="row mb-4">
-                      <div class="col-12">
-                        <label class="form-label" for="password-confirm">Confirm New Password</label>
-                        <input type="password" class="form-control" id="password-confirm" name="password-confirm">
+                    <div class="row push">
+                      <div class="col-lg-8 col-xl-5 offset-lg-4">
+                        <div class="mb-4">
+                          <button type="submit" class="btn btn-alt-primary">
+                            <i class="fa fa-check-circle opacity-50 me-1"></i> Update Password
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="row push">
-                  <div class="col-lg-8 col-xl-5 offset-lg-4">
-                    <div class="mb-4">
-                      <button type="submit" class="btn btn-alt-primary">
-                        <i class="fa fa-check-circle opacity-50 me-1"></i> Update Password
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+                </form>
             </div>
           </div>
         </div>

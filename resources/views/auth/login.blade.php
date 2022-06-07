@@ -42,7 +42,7 @@
                                         </p>
                                         <center><div class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1">
                                             @if(app()->getLocale()=='es')
-                                                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09"
+                                                <a class="nav-link dropdown-toggle" href="" id="dropdown09"
                                                    data-toggle="dropdown"
                                                    aria-haspopup="true" aria-expanded="false"><span
                                                         class="flag-icon flag-icon-es"> </span>
@@ -51,7 +51,7 @@
                                                     <a class="dropdown-item" href="{{url('locale/en')}}"><span
                                                             class="flag-icon flag-icon-us"></span> English</a>
                                                     @elseif(app()->getLocale()=='en')
-                                                        <a class="nav-link dropdown-toggle" href="http://example.com"
+                                                        <a class="nav-link dropdown-toggle" href=""
                                                            id="dropdown09" data-toggle="dropdown"
                                                            aria-haspopup="true" aria-expanded="false"><span
                                                                 class="flag-icon flag-icon-us"> </span>
@@ -76,17 +76,6 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div
-                    class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
-                    <div class="p-3">
-                        <p class="display-4 fw-bold text-white mb-3">
-                            Welcome to the future
-                        </p>
-                        <p class="fs-lg fw-semibold text-white-75 mb-0">
-                            © 2022 RosterFly
-                        </p>
                     </div>
                 </div>
             </div>

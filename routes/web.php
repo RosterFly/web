@@ -26,5 +26,5 @@ Route::get('/maintenance', function (){return view('public.maintenance');})->nam
 Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale);return Redirect::back();});
 
 //User Routes
-Route::get('/home', function(){return view('index');})->name('user.index');
+Route::view('/home', 'index')->middleware('auth')->name('user.index');
 Route::view('/edit-profile', 'profile_edit')->middleware('auth')->name('edit.profile');

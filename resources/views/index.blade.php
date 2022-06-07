@@ -1367,6 +1367,7 @@
                 <div class="space-x-1">
                 </div>
                 <div class="space-x-1">
+                    <!-- Opciones Usuario-->
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-fw fa-user d-sm-none"></i>
@@ -1400,9 +1401,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- END User Dropdown -->
-
-                    <!-- Notifications Dropdown -->
+                    <!-- Notificationes -->
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn btn-alt-secondary" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-fw fa-bell"></i>
@@ -1420,7 +1419,7 @@
                                         </div>
                                         <div class="flex-grow-1 fs-sm pe-2">
                                             <div class="fw-semibold">{{$notification->description}}</div>
-                                            <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->addHours(-2)->diffForHumans(Carbon::now())}}</div>
+                                            <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->addHours(-2)->diffForHumans()}}</div>
                                         </div>
                                     </a>
                                 </li>
@@ -1428,7 +1427,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Cambio Lenguaje -->
+                    <!-- Lenguaje -->
                     <div class="dropdown d-inline-block">
                         @if(app()->getLocale()=='es')
 
@@ -1459,19 +1458,9 @@
                     </div>
                 </div>
             </div>
-            <div id="page-header-loader" class="overlay-header bg-header-dark">
-                <div class="bg-white-10">
-                    <div class="content-header">
-                        <div class="w-100 text-center">
-                            <i class="fa fa-fw fa-sun fa-spin text-white"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
 
       <main id="main-container">
-
         <div class="content">
           <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
             <div>
@@ -1481,20 +1470,6 @@
               <p class="fw-medium mb-0 text-muted">
                 Welcome, {{ Auth::user()->name }} {{Auth::user()->surname}}!
               </p>
-            </div>
-            <div class="mt-4 mt-md-0">
-              <div class="dropdown d-inline-block">
-                <button type="button" class="btn btn-sm btn-alt-primary px-3" id="dropdown-analytics-overview" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Last 30 days <i class="fa fa-fw fa-angle-down"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-end fs-sm" aria-labelledby="dropdown-analytics-overview">
-                  <a class="dropdown-item" href="javascript:void(0)">This Week</a>
-                  <a class="dropdown-item" href="javascript:void(0)">Previous Week</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0)">This Month</a>
-                  <a class="dropdown-item" href="javascript:void(0)">Previous Month</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1601,6 +1576,182 @@
             </div>
           </div>
 
+            <div class="block block-rounded">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">
+                        Store Growth
+                    </h3>
+                </div>
+                <div class="block-content">
+                    <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
+                        <thead>
+                        <tr class="text-uppercase">
+                            <th>Product</th>
+                            <th class="d-none d-xl-table-cell">Date</th>
+                            <th>Status</th>
+                            <th class="d-none d-sm-table-cell text-end" style="width: 120px;">Price</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">iPhone 11 Pro</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">today</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-warning">Pending..</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $1199,99
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">MacBook Pro 15"</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">today</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-warning">Pending..</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $2.299,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">Nvidia GTX 2080 Ti</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">today</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-warning">Pending..</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $1200,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">Playstation 4 Pro</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">today</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-danger">Canceled</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $399,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">Nintendo Switch</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">yesterday</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-success">Completed</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $349,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">iPhone 11</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">yesterday</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-success">Completed</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $999,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">Airpods Pro</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">yesterday</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-success">Completed</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $39,99
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold">Xbox One X</span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted">yesterday</span>
+                            </td>
+                            <td>
+                                <span class="fw-semibold text-success">Completed</span>
+                            </td>
+                            <td class="d-none d-sm-table-cell text-end fw-medium">
+                                $499,00
+                            </td>
+                            <td class="text-center text-nowrap fw-medium">
+                                <a href="javascript:void(0)">
+                                    View
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
           <div class="row">
             <div class="col-md-8">
               <div class="block block-rounded block-mode-loading-refresh">
@@ -1609,13 +1760,7 @@
                     Latest Orders
                   </h3>
                   <div class="block-options">
-                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                      <i class="si si-refresh"></i>
-                    </button>
                     <div class="dropdown">
-                      <button type="button" class="btn-block-option" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="si si-chemistry"></i>
-                      </button>
                       <div class="dropdown-menu dropdown-menu-end">
                         <a class="dropdown-item" href="javascript:void(0)">
                           <i class="far fa-fw fa-dot-circle opacity-50 me-1"></i> Pending
