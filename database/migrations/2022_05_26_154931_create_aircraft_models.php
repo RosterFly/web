@@ -18,7 +18,7 @@ class CreateAircraftModels extends Migration
             $table->string('aircraft_model');
             $table->string('manufacturer');
             $table->string('IATACode');
-            $table->string('ICAOCode');
+            $table->string('ICAOCode')->primary();
             $table->string('type');
             $table->timestamp('created_at');
         });
