@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('flights', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->integer('id')->primary();
             $table->string('flight_number');
             $table->string('aircraft');
             $table->string('acft_registration');
