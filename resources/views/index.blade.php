@@ -1412,8 +1412,7 @@
                                 Notifications
                             </div>
                             <ul class="nav-items my-2">
-                                {{$notifications=DB::table('$notifications')->orderBy('created_at', 'desc')->limit(5)->get()}}
-                                @foreach($notifications as $notification)
+                                @foreach($notifications=DB::table('notifications')->orderBy('created_at', 'desc')->limit(5)->get() as $notification)
                                 <li>
                                     <a class="d-flex text-dark py-2">
                                         <div class="flex-shrink-0 mx-3">
@@ -1421,7 +1420,7 @@
                                         </div>
                                         <div class="flex-grow-1 fs-sm pe-2">
                                             <div class="fw-semibold">{{$notification->description}}</div>
-                                            <div class="text-muted">{{$notification->created_at->diffForHumanns()}}</div>
+                                            <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->addHours(-2)->diffForHumans(Carbon::now())}}</div>
                                         </div>
                                     </a>
                                 </li>
@@ -1538,7 +1537,7 @@
                     <i class="fa fa-chart-line fa-lg text-primary"></i>
                   </div>
                   <div class="fs-1 fw-bold">386</div>
-                  <div class="text-muted mb-3">Confirmed Sales</div>
+                  <div class="text-muted mb-3">Passengers Carried</div>
                   <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-success bg-success-light">
                     <i class="fa fa-caret-up me-1"></i>
                     7.9%
