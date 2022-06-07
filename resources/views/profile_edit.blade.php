@@ -1555,48 +1555,6 @@
                       </div>
                   </div>
               </form>
-                <form action="{{route('user-password.update')}}" method="POST">
-                    @csrf
-                    @method('PUT')
-                    <h2 class="content-heading pt-0">
-                      <i class="fa fa-fw fa-asterisk text-muted me-1"></i> Change Password
-                    </h2>
-                    <div class="row push">
-                      <div class="col-lg-4">
-                        <p class="text-muted">
-                          Changing your sign in password is an easy way to keep your account secure.
-                        </p>
-                      </div>
-
-                      <div class="col-lg-8 col-xl-5">
-                        <div class="mb-4">
-                          <label class="form-label" for="current_password">Current Password</label>
-                          <input type="password" class="form-control" id=current_password" name="current_password">
-                        </div>
-                        <div class="row mb-4">
-                          <div class="col-12">
-                            <label class="form-label" for="password">New Password</label>
-                            <input type="password" class="form-control" id="password" name="password">
-                          </div>
-                        </div>
-                        <div class="row mb-4">
-                          <div class="col-12">
-                            <label class="form-label" for="password-confirm">Confirm New Password</label>
-                            <input type="password" class="form-control" id="password-confirm" name="password-confirm">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row push">
-                      <div class="col-lg-8 col-xl-5 offset-lg-4">
-                        <div class="mb-4">
-                          <button type="submit" class="btn btn-alt-primary">
-                            <i class="fa fa-check-circle opacity-50 me-1"></i> Update Password
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                </form>
             </div>
           </div>
         </div>
