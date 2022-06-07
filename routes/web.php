@@ -25,7 +25,7 @@ Route::get('/maintenance', function (){return view('public.maintenance');})->nam
 
 //Lang Route
 Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale);return Redirect::back();});
-Route::view('/edit-flight', 'flight_edit')->name('edit.flight');
+Route::view('flights/edit-flight', 'flight_edit')->name('edit.flight');
 
 Route::group([
     'middleware' => ['auth','web'],

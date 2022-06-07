@@ -1451,7 +1451,7 @@
                                     </div>
                                     <div class="flex-grow-1 fs-sm pe-2">
                                         <div class="fw-semibold">{{$notification->description}}</div>
-                                        <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->addHours(-2)->diffForHumans()}}</div>
+                                        <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->diffForHumans()}}</div>
                                     </div>
                                 </a>
                             </li>
