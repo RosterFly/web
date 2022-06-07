@@ -1,0 +1,136 @@
+version: '3'
+
+networks:
+    laravel:
+        driver: bridge
+
+services:
+    site:
+        build:
+            context: ./Docker
+            dockerfile: nginx.dockerfile
+            args:
+                - UID=${UID:-1000}
+                - GID=${GID:-1000}
+        container_name: nginx
+        ports:
+            - "80:80"
+        volumes:
+            - ./:/var/www/html:delegated
+            - ./Docker/certbot/conf:/etc/letsencrypt
+            - ./Docker/certbot/www:/var/www/certbot
+        depends_on:
+            - php
+            - redis
+            - mariadb
+        networks:
+            - laravel
+        command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+    certbot:
+        image: certbot/certbot
+        volumes:
+            - ./Docker/certbot/conf:/etc/letsencrypt
+            - ./Docker/certbot/www:/var/www/certbot
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+    mariadb:
+        image: mariadb:10.7
+        container_name: mariadb
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "3306:3306"
+        volumes:
+            - mariadb_data:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: laravel
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+            SERVICE_TAGS: dev
+            SERVICE_NAME: mysql
+            TZ: Europe/Madrid
+        networks:
+            - laravel
+    php:
+        build:
+            context: ./Docker
+            dockerfile: php.dockerfile
+            args:
+                - UID=${UID:-1000}
+                - GID=${GID:-1000}
+        container_name: php
+        volumes:
+            - ./:/var/www/html:delegated
+        networks:
+            - laravel
+
+    redis:
+        image: redis:alpine
+        container_name: redis
+        restart: unless-stopped
+        ports:
+            - "6379:6379"
+        networks:
+            - laravel
+
+    composer:
+        build:
+            context: ./Docker
+            dockerfile: composer.dockerfile
+            args:
+                - UID=${UID:-1000}
+                - GID=${GID:-1000}
+        container_name: composer
+        volumes:
+            - ./:/var/www/html
+        working_dir: /var/www/html
+        depends_on:
+            - php
+        user: laravel
+        entrypoint: [ 'composer', '--ignore-platform-reqs' ]
+        networks:
+            - laravel
+
+    npm:
+        image: node:16-alpine
+        container_name: npm
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - "3002:3002"
+            - "3003:3003"
+        working_dir: /var/www/html
+        entrypoint: [ 'npm' ]
+        networks:
+            - laravel
+
+    artisan:
+        build:
+            context: ./Docker
+            dockerfile: php.dockerfile
+            args:
+                - UID=${UID:-1000}
+                - GID=${GID:-1000}
+        container_name: artisan
+        volumes:
+            - ./:/var/www/html:delegated
+        depends_on:
+            - mariadb
+        working_dir: /var/www/html
+        entrypoint: [ 'php', '/var/www/html/artisan' ]
+        networks:
+            - laravel
+
+    mailhog:
+        image: mailhog/mailhog:latest
+        container_name: mailhog
+        ports:
+            - "1025:1025"
+            - "8025:8025"
+        networks:
+            - laravel
+volumes:
+    mariadb_data:
+        driver: local
