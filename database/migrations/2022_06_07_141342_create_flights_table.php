@@ -8,24 +8,24 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('flights', function (Blueprint $table) {
-            $table->integer('id')->primary();
-            $table->string('flight_number');
-            $table->string('aircraft');
-            $table->string('acft_registration');
+            $table->integer('id')->autoIncrement();
+            $table->string('flightnumber');
+            $table->string('aircraftICAO');
+            $table->string('acftregistration')->nullable();
             $table->dateTime('etd');
             $table->dateTime('eta');
             $table->string('ICAOdeparture');
             $table->string('ICAOarrival');
             $table->integer('distance');
-            $table->integer('passengers');
-            $table->integer('cargo');
-            $table->integer('fob');
-            $table->integer('user_id');
+            $table->integer('passengers')->nullable();
+            $table->integer('cargo')->nullable();
+            $table->integer('fob')->nullable();
+            $table->integer('userid');
             $table->timestamps();
-            $table->foreign('aircraft')->references('ICAOCode')->on('aircraft_models');
+            $table->foreign('aircraftICAO')->references('ICAOCode')->on('aircraft_models');
             $table->foreign('ICAOdeparture')->references('icao')->on('airports');
             $table->foreign('ICAOarrival')->references('icao')->on('airports');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('userid')->references('id')->on('users');
 
         });
     }
