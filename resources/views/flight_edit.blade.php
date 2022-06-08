@@ -6,7 +6,7 @@
         <div class="block block-rounded">
             <div class="block-header block-header-default">
                 <h3 class="block-title">
-                    Edit Flight
+                    @lang('flightsmod.editFlight')
                 </h3>
             </div>
             <div class="block-content">
@@ -19,7 +19,7 @@
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="flightnumber">Flight Number</label></span>
+                                                                 for="flightnumber">@lang('flightsmod.flightnumber')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
@@ -30,7 +30,7 @@
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="aircraftICAO">Aircraft ICAO</label></span>
+                                                                 for="aircraftICAO">@lang('flightsmod.aircraftICAO')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
@@ -41,7 +41,7 @@
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="acftregistration">Aircraft Registration</label></span>
+                                                                 for="acftregistration">@lang('flightsmod.acftregistration')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
@@ -51,7 +51,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="etd">Estimated Time of Departure (ETD) (zulú)</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="etd">@lang('flightsmod.etd')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
@@ -60,7 +60,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="eta">Estimated Time of Arrival (ETA) (zulú)</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="eta">@lang('flightsmod.eta')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
@@ -69,7 +69,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="ICAOdeparture">Departure Airport</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="ICAOdeparture">@lang('flightsmod.departureapt')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
@@ -79,7 +79,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="ICAOarrival">Arrival Airport</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="ICAOarrival">@lang('flightsmod.arrivalapt')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="passengers">Passengers</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="passengers">@lang('flightsmod.passengers')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
@@ -99,7 +99,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="cargo">Cargo (in kg)</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="cargo">@lang('flightsmod.cargo')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
@@ -109,7 +109,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="fob">Fuel On Board (in kg)</label></span>
+                                <span class="fw-semibold"><label class="form-label" for="fob">@lang('flightsmod.fuel')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
@@ -122,7 +122,7 @@
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-alt-primary" style="float: right;">
-                                    <i class="fa fa-check-circle opacity-50 me-1"></i> Save
+                                    <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('flightsmod.save')
                                 </button>
                             </td>
                         </tr>

@@ -1,1 +1,29 @@
 <?php
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used during authentication for various
+    | messages that we need to display to the user. You are free to modify
+    | these language lines according to your application's requirements.
+    |
+    */
+
+    'newFlight'=>'New Flight',
+    'editFlight'=>'Edit Flight',
+    'flightnumber'=>'Flight Number',
+    'aircraftICAO'=>'Aircraft ICAO',
+    'etd'=>'Estimated Time of Departure (ETD) (zulú)',
+    'eta'=>'Estimated Time of Arrival (ETA) (zulú)',
+    'departureapt'=>'Departure Airport',
+    'arrivalapt'=>'Arrival Airport',
+    'acftregistration'=>'Aircraft Registration',
+    'passengers'=>'Passengers',
+    'cargo'=>'Cargo (on kg)',
+    'fuel'=>'Fuel On Board (on kg)',
+    'save'=>'Save',
+    'create'=>'Create Flight',
+];
