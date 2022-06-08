@@ -20,7 +20,7 @@ class CreateAircraftModels extends Migration
             $table->string('IATACode');
             $table->string('ICAOCode')->primary();
             $table->string('type');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 
