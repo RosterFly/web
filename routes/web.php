@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AircraftModelsController;
 use App\Http\Controllers\FlightsController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,11 @@ Route::group([
         Route::get('/edit/{flight}', [FlightsController::class, 'edit'])->name('edit.flight');
         Route::put('/edit/{flight}', [FlightsController::class, 'update'])->name('edit.flight.update');
         Route::delete('/delete/{id}', [FlightsController::class, 'destroy'])->name('delete.flight');
+    });
+    Route::group(['prefix' => 'acftmodels'], function () {
+        Route::get('/', [AircraftModelsController::class, 'index'])->name('acftmodels');
+        Route::get('/new', [AircraftModelsController::class, 'create'])->name('new.acftmodel');
+        Route::post('/new', [AircraftModelsController::class, 'store'])->name('new.acftmodel.store');
     });
 
 });
