@@ -64,7 +64,7 @@
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
-                                                                      id="eta" name="eta"></span>
+                                                                      id="eta" name="eta" value="{{ date('Y-m-d\TH:i', strtotime($flight->eta)) }}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -74,7 +74,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="ICAOdeparture" name="ICAOdeparture"
-                                                                      minlength="4" maxlength="4"></span>
+                                                                      minlength="4" maxlength="4" value="{{$flight->ICAOdeparture}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -84,7 +84,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="ICAOarrival" name="ICAOarrival"
-                                                                      minlength="4" maxlength="4"></span>
+                                                                      minlength="4" maxlength="4" value="{{$flight->ICAOarrival}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -94,7 +94,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
                                                                       id="passengers" name="passengers"
-                                                                      min="0"></span>
+                                                                      min="0" value="{{$flight->passengers}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -104,7 +104,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
                                                                       id="cargo" name="cargo"
-                                                                      min="0"></span>
+                                                                      min="0" value="{{$flight->cargo}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -114,7 +114,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="number" class="form-control"
                                                                       id="fob" name="fob"
-                                                                      min="0"></span>
+                                                                      min="0" value="{{$flight->fob}}"></span>
                             </td>
                         </tr>
                         <tr>
