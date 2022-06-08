@@ -11,6 +11,7 @@
             </h3>
         </div>
         <div class="block-content">
+            {{$errors}}
             <form action="{{route('new.acftmodel.store')}}" method="POST">
                 @csrf
                 <table class="table table-borderless table-vcenter fs-sm">
@@ -49,10 +50,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="type">@lang('acftmodelsmod.wingtype')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="wing_type">@lang('acftmodelsmod.wingtype')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
-                            <span class="fs-sm text-muted"><select class="form-select" name="type" id="type">
+                            <span class="fs-sm text-muted"><select class="form-select" name="wing_type" id="wingtype">
                                 <option value="Rotatory Wing">@lang('acftmodelsmod.rotatorywing')</option>
                                 <option value="Fixed Wing">@lang('acftmodelsmod.fixedwing')</option>
                             </select></span>
