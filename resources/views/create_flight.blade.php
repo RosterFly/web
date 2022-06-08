@@ -11,8 +11,8 @@
             </h3>
         </div>
         <div class="block-content">
-            <form action="" method="POST">
-                @csrf
+            <form action="{{route('new.flight.store')}}" method="POST">
+                @csrf}
                 <table class="table table-borderless table-vcenter fs-sm">
                     <tbody>
                     <tr>
@@ -25,10 +25,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="aicraftICAO">Aircraft ICAO</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="aircraftICAO">Aircraft ICAO</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
-                            <span class="fs-sm text-muted"><input type="text" class="form-control" id="aicraftICAO" name="aicraftICAO" maxlength="4"></span>
+                            <span class="fs-sm text-muted"><input type="text" class="form-control" id="aircraftICAO" name="aircraftICAO" maxlength="4"></span>
                         </td>
                     </tr>
                     <tr>
@@ -63,6 +63,7 @@
                             <span class="fs-sm text-muted"><input type="text" class="form-control" id="ICAOarrival" name="ICAOarrival" minlength="4" maxlength="4"></span>
                         </td>
                     </tr>
+                    <input hidden type="text" id="userid" name="userid" value="{{Auth::user()->id}}"></tbody>
                     <tr>
                         <td>
                         </td>

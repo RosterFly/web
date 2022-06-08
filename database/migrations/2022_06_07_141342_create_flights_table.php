@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->dateTime('eta');
             $table->string('ICAOdeparture');
             $table->string('ICAOarrival');
-            $table->integer('distance');
             $table->integer('passengers')->nullable();
             $table->integer('cargo')->nullable();
             $table->integer('fob')->nullable();

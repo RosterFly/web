@@ -38,6 +38,17 @@
                         </tr>
                         <tr>
                             <td>
+                                <span class="fw-semibold"><label class="form-label"
+                                                                 for="acftregistration">Aircraft Registration</label></span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted"><input type="text" class="form-control"
+                                                                      id="acftregistration" name="acftregistration"
+                                                                      maxlength="5"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <span class="fw-semibold"><label class="form-label" for="etd">Estimated Time of Departure (ETD) (zulú)</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
@@ -72,6 +83,46 @@
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="ICAOarrival" name="ICAOarrival"
                                                                       minlength="4" maxlength="4"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold"><label class="form-label" for="distance">Distance</label></span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted"><input type="number" class="form-control"
+                                                                      id="distance" name="distance"
+                                                                      min="0" readonly></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold"><label class="form-label" for="passengers">Passengers</label></span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted"><input type="number" class="form-control"
+                                                                      id="passengers" name="passengers"
+                                                                      min="0"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold"><label class="form-label" for="cargo">Cargo (in kg)</label></span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted"><input type="number" class="form-control"
+                                                                      id="cargo" name="cargo"
+                                                                      min="0"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold"><label class="form-label" for="fob">Fuel On Board (in kg)</label></span>
+                            </td>
+                            <td class="d-none d-xl-table-cell">
+                                <span class="fs-sm text-muted"><input type="number" class="form-control"
+                                                                      id="fob" name="fob"
+                                                                      min="0"></span>
                             </td>
                         </tr>
                         <tr>

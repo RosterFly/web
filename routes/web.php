@@ -30,11 +30,12 @@ Route::view('flights/edit-flight', 'flight_edit')->name('edit.flight');
 Route::group([
     'middleware' => ['auth','web'],
 ], function(){
-    Route::view('/home', 'index')->middleware('auth')->name('user.index');
-    Route::view('/edit-profile', 'profile_edit')->middleware('auth')->name('edit.profile');
-    Route::get('/flights', [FlightsController::class, 'index'])->middleware('auth')->name('flights');
-    Route::get('/flights/new-flight', [FlightsController::class, 'create'])->middleware('auth')->name('new.flight');
-    Route::post('/flights/new-flight', [FlightsController::class, 'store'])->middleware('auth')->name('new.flight.store');
+    Route::view('/home', 'index')->name('user.index');
+    Route::view('/edit-profile', 'profile_edit')->name('edit.profile');
+    Route::get('/flights', [FlightsController::class, 'index'])->name('flights');
+    Route::get('/flights/new', [FlightsController::class, 'create'])->name('new.flight');
+    Route::post('/flights/new', [FlightsController::class, 'store'])->name('new.flight.store');
+    Route::get('/flights/edit/{flight}', [FlightsController::class, 'edit'])->name('edit.flight');
 });
 
 //User Routes
