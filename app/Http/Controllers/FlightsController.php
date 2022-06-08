@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFlightRequest;
+use App\Http\Requests\UpdateFlightRequest;
 use App\Models\Flight;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,16 +35,21 @@ class FlightsController extends Controller
 
     public function edit(Flight $flight)
     {
-        //
+        return view('flight_edit', compact('flight'));
     }
 
-    public function update(Request $request, Flight $flight)
+    public function update(UpdateFlightRequest $request, Flight $flight)
     {
-        //
+        $flight->update($request->validated());
+        return back()->with('success', 'Flight updated successfully');
     }
 
     public function destroy(Flight $flight)
     {
-        //
+        dd($flight);
+        $flight = Flight::find($flight);
+        $flight->delete();
+
+        return back()->with('success', 'Flight deleted successfully');
     }
 }

@@ -4,33 +4,26 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreFlightRequest extends FormRequest
+class UpdateFlightRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return true;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
+    public function rules(): array
     {
         return [
             'flightnumber' => 'required|string|max:255',
             'aircraftICAO' => 'required|string|min:4|max:4',
+            'acftregistration'=> 'nullable|string|max:255',
             'etd' => 'required|date|before:eta',
             'eta' => 'required|date',
             'ICAOdeparture' => 'required|string|max:4',
             'ICAOarrival' => 'required|string|max:4',
-            'userid' => 'required|integer|exists:users,id',
+            'passengers' => 'nullable|integer',
+            'cargo' => 'nullable|integer',
+            'fob' => 'nullable|integer',
         ];
+    }
+
+    public function authorize(): bool
+    {
+        return true;
     }
 }

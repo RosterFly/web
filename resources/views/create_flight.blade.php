@@ -12,7 +12,7 @@
         </div>
         <div class="block-content">
             <form action="{{route('new.flight.store')}}" method="POST">
-                @csrf}
+                @csrf
                 <table class="table table-borderless table-vcenter fs-sm">
                     <tbody>
                     <tr>

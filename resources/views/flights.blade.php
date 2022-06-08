@@ -8,6 +8,7 @@
             <h3 class="block-title">
                 Flights
             </h3>
+            <a href="{{route('new.flight')}}" class="btn btn-success" type="submit"><i class="fa-solid fa-plus"></i></a>
         </div>
         <div class="block-content">
             <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
@@ -18,6 +19,7 @@
                     <th>Arrival Airport</th>
                     <th>ETD</th>
                     <th>ETA</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 </thead>
@@ -34,20 +36,28 @@
                         <span class="fs-sm text-muted">{{$flight->icaoArrival->name}}<br>({{$flight->ICAOarrival}}/{{$flight->icaoArrival->iata}})</span>
                     </td>
                     <td>
-                        <span class="fw-semibold text-warning">{{$flight->etd->format('d/m/Y H:i')}}z</span>
+                        <span class="fs-sm text-muted">{{$flight->etd->format('d/m/Y H:i')}}z</span>
                     </td>
-                    <td class="d-none d-sm-table-cell fw-medium">
+                    <td class="fs-sm text-muted">
                         {{$flight->eta->format('d/m/Y H:i')}}z
                     </td>
                     <td class="text-center text-nowrap fw-medium">
-                        <a href="{{route('edit.flight',$flight->id)}}">
-                            View
-                        </a>
+                        <a href="{{route('edit.flight',$flight->id)}}" class="btn btn-warning" type="submit"><i class="fa-solid fa-pencil"></i></a>
+                    </td>
+                    <td>
+                        <form href="{{route('delete.flight', $flight->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
                 </tbody>
             </table>
+            <div>
+                {{ $flights->links() }}
+            </div>
         </div>
     </div>
   </div>

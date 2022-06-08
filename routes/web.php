@@ -25,17 +25,22 @@ Route::get('/maintenance', function (){return view('public.maintenance');})->nam
 
 //Lang Route
 Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale);return Redirect::back();});
-Route::view('flights/edit-flight', 'flight_edit')->name('edit.flight');
 
 Route::group([
     'middleware' => ['auth','web'],
 ], function(){
     Route::view('/home', 'index')->name('user.index');
     Route::view('/edit-profile', 'profile_edit')->name('edit.profile');
-    Route::get('/flights', [FlightsController::class, 'index'])->name('flights');
-    Route::get('/flights/new', [FlightsController::class, 'create'])->name('new.flight');
-    Route::post('/flights/new', [FlightsController::class, 'store'])->name('new.flight.store');
-    Route::get('/flights/edit/{flight}', [FlightsController::class, 'edit'])->name('edit.flight');
+
+    Route::group(['prefix' => 'flights'], function () {
+        Route::get('/', [FlightsController::class, 'index'])->name('flights');
+        Route::get('/new', [FlightsController::class, 'create'])->name('new.flight');
+        Route::post('/new', [FlightsController::class, 'store'])->name('new.flight.store');
+        Route::get('/edit/{flight}', [FlightsController::class, 'edit'])->name('edit.flight');
+        Route::put('/edit/{flight}', [FlightsController::class, 'update'])->name('edit.flight.update');
+        Route::delete('/delete/{flight}', [FlightsController::class, 'destroy'])->name('delete.flight');
+    });
+
 });
 
 //User Routes

@@ -10,8 +10,10 @@
                 </h3>
             </div>
             <div class="block-content">
-                <form action="" method="POST">
+                <form action="{{route('edit.flight.update', $flight->id)}}" method="POST">
                     @csrf
+                    @method('PUT')
+                    {{ $errors }}
                     <table class="table table-borderless table-vcenter fs-sm">
                         <tbody>
                         <tr>
@@ -22,18 +24,18 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="flightnumber" name="flightnumber"
-                                                                      maxlength="6"></span>
+                                                                      maxlength="6" value="{{$flight->flightnumber}}"></span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="aicraftICAO">Aircraft ICAO</label></span>
+                                                                 for="aircraftICAO">Aircraft ICAO</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="aicraftICAO" name="aicraftICAO"
-                                                                      maxlength="4"></span>
+                                                                      id="aircraftICAO" name="aircraftICAO"
+                                                                      maxlength="4" value="{{$flight->aircraftICAO}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -44,7 +46,7 @@
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="acftregistration" name="acftregistration"
-                                                                      maxlength="5"></span>
+                                                                      maxlength="5" value="{{$flight->acftregistration}}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +55,7 @@
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
-                                                                      id="etd" name="etd"></span>
+                                                                      id="etd" name="etd" value="{{ date('Y-m-d\TH:i', strtotime($flight->etd)) }}"></span>
                             </td>
                         </tr>
                         <tr>
@@ -83,16 +85,6 @@
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="ICAOarrival" name="ICAOarrival"
                                                                       minlength="4" maxlength="4"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="distance">Distance</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="number" class="form-control"
-                                                                      id="distance" name="distance"
-                                                                      min="0" readonly></span>
                             </td>
                         </tr>
                         <tr>
