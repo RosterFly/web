@@ -11,6 +11,8 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'editProfile' => 'Edit Profile',
+    'home' => 'Home',
     'emailText' => 'Email Address',
     'nameText' => 'Name',
     'surnameText' => 'Surname',

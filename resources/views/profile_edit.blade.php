@@ -8,12 +8,12 @@
     <div class="content content-full">
       <div class="py-5 text-center">
           <img class="img-avatar img-avatar96 img-avatar-thumb" src="{{asset('resources/images/user_icon.png')}}" alt="">
-        <h1 class="fw-bold my-2 text-white">Edit Profile</h1>
+        <h1 class="fw-bold my-2 text-white">@lang('edit-profile.editProfile')</h1>
         <h2 class="h4 fw-bold text-white-75">
             {{ Auth::user()->name }} {{Auth::user()->surname}}
         </h2>
         <a class="btn btn-secondary" href="{{route('user.index')}}">
-          <i class="fa fa-fw fa-arrow-left opacity-50"></i> Home
+          <i class="fa fa-fw fa-arrow-left opacity-50"></i> @lang('edit-profile.home')
         </a>
       </div>
     </div>
@@ -40,23 +40,23 @@
               <input type="text" class="form-control" id="dni" name="dni" value="{{Auth::user()->dni}}" readonly>
             </div>
             <div class="mb-4">
-              <label class="form-label" for="name">Name</label>
+              <label class="form-label" for="name">@lang('edit-profile.nameText')</label>
               <input type="text" class="form-control" id="name" name="name" value="{{Auth::user()->name}}" readonly>
             </div>
               <div class="mb-4">
-                  <label class="form-label" for="name">Surname</label>
+                  <label class="form-label" for="name">@lang('edit-profile.surnameText')</label>
                   <input type="text" class="form-control" id="surname" name="surname" value="{{Auth::user()->surname}}" readonly>
               </div>
             <div class="mb-4">
-              <label class="form-label" for="email">Email Address</label>
+              <label class="form-label" for="email">@lang('edit-profile.emailText')</label>
               <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email.." value="{{Auth::user()->email}}">
             </div>
             <div class="mb-4">
-              <label class="form-label" for="birth_date">Birth Date</label>
+              <label class="form-label" for="birth_date">@lang('edit-profile.BirthText')</label>
               <input type="text" class="form-control" id="birth_date" name="birth_date" value="{{Auth::user()->birth_date}}" readonly>
             </div>
               <div class="mb-4">
-                  <label class="form-label" for="telephone">Telephone Number</label>
+                  <label class="form-label" for="telephone">@lang('edit-profile.TelefText')</label>
                   <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Add your job title.." value="{{Auth::user()->telephone}}">
               </div>
           </div>
@@ -65,7 +65,7 @@
               <div class="col-lg-8 col-xl-5 offset-lg-4">
                   <div class="mb-4">
                       <button type="submit" class="btn btn-alt-primary">
-                          <i class="fa fa-check-circle opacity-50 me-1"></i> Update Profile
+                          <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('edit-profile.EusrPText')
                       </button>
                   </div>
               </div>
