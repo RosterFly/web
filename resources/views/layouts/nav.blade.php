@@ -57,40 +57,27 @@
         <div class="content-side">
             <ul class="nav-main">
                 <li class="nav-main-item">
-                    <a class="nav-main-link active" href="{{route('user.index')}}">
+                    <a class="nav-main-link {{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{route('user.index')}}">
                         <i class="nav-main-link-icon fa-solid fa-house"></i>
                         <span class="nav-main-link-name">Home</span>
                     </a>
                 </li>
                 <li class="nav-main-heading">FLIGHTS</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <a class="nav-main-link {{ Request::segment(1) === 'flights' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('flights')}}">
                         <i class="nav-main-link-icon fa-solid fa-plane-departure"></i>
                         <span class="nav-main-link-name">Flights</span>
                     </a>
                 </li>
                 <li class="nav-main-heading">AIRCRAFTS</li>
-                <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{route('acftmodels')}}">
+                <a class="nav-main-link {{ Request::segment(1) === 'acftmodels' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('acftmodels')}}">
                     <i class="nav-main-link-icon fa-solid fa-plane"></i>
                     <span class="nav-main-link-name">Aircraft Models</span>
                 </a>
-                <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="#">
+                <a class="nav-main-link {{ Request::segment(1) === 'hangar' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('hangar')}}">
                     <i class="nav-main-link-icon fa-solid fa-warehouse"></i>
                     <span class="nav-main-link-name">Hangar</span>
                 </a>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                        <i class="nav-main-link-icon fa fa-sticky-note"></i>
-                        <span class="nav-main-link-name">Forms</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="../../../../Downloads/dashmix-51/Dashmix%205.1%20by%20pixelcave/01%20-%20Dashmix%20Source%20(HTML)/src/be_forms_elements.html">
-                                <span class="nav-main-link-name">Elements</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
