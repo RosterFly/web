@@ -38,7 +38,7 @@ Route::group([
         Route::post('/new', [FlightsController::class, 'store'])->name('new.flight.store');
         Route::get('/edit/{flight}', [FlightsController::class, 'edit'])->name('edit.flight');
         Route::put('/edit/{flight}', [FlightsController::class, 'update'])->name('edit.flight.update');
-        Route::delete('/delete/{flight}', [FlightsController::class, 'destroy'])->name('delete.flight');
+        Route::delete('/delete/{id}', [FlightsController::class, 'destroy'])->name('delete.flight');
     });
 
 });

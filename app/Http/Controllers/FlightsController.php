@@ -44,10 +44,9 @@ class FlightsController extends Controller
         return back()->with('success', 'Flight updated successfully');
     }
 
-    public function destroy($flight)
+    public function destroy($id)
     {
-        dd($flight);
-        $flight = Flight::find($flight);
+        $flight = Flight::find($id);
         $flight->delete();
 
         return back()->with('success', 'Flight deleted successfully');

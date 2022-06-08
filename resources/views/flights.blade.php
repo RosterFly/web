@@ -45,7 +45,7 @@
                         <a href="{{route('edit.flight',$flight->id)}}" class="btn btn-warning" type="submit"><i class="fa-solid fa-pencil"></i></a>
                     </td>
                     <td>
-                        <form href="{{route('delete.flight', $flight->id)}}">
+                        <form action="{{route('delete.flight', $flight->id)}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
