@@ -11,7 +11,6 @@
             </h3>
         </div>
         <div class="block-content">
-            {{$errors}}
             <form action="{{route('new.acftmodel.store')}}" method="POST">
                 @csrf
                 <table class="table table-borderless table-vcenter fs-sm">
@@ -71,8 +70,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                        </td>
                         <td>
                             <button type="submit" class="btn btn-alt-primary" style="float: right;">
                                 <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('acftmodelsmod.create')

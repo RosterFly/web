@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 //Public Routes
 Route::view('/', 'public.index')->name('public.index');
-//Route::get('/login', function () {return view('auth.login');})->name('auth.login');
-//Route::get('/password-reminder', function () {return view('auth.reminder');})->name('auth.password-reminder');
 Route::view('/status', 'status')->name('status');
 Route::get('/signup', function (){return view('auth.signup');})->name('auth.signup');
 Route::get('/maintenance', function (){return view('public.maintenance');})->name('maintenance');
@@ -41,12 +39,15 @@ Route::group([
         Route::put('/edit/{flight}', [FlightsController::class, 'update'])->name('edit.flight.update');
         Route::delete('/delete/{id}', [FlightsController::class, 'destroy'])->name('delete.flight');
     });
+
     Route::group(['prefix' => 'acftmodels'], function () {
         Route::get('/', [AircraftModelsController::class, 'index'])->name('acftmodels');
         Route::get('/new', [AircraftModelsController::class, 'create'])->name('new.acftmodel');
         Route::post('/new', [AircraftModelsController::class, 'store'])->name('new.acftmodel.store');
     });
 
-});
+    Route::group(['prefix' => 'hangar'], function(){
 
-//User Routes
+    });
+
+});
