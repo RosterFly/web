@@ -9,4 +9,5 @@ class Country extends Model
     protected $table = 'countries';
     public $incrementing = false;
     protected $primaryKey = 'code';
+    protected $fillable = ['*'];
 }

@@ -13,7 +13,7 @@ class Hangar extends Model
 
     public function aircraft()
     {
-        return $this->belongsTo('App\Models\AircraftModel', 'ICAOCode', 'ICAOCode');
+        return $this->belongsTo('App\Models\Aircraft', 'ICAOCode', 'ICAOCode');
     }
 
     public function user()

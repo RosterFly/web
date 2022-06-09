@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAircraftModelRequest;
-use App\Models\AircraftModel;
+use App\Models\Aircraft;
 use Illuminate\Http\Request;
 
 class AircraftModelsController extends Controller
 {
     public function index()
     {
-        $acftmodels = AircraftModel::paginate(10);
+        $acftmodels = Aircraft::paginate(10);
         return view('acftmodels', compact('acftmodels'));
     }
 
@@ -21,21 +21,21 @@ class AircraftModelsController extends Controller
 
     public function store(StoreAircraftModelRequest $request)
     {
-        AircraftModel::create($request->validated());
+        Aircraft::create($request->validated());
         return back()->with('success', 'Aircraft model created successfully');
     }
 
-    public function show(AircraftModel $aircraftModel)
+    public function show(Aircraft $aircraftModel)
     {
         //
     }
 
-    public function edit(AircraftModel $aircraftModel)
+    public function edit(Aircraft $aircraftModel)
     {
         //
     }
 
-    public function update(Request $request, AircraftModel $aircraftModel)
+    public function update(Request $request, Aircraft $aircraftModel)
     {
         //
     }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreHangarRequest;
 use App\Http\Requests\UpdateHangarRequest;
-use App\Models\AircraftModel;
+use App\Models\Aircraft;
 use App\Models\Hangar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +19,7 @@ class HangarsController extends Controller
 
     public function create()
     {
-        $aircraftmodels=AircraftModel::all();
+        $aircraftmodels=Aircraft::all();
         return view('create_hangar', compact('aircraftmodels'));
     }
 
@@ -36,7 +36,7 @@ class HangarsController extends Controller
 
     public function edit(Hangar $hangar)
     {
-        $aircraftmodels=AircraftModel::all();
+        $aircraftmodels=Aircraft::all();
         return view('hangar_edit', compact('hangar', 'aircraftmodels'));
     }
 
