@@ -15,6 +15,7 @@ return [
     'newAircraft'=>'New Aircraft',
     'editAircraft'=>'Edit Aircraft',
     'name'=>'Name',
+    'aircraftmodel'=>'Aircraft Model',
     'registration'=>'Registration',
     'ICAOCode'=>'ICAO Code',
     'save'=>'Save',

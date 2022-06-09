@@ -14,13 +14,13 @@
             <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                 <thead>
                 <tr class="text-uppercase">
-                    <th>Flight Number</th>
-                    <th class="d-none d-xl-table-cell">Departure Airport</th>
-                    <th>Arrival Airport</th>
-                    <th>ETD</th>
-                    <th>ETA</th>
-                    <th>Aircraft</th>
-                    <th></th>
+                    <th>@lang('flightsmod.flightnumber')</th>
+                    <th>@lang('flightsmod.departureapt')</th>
+                    <th>@lang('flightsmod.arrivalapt')</th>
+                    <th>@lang('flightsmod.etdgeneral')</th>
+                    <th>@lang('flightsmod.etageneral')</th>
+                    <th>@lang('flightsmod.aircraft')</th>
+                    <th style="width: 100px"></th>
                     <th></th>
                     <th></th>
                 </tr>

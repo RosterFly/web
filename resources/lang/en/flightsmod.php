@@ -17,6 +17,8 @@ return [
     'flightnumber'=>'Flight Number',
     'aircraft'=>'Aircraft',
     'etd'=>'Estimated Time of Departure (ETD) (zulú)',
+    'etdgeneral'=>'Estimated Time of Departure',
+    'etageneral'=>'Estimated Time of Arrival',
     'eta'=>'Estimated Time of Arrival (ETA) (zulú)',
     'departureapt'=>'Departure Airport',
     'arrivalapt'=>'Arrival Airport',

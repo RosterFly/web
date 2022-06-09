@@ -35,7 +35,8 @@ class HangarsController extends Controller
 
     public function edit(Hangar $hangar)
     {
-        return view('hangar_edit', compact('hangar'));
+        $aircraftmodels=AircraftModel::all();
+        return view('hangar_edit', compact('hangar', 'aircraftmodels'));
     }
 
     public function update(UpdateHangarRequest $request, Hangar $hangar)

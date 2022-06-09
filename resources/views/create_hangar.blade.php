@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="ICAOCode">@lang('flightsmod.aircraftICAO')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="ICAOCode">@lang('hangarmod.aircraftmodel')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
                             <span class="fs-sm text-muted"><select class="form-select" name="ICAOCode" id="ICAOCode">

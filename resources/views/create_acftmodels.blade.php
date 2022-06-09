@@ -71,6 +71,9 @@
                     </tr>
                     <tr>
                         <td>
+
+                        </td>
+                        <td>
                             <button type="submit" class="btn btn-alt-primary" style="float: right;">
                                 <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('acftmodelsmod.create')
                             </button>
