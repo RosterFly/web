@@ -16,6 +16,8 @@ return [
     'registeredusers'=>'Registered Users',
     'managedflights'=>'Managed Flights',
     'passengerscarried'=>'Passengers Carried',
+    'fuelused'=>'Fuel Used',
+    'totalflights'=>'Total Flights',
     'next10flights'=>'Next 10 Flights',
     'viewallflights'=>'View All Flights',
 
