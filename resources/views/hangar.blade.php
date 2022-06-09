@@ -14,9 +14,10 @@
             <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                 <thead>
                 <tr class="text-uppercase">
-                    <th>Aircraft Registration</th>
-                    <th class="d-none d-xl-table-cell">Name</th>
-                    <th>ICAO Code</th>
+                    <th>@lang('hangarmod.registration')</th>
+                    <th class="d-none d-xl-table-cell">@lang('hangarmod.name')</th>
+                    <th>@lang('hangarmod.ICAOCode')</th>
+                    <th style="width: 100px"></th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -32,6 +33,21 @@
                     </td>
                     <td class="d-none d-xl-table-cell">
                         <span class="fs-sm text-muted">{{$hangar->aircraft->aircraft_model}} ({{$hangar->ICAOCode}})</span>
+                    </td>
+                    <td text-center text-nowrap fw-medium>
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn btn-alt-primary" id="flights-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="flights-dropdown">
+                                <div class="p-2">
+                                    <a class="dropdown-item" href="https://www.flightradar24.com/data/aircraft/{{$hangar->acftregistration}}" target="_blank">
+                                        <i class="fa-solid fa-plane-arrival"></i>&nbsp;&nbsp;{{$hangar->acftregistration}} @lang('hangarmod.flighthistory')
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                     <td class="text-center text-nowrap fw-medium">
                         <a href="{{route('edit.hangar',$hangar->id)}}" class="btn btn-warning" type="submit"><i class="fa-solid fa-pencil"></i></a>

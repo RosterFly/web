@@ -16,6 +16,7 @@ return [
     'editAircraft'=>'Edit Aircraft',
     'name'=>'Name',
     'aircraftmodel'=>'Aircraft Model',
+    'flighthistory'=>'Flight History',
     'registration'=>'Registration',
     'ICAOCode'=>'ICAO Code',
     'save'=>'Save',
