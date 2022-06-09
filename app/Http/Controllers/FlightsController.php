@@ -25,7 +25,7 @@ class FlightsController extends Controller
     public function store(StoreFlightRequest $request)
     {
         Flight::create($request->validated());
-        return back()->with('success', 'Flight created successfully');
+        return redirect()->route('flights');
     }
 
     public function show(Flight $flight)
@@ -41,7 +41,7 @@ class FlightsController extends Controller
     public function update(UpdateFlightRequest $request, Flight $flight)
     {
         $flight->update($request->validated());
-        return back()->with('success', 'Flight updated successfully');
+        return redirect()->route('flights');
     }
 
     public function destroy($id)
@@ -49,6 +49,6 @@ class FlightsController extends Controller
         $flight = Flight::find($id);
         $flight->delete();
 
-        return back()->with('success', 'Flight deleted successfully');
+        return redirect()->route('flights');
     }
 }
