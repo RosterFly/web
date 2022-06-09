@@ -12,4 +12,16 @@ return [
     |
     */
 
+     'home' => 'Inicio',
+    'flights' => 'VUELOS',
+    'flightssub' => 'Vuelos',
+    'aircrafts' => 'AERONAVES',
+    'aircraftmodels' => 'Modelos de aeronaves',
+    'hangars' => 'Tu Hangar',
+    'appstatus'=>'Estado de la aplicación',
+    'useroptions'=>'Opciones de usuario',
+    'editprofile'=>'Editar perfil',
+    'signout'=>'Cerrar sesión',
+    'notifications'=>'Notificaciones',
+
 ];
