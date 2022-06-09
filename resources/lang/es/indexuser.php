@@ -12,11 +12,15 @@ return [
     |
     */
     'welcome'=>'Bienvenido/a, ',
+    'rosterflystatics'=>'Estadisticas RosterFly',
+    'yourstatics'=>'Tus estadisticas',
     'registeredusers'=>'Usuarios registrados',
     'managedflights'=>'Vuelos gestionados',
     'passengerscarried'=>'Pasajeros transportados',
     'fuelused'=>'Combustible usado',
+    'cargocarried'=>'Carga transportada',
     'totalflights'=>'Vuelos totales',
+    'hoursflown'=>'Horas de vuelo',
     'next10flights'=>'Próximos 10 vuelos',
     'top5aircraftsflown'=>'Top 5 aviones volados',
     'viewallflights'=>'Ver todos los vuelos',

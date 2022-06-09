@@ -11,7 +11,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'welcome'=>'Welcome, ',
     'rosterflystatics'=>'RosterFly Statistics',
     'yourstatics'=>'Your Statistics',
