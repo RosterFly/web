@@ -25,10 +25,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="aircraftICAO">@lang('flightsmod.aircraftICAO')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="aircraftid">@lang('flightsmod.aircraft')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
-                            <span class="fs-sm text-muted"><input type="text" class="form-control" id="aircraftICAO" name="aircraftICAO" maxlength="4"></span>
+                            <span class="fs-sm text-muted"><select class="form-select" name="aircraftid" id="aircraftid">
+                            @foreach($hangars as $hangar)
+                                <option value="{{$hangar->id}}">{{$hangar->name}} ({{$hangar->acftregistration}} / {{$hangar->aircraft->aircraft_model}})</option>
+                                @endforeach
+                            </select></span>
                         </td>
                     </tr>
                     <tr>

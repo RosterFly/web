@@ -29,24 +29,16 @@
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="aircraftICAO">@lang('flightsmod.aircraftICAO')</label></span>
+                                                                 for="aircraftid">@lang('flightsmod.aircraft')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="aircraftICAO" name="aircraftICAO"
-                                                                      maxlength="4" value="{{$flight->aircraftICAO}}"></span>
+                            <span class="fs-sm text-muted"><select class="form-select" name="aircraftid" id="aircraftid">
+                            @foreach($hangars as $hangar)
+                                        <option value="{{$hangar->id}}">{{$hangar->name}} ({{$hangar->acftregistration}} / {{$hangar->aircraft->aircraft_model}})</option>
+                                    @endforeach
+                            </select></span>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label"
-                                                                 for="acftregistration">@lang('flightsmod.acftregistration')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="acftregistration" name="acftregistration"
-                                                                      maxlength="5" value="{{$flight->acftregistration}}"></span>
-                            </td>
                         </tr>
                         <tr>
                             <td>

@@ -10,8 +10,7 @@ return new class extends Migration {
         Schema::create('flights', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->string('flightnumber');
-            $table->string('aircraftICAO');
-            $table->string('acftregistration')->nullable();
+            $table->integer('aircraftid');
             $table->dateTime('etd');
             $table->dateTime('eta');
             $table->string('ICAOdeparture');
@@ -21,7 +20,7 @@ return new class extends Migration {
             $table->integer('fob')->nullable();
             $table->integer('userid');
             $table->timestamps();
-            $table->foreign('aircraftICAO')->references('ICAOCode')->on('aircraft_models');
+            $table->foreign('aircraftid')->references('id')->on('hangars');
             $table->foreign('ICAOdeparture')->references('icao')->on('airports');
             $table->foreign('ICAOarrival')->references('icao')->on('airports');
             $table->foreign('userid')->references('id')->on('users');

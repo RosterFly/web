@@ -10,8 +10,7 @@ class UpdateFlightRequest extends FormRequest
     {
         return [
             'flightnumber' => 'required|string|max:255',
-            'aircraftICAO' => 'required|string|min:4|max:4',
-            'acftregistration'=> 'nullable|string|max:255',
+            'aircraftid' => 'required|integer|exists:hangars,id',
             'etd' => 'required|date|before:eta',
             'eta' => 'required|date',
             'ICAOdeparture' => 'required|string|max:4',

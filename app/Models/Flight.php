@@ -11,7 +11,7 @@ class Flight extends Model
     protected $table = 'flights';
     public $incrementing = false;
     protected $primaryKey = 'id';
-    protected $fillable = ['flightnumber', 'aircraftICAO', 'acftregistration' , 'etd', 'eta', 'ICAOdeparture', 'ICAOarrival', 'passengers', 'cargo', 'fob', 'userid'];
+    protected $fillable = ['flightnumber', 'aircraftid' , 'etd', 'eta', 'ICAOdeparture', 'ICAOarrival', 'passengers', 'cargo', 'fob', 'userid'];
     protected $hidden = ['id', 'user'];
     protected $casts = [
         'etd'=>'datetime',
@@ -24,6 +24,14 @@ class Flight extends Model
     public function icaoArrival()
     {
         return $this->hasOne(Airport::class, 'icao', 'ICAOarrival');
+    }
+    public function aircraft()
+    {
+        return $this->hasOne(Hangar::class, 'id', 'aircraftid');
+    }
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'userid');
     }
 
 }

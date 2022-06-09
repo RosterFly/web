@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFlightRequest;
 use App\Http\Requests\UpdateFlightRequest;
 use App\Models\Flight;
+use App\Models\Hangar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -19,7 +20,8 @@ class FlightsController extends Controller
 
     public function create()
     {
-        return view('create_flight');
+        $hangars=Hangar::where('userid', Auth::user()->id)->get();
+        return view('create_flight', compact('hangars'));
     }
 
     public function store(StoreFlightRequest $request)
@@ -35,7 +37,8 @@ class FlightsController extends Controller
 
     public function edit(Flight $flight)
     {
-        return view('flight_edit', compact('flight'));
+        $hangars=Hangar::where('userid', Auth::user()->id)->get();
+        return view('flight_edit', compact('hangars', 'flight'));
     }
 
     public function update(UpdateFlightRequest $request, Flight $flight)
