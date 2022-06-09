@@ -9,7 +9,7 @@
                 RosterFly
               </h1>
               <p class="fw-medium mb-0 text-muted">
-                Welcome, {{ Auth::user()->name }} {{Auth::user()->surname}}!
+                @lang('indexuser.welcome'){{ Auth::user()->name }} {{Auth::user()->surname}}!
               </p>
             </div>
           </div>
@@ -23,7 +23,7 @@
                     <i class="fa fa-users fa-lg text-primary"></i>
                   </div>
                   <div class="fs-1 fw-bold">{{DB::table('users')->count()}}</div>
-                  <div class="text-muted mb-3">Registered Users</div>
+                  <div class="text-muted mb-3">@lang('indexuser.registeredusers')</div>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@
                     <i class="fa fa-level-up-alt fa-lg text-primary"></i>
                   </div>
                   <div class="fs-1 fw-bold">{{DB::table('flights')->count()}}</div>
-                  <div class="text-muted mb-3">Managed Flights</div>
+                  <div class="text-muted mb-3">@lang('indexuser.managedflights')</div>
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@
                     <i class="fa fa-chart-line fa-lg text-primary"></i>
                   </div>
                   <div class="fs-1 fw-bold">{{DB::table('flights')->sum('passengers')}}</div>
-                  <div class="text-muted mb-3">Passengers Carried</div>
+                  <div class="text-muted mb-3">@lang('indexuser.passengerscarried')</div>
                 </div>
               </div>
             </div>
@@ -108,18 +108,18 @@
             <div class="block block-rounded">
                 <div class="block-header block-header-default">
                     <h3 class="block-title">
-                        Store Growth
+                        @lang('indexuser.next10flights')
                     </h3>
                 </div>
                 <div class="block-content">
                     <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                         <thead>
                         <tr class="text-uppercase">
-                            <th>Flight Number</th>
-                            <th class="d-none d-xl-table-cell">Departure Airport</th>
-                            <th>Arrival Airport</th>
-                            <th>ETD</th>
-                            <th>ETA</th>
+                            <th>@lang('flightsmod.flightnumber')</th>
+                            <th class="d-none d-xl-table-cell">@lang('flightsmod.departureapt')</th>
+                            <th>@lang('flightsmod.arrivalapt')</th>
+                            <th>@lang('flightsmod.etd')</th>
+                            <th>@lang('flightsmod.eta')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="block-content block-content-full block-content-sm bg-body-light fs-sm text-center">
                     <a class="fw-medium" href="{{route('flights')}}">
-                        View all flights
+                        @lang('indexuser.viewallflights')
                         <i class="fa fa-arrow-right ms-1 opacity-25"></i>
                     </a>
                 </div>
