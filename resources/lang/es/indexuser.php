@@ -18,6 +18,7 @@ return [
     'fuelused'=>'Combustible usado',
     'totalflights'=>'Vuelos totales',
     'next10flights'=>'Próximos 10 vuelos',
+    'top5aircraftsflown'=>'Top 5 aviones volados',
     'viewallflights'=>'Ver todos los vuelos',
 
 ];
