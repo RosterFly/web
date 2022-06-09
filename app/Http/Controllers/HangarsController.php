@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreHangarRequest;
 use App\Http\Requests\UpdateHangarRequest;
+use App\Models\AircraftModel;
 use App\Models\Hangar;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class HangarsController extends Controller
 
     public function create()
     {
-        return view('create_hangar');
+        $aircraftmodels=AircraftModel::all();
+        return view('create_hangar', compact('aircraftmodels'));
     }
 
     public function store(StoreHangarRequest $request)

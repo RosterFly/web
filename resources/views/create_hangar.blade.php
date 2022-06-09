@@ -7,7 +7,7 @@
     <div class="block block-rounded">
         <div class="block-header block-header-default">
             <h3 class="block-title">
-                @lang('flightsmod.newFlight')
+                @lang('hangarmod.create')
             </h3>
         </div>
         <div class="block-content">
@@ -17,7 +17,7 @@
                     <tbody>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="name">@lang('flightsmod.flightnumber')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="name">@lang('hangarmod.name')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
                             <span class="fs-sm text-muted"><input type="text" class="form-control" id="name" name="name"></span>
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="acftregistration">@lang('flightsmod.aircraftICAO')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="acftregistration">@lang('hangarmod.registration')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
                             <span class="fs-sm text-muted"><input type="text" class="form-control" id="acftregistration" name="acftregistration" maxlength="5"></span>
@@ -33,10 +33,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="fw-semibold"><label class="form-label" for="ICAOCode">@lang('flightsmod.etd')</label></span>
+                            <span class="fw-semibold"><label class="form-label" for="ICAOCode">@lang('flightsmod.aircraftICAO')</label></span>
                         </td>
                         <td class="d-none d-xl-table-cell">
-                            <span class="fs-sm text-muted"><input type="text" class="form-control" id="ICAOCode" name="ICAOCode" maxlength="4"></span>
+                            <span class="fs-sm text-muted"><select class="form-select" name="type" id="type">
+                                    @foreach($aircraftmodels as $aircraftmodel)
+                                        <option value="{{$aircraftmodel->ICAOCode}}">{{$aircraftmodel->ICAOCode}} ({{$aircraftmodel->aircraft_model}})</option>
+                                    @endforeach
+                            </select></span>
                         </td>
                     </tr>
                     <input hidden type="text" id="userid" name="userid" value="{{Auth::user()->id}}"></tbody>
@@ -45,7 +49,7 @@
                         </td>
                         <td>
                             <button type="submit" class="btn btn-alt-primary" style="float: right;">
-                                <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('flightsmod.create')
+                                <i class="fa fa-check-circle opacity-50 me-1"></i> @lang('hangarmod.create')
                             </button>
                         </td>
                     </tr>
