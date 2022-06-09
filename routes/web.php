@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AircraftModelsController;
 use App\Http\Controllers\FlightsController;
+use App\Http\Controllers\HangarsController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -47,7 +48,12 @@ Route::group([
     });
 
     Route::group(['prefix' => 'hangar'], function(){
-
+        Route::get('/', [HangarsController::class, 'index'])->name('hangar');
+        Route::get('/new', [HangarsController::class, 'create'])->name('new.hangar');
+        Route::post('/new', [HangarsController::class, 'store'])->name('new.hangar.store');
+        Route::get('/edit/{hangar}', [HangarsController::class, 'edit'])->name('edit.hangar');
+        Route::put('/edit/{hangar}', [HangarsController::class, 'update'])->name('edit.hangar.update');
+        Route::delete('/delete/{id}', [HangarsController::class, 'destroy'])->name('delete.hangar');
     });
 
 });
