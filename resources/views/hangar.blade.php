@@ -23,6 +23,13 @@
                 </tr>
                 </thead>
                 <tbody>
+                @if(count($hangars)==0)
+                    <tr>
+                        <td colspan="6">
+                            <center>@lang('indexuser.noaircrafts')</center>
+                        </td>
+                    </tr>
+                @else
                 @foreach($hangars as $hangar)
                 <tr>
                     <td>
@@ -61,11 +68,14 @@
                     </td>
                 </tr>
                 @endforeach
+                @endif
                 </tbody>
             </table>
+            @if(!count($hangars)==0)
             <div>
                 {{ $hangars->links() }}
             </div>
+                @endif
         </div>
     </div>
   </div>

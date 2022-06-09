@@ -149,6 +149,11 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @if(count($flights)==0)
+                            <tr>
+                                <td colspan="5"><center>@lang('indexuser.noflights')</center></td>
+                            </tr>
+                        @else
                         @foreach($flights as $flight)
                             <tr>
                                 <td>
@@ -168,6 +173,7 @@
                                 </td>
                             </tr>
                         @endforeach
+                        @endif
                         </tbody>
                     </table>
                 </div>
@@ -196,6 +202,12 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @if(count($top5aircraft)==0)
+                            <tr>
+                                <td colspan="4"><center>@lang('indexuser.noaircrafts')</center></td>
+                            </tr>
+
+                        @else
                         @foreach($top5aircraft as $aircraft)
                             <tr>
                                 <td>
@@ -212,6 +224,7 @@
                                 </td>
                             </tr>
                         @endforeach
+                        @endif
                         </tbody>
                     </table>
                 </div>

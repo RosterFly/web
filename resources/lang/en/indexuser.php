@@ -25,5 +25,7 @@ return [
     'top5aircraftsflown'=>'Top 5 Aircrafts Flown',
     'flightsflown'=>'Flights Flown',
     'viewallflights'=>'View All Flights',
+    'noaircrafts'=>'No aircrafts on your hangar',
+    'noflights'=>'No flights on your roster',
 
 ];

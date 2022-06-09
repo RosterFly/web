@@ -7,12 +7,13 @@ use App\Http\Requests\UpdateHangarRequest;
 use App\Models\AircraftModel;
 use App\Models\Hangar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HangarsController extends Controller
 {
     public function index()
     {
-        $hangars = Hangar::paginate(10);
+        $hangars = Hangar::where('userid', Auth::user()->id)->paginate(10);
         return view('hangar', compact('hangars'));
     }
 

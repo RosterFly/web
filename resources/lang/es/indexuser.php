@@ -25,5 +25,7 @@ return [
     'top5aircraftsflown'=>'Top 5 aviones volados',
     'flightsflown'=>'Vuelos volados',
     'viewallflights'=>'Ver todos los vuelos',
+    'noaircrafts'=>'No tienes aeronaves en tu hangar',
+    'noflights'=>'No tienes programados vuelos',
 
 ];
