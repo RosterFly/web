@@ -24,10 +24,6 @@
                   </div>
                   <div class="fs-1 fw-bold">{{DB::table('users')->count()}}</div>
                   <div class="text-muted mb-3">Registered Users</div>
-                  <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-success bg-success-light">
-                    <i class="fa fa-caret-up me-1"></i>
-                    19.2%
-                  </div>
                 </div>
               </div>
             </div>
@@ -37,12 +33,8 @@
                   <div class="item rounded-3 bg-body mx-auto my-3">
                     <i class="fa fa-level-up-alt fa-lg text-primary"></i>
                   </div>
-                  <div class="fs-1 fw-bold">14.6%</div>
+                  <div class="fs-1 fw-bold">{{DB::table('flights')->count()}}</div>
                   <div class="text-muted mb-3">Managed Flights</div>
-                  <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-danger bg-danger-light">
-                    <i class="fa fa-caret-down me-1"></i>
-                    2.3%
-                  </div>
                 </div>
               </div>
             </div>
@@ -52,12 +44,8 @@
                   <div class="item rounded-3 bg-body mx-auto my-3">
                     <i class="fa fa-chart-line fa-lg text-primary"></i>
                   </div>
-                  <div class="fs-1 fw-bold">386</div>
+                  <div class="fs-1 fw-bold">{{DB::table('flights')->sum('passengers')}}</div>
                   <div class="text-muted mb-3">Passengers Carried</div>
-                  <div class="d-inline-block px-3 py-1 rounded-pill fs-sm fw-semibold text-success bg-success-light">
-                    <i class="fa fa-caret-up me-1"></i>
-                    7.9%
-                  </div>
                 </div>
               </div>
             </div>
@@ -127,168 +115,41 @@
                     <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                         <thead>
                         <tr class="text-uppercase">
-                            <th>Product</th>
-                            <th class="d-none d-xl-table-cell">Date</th>
-                            <th>Status</th>
-                            <th class="d-none d-sm-table-cell text-end" style="width: 120px;">Price</th>
-                            <th></th>
+                            <th>Flight Number</th>
+                            <th class="d-none d-xl-table-cell">Departure Airport</th>
+                            <th>Arrival Airport</th>
+                            <th>ETD</th>
+                            <th>ETA</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">iPhone 11 Pro</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">today</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-warning">Pending..</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $1199,99
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">MacBook Pro 15"</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">today</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-warning">Pending..</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $2.299,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">Nvidia GTX 2080 Ti</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">today</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-warning">Pending..</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $1200,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">Playstation 4 Pro</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">today</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-danger">Canceled</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $399,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">Nintendo Switch</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">yesterday</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-success">Completed</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $349,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">iPhone 11</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">yesterday</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-success">Completed</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $999,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">Airpods Pro</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">yesterday</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-success">Completed</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $39,99
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold">Xbox One X</span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted">yesterday</span>
-                            </td>
-                            <td>
-                                <span class="fw-semibold text-success">Completed</span>
-                            </td>
-                            <td class="d-none d-sm-table-cell text-end fw-medium">
-                                $499,00
-                            </td>
-                            <td class="text-center text-nowrap fw-medium">
-                                <a href="javascript:void(0)">
-                                    View
-                                </a>
-                            </td>
-                        </tr>
+                @foreach($flights=DB::table('flights')->where('userid', Auth::user()->id)->orderBy('etd', 'DESC')->paginate(10) as $flight)
+                    <tr>
+                        <td>
+                            <span class="fw-semibold">{{$flight->flightnumber}}</span>
+                        </td>
+                        <td>
+                            <span class="fs-sm text-muted">{{$flight->ICAOdeparture}}</span>
+                        </td>
+                        <td class="d-none d-xl-table-cell">
+                            <span class="fs-sm text-muted">{{$flight->ICAOarrival}}</span>
+                        </td>
+                        <td>
+                            <span class="fw-semibold text-warning">{{$flight->etd}}z</span>
+                        </td>
+                        <td class="d-none d-sm-table-cell fw-medium">
+                            {{$flight->eta}}z
+                        </td>
+                    </tr>
+                @endforeach
                         </tbody>
                     </table>
+                </div>
+                <div class="block-content block-content-full block-content-sm bg-body-light fs-sm text-center">
+                    <a class="fw-medium" href="{{route('flights')}}">
+                        View all flights
+                        <i class="fa fa-arrow-right ms-1 opacity-25"></i>
+                    </a>
                 </div>
             </div>
 

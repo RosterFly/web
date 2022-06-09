@@ -7,17 +7,13 @@
     <title>RosterFly</title>
 
     <meta name="description"
-          content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-    <meta name="author" content="pixelcave">
-    <meta name="robots" content="noindex, nofollow">
+          content="RosterFly - Your flights and aircraft manager">
 
-    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
-    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:title" content="RosterFly - Your flights and aircraft manager">
+    <meta property="og:site_name" content="RosterFly">
     <meta property="og:description"
-          content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+          content="RosterFly - Your flights and aircraft manager">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
 
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
@@ -43,10 +39,10 @@
           </span>
             </a>
             <div>
-                <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#sidebar-style-toggler" data-class="fa-toggle-off fa-toggle-on" onclick="Dashmix.layout('sidebar_style_toggle');Dashmix.layout('header_style_toggle');">
+                <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#sidebar-style-toggler" data-class="fa-toggle-off fa-toggle-on" onclick="Rosterfly.layout('sidebar_style_toggle');Rosterfly.layout('header_style_toggle');">
                     <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>
                 </button>
-                <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#dark-mode-toggler" data-class="far fa" onclick="Dashmix.layout('dark_mode_toggle');">
+                <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="class-toggle" data-target="#dark-mode-toggler" data-class="far fa" onclick="Rosterfly.layout('dark_mode_toggle');">
                     <i class="far fa-moon" id="dark-mode-toggler"></i>
                 </button>
             </div>
@@ -59,24 +55,24 @@
                 <li class="nav-main-item">
                     <a class="nav-main-link {{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{route('user.index')}}">
                         <i class="nav-main-link-icon fa-solid fa-house"></i>
-                        <span class="nav-main-link-name">Home</span>
+                        <span class="nav-main-link-name">@lang('nav.home')</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">FLIGHTS</li>
+                <li class="nav-main-heading">@lang('nav.flights')</li>
                 <li class="nav-main-item">
                     <a class="nav-main-link {{ Request::segment(1) === 'flights' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('flights')}}">
                         <i class="nav-main-link-icon fa-solid fa-plane-departure"></i>
-                        <span class="nav-main-link-name">Flights</span>
+                        <span class="nav-main-link-name">@lang('nav.flightssub')</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">AIRCRAFTS</li>
+                <li class="nav-main-heading">@lang('nav.aircrafts')</li>
                 <a class="nav-main-link {{ Request::segment(1) === 'acftmodels' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('acftmodels')}}">
                     <i class="nav-main-link-icon fa-solid fa-plane"></i>
-                    <span class="nav-main-link-name">Aircraft Models</span>
+                    <span class="nav-main-link-name">@lang('nav.aircraftmodels')</span>
                 </a>
                 <a class="nav-main-link {{ Request::segment(1) === 'hangar' ? 'active' : null }}" aria-haspopup="true" aria-expanded="false" href="{{route('hangar')}}">
                     <i class="nav-main-link-icon fa-solid fa-warehouse"></i>
-                    <span class="nav-main-link-name">Hangar</span>
+                    <span class="nav-main-link-name">@lang('nav.hangars')</span>
                 </a>
             </ul>
         </div>
@@ -97,7 +93,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
                     <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                        Application Status
+                        @lang('nav.appstatus')
                     </div>
                     <div class="p-2">
                         <a class="dropdown-item" href="{{route('status')}}">
@@ -105,18 +101,18 @@
                         </a>
                     </div>
                     <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                        User Options
+                        @lang('nav.useroptions')
                     </div>
                     <div class="p-2">
                         <a class="dropdown-item" href="{{route('edit.profile')}}">
-                            <i class="far fa-fw fa-user me-1"></i> Edit Profile
+                            <i class="far fa-fw fa-user me-1"></i> @lang('nav.editprofile')
                         </a>
                         <!--Logout button-->
                         <div role="separator" class="dropdown-divider"></div>
                         <form action="{{route('logout')}}" method="POST">
                             @csrf
                             <button class="dropdown-item" type="submit">
-                                <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> Sign Out
+                                <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> @lang('nav.signout')
                             </button>
                         </form>
                     </div>
@@ -129,7 +125,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                     <div class="bg-primary-dark rounded-top fw-semibold text-white text-center p-3">
-                        Notifications
+                        @lang('nav.notifications')
                     </div>
                     <ul class="nav-items my-2">
                         @foreach($notifications=DB::table('notifications')->orderBy('created_at', 'desc')->limit(5)->get() as $notification)
@@ -139,7 +135,11 @@
                                         <i class="{{$notification->fa_icon}}"></i>
                                     </div>
                                     <div class="flex-grow-1 fs-sm pe-2">
-                                        <div class="fw-semibold">{{$notification->description}}</div>
+                                        @if(app()->getLocale()=='en')
+                                        <div class="fw-semibold">{{$notification->description_en}}</div>
+                                        @elseif(app()->get('locale')=='es')
+                                        <div class="fw-semibold">{{$notification->description_es}}</div>
+                                        @endif
                                         <div class="text-muted">{{Carbon::parse($date=$notification->created_at)->diffForHumans()}}</div>
                                     </div>
                                 </a>
