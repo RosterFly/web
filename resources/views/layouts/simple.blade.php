@@ -6,16 +6,14 @@
 
     <title>RosterFly</title>
 
-    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-    <meta name="author" content="RosterFly">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="description"
+          content="RosterFly - Your flights and aircraft manager">
 
-    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:title" content="RosterFly - Your flights and aircraft manager">
     <meta property="og:site_name" content="RosterFly">
-    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:description"
+          content="RosterFly - Your flights and aircraft manager">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
 
     <link rel="shortcut icon" href="{{asset('favicon.png')}}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon.png')}}">
