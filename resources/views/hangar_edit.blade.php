@@ -10,111 +10,42 @@
                 </h3>
             </div>
             <div class="block-content">
-                <form action="{{route('edit.flight.update', $flight->id)}}" method="POST">
+                <form action="{{route('edit.hangar.update', $hangar->id)}}" method="POST">
                     @csrf
                     @method('PUT')
-                    {{ $errors }}
                     <table class="table table-borderless table-vcenter fs-sm">
                         <tbody>
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="flightnumber">@lang('flightsmod.flightnumber')</label></span>
+                                                                 for="name">@lang('flightsmod.flightnumber')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="flightnumber" name="flightnumber"
-                                                                      maxlength="6" value="{{$flight->flightnumber}}"></span>
+                                                                      id="name" name="name"
+                                                                      value="{{$hangar->name}}"></span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span class="fw-semibold"><label class="form-label"
-                                                                 for="aircraftICAO">@lang('flightsmod.aircraftICAO')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="aircraftICAO" name="aircraftICAO"
-                                                                      maxlength="4" value="{{$flight->aircraftICAO}}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label"
-                                                                 for="acftregistration">@lang('flightsmod.acftregistration')</label></span>
+                                                                 for="acftregistration">@lang('flightsmod.aircraftICAO')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
                                                                       id="acftregistration" name="acftregistration"
-                                                                      maxlength="5" value="{{$flight->acftregistration}}"></span>
+                                                                      maxlength="4" value="{{$hangar->acftregistration}}"></span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <span class="fw-semibold"><label class="form-label" for="etd">@lang('flightsmod.etd')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
-                                                                      id="etd" name="etd" value="{{ date('Y-m-d\TH:i', strtotime($flight->etd)) }}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="eta">@lang('flightsmod.eta')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="datetime-local" class="form-control"
-                                                                      id="eta" name="eta" value="{{ date('Y-m-d\TH:i', strtotime($flight->eta)) }}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="ICAOdeparture">@lang('flightsmod.departureapt')</label></span>
+                                <span class="fw-semibold"><label class="form-label"
+                                                                 for="ICAOCode">@lang('flightsmod.acftregistration')</label></span>
                             </td>
                             <td class="d-none d-xl-table-cell">
                                 <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="ICAOdeparture" name="ICAOdeparture"
-                                                                      minlength="4" maxlength="4" value="{{$flight->ICAOdeparture}}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="ICAOarrival">@lang('flightsmod.arrivalapt')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="text" class="form-control"
-                                                                      id="ICAOarrival" name="ICAOarrival"
-                                                                      minlength="4" maxlength="4" value="{{$flight->ICAOarrival}}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="passengers">@lang('flightsmod.passengers')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="number" class="form-control"
-                                                                      id="passengers" name="passengers"
-                                                                      min="0" value="{{$flight->passengers}}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="cargo">@lang('flightsmod.cargo')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="number" class="form-control"
-                                                                      id="cargo" name="cargo"
-                                                                      min="0" value="{{$flight->cargo}}"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="fw-semibold"><label class="form-label" for="fob">@lang('flightsmod.fuel')</label></span>
-                            </td>
-                            <td class="d-none d-xl-table-cell">
-                                <span class="fs-sm text-muted"><input type="number" class="form-control"
-                                                                      id="fob" name="fob"
-                                                                      min="0" value="{{$flight->fob}}"></span>
+                                                                      id="ICAOCode" name="ICAOCode"
+                                                                      maxlength="5" value="{{$hangar->ICAOCode}}"></span>
                             </td>
                         </tr>
                         <tr>

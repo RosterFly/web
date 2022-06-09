@@ -13,7 +13,6 @@
                 <form action="{{route('edit.flight.update', $flight->id)}}" method="POST">
                     @csrf
                     @method('PUT')
-                    {{ $errors }}
                     <table class="table table-borderless table-vcenter fs-sm">
                         <tbody>
                         <tr>

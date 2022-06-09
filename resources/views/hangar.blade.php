@@ -31,13 +31,13 @@
                         <span class="fs-sm text-muted">{{$hangar->name}}</span>
                     </td>
                     <td class="d-none d-xl-table-cell">
-                        <span class="fs-sm text-muted">{{$hangar->ICAOCode}}</span>
+                        <span class="fs-sm text-muted">{{$hangar->aircraft->aircraft_model}} ({{$hangar->ICAOCode}})</span>
                     </td>
                     <td class="text-center text-nowrap fw-medium">
-                        <a href="{{route('edit.flight',$hangar->id)}}" class="btn btn-warning" type="submit"><i class="fa-solid fa-pencil"></i></a>
+                        <a href="{{route('edit.hangar',$hangar->id)}}" class="btn btn-warning" type="submit"><i class="fa-solid fa-pencil"></i></a>
                     </td>
                     <td>
-                        <form action="{{route('delete.flight', $hangar->id)}}" method="POST">
+                        <form action="{{route('delete.hangar', $hangar->id)}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
