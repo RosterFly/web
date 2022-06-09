@@ -17,9 +17,8 @@ return [
     'name'=>'Nombre',
     'aircraftmodel'=>'Modelo de aeronave',
     'flighthistory'=>'Historial de vuelos',
-    'registration'=>'Registro',
+    'registration'=>'Matricula',
     'ICAOCode'=>'Código ICAO',
-    'error'=> 'Si encuentra algún error, reportelo en...',
     'save'=>'Guardar',
     'create'=>'Crear aeronave',
 ];

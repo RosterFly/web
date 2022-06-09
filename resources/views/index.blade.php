@@ -31,7 +31,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa fa-users fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('users')->count()}}</div>
+                                        <div class="fs-1 fw-bold">{{$totalusers}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.registeredusers')</div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa-solid fa-plane-departure fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->count()}}</div>
+                                        <div class="fs-1 fw-bold">{{$totalflights}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.managedflights')</div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa-solid fa-people-arrows text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->sum('passengers')}}</div>
+                                        <div class="fs-1 fw-bold">{{$totalpassengers}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.passengerscarried')</div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa-solid fa-gas-pump fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->sum('fob')}}</div>
+                                        <div class="fs-1 fw-bold">{{$totalfob}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.fuelused')</div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa fa-users fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->where('userid','=', Auth::user()->id)->count()}}</div>
+                                        <div class="fs-1 fw-bold">{{$flightsbyuser}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.totalflights')</div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa fa-clock fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->count()}}</div>
+                                        <div class="fs-1 fw-bold">{{$hours}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.hoursflown')</div>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa fa-chart-line fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->where('userid','=', Auth::user()->id)->sum('passengers')}}</div>
+                                        <div class="fs-1 fw-bold">{{$passengersbyuser}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.passengerscarried')</div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                         <div class="item rounded-3 bg-body mx-auto my-3">
                                             <i class="fa fa-box fa-lg text-primary"></i>
                                         </div>
-                                        <div class="fs-1 fw-bold">{{DB::table('flights')->where('userid','=', Auth::user()->id)->sum('cargo')}}</div>
+                                        <div class="fs-1 fw-bold">{{$cargobyuser}}</div>
                                         <div class="text-muted mb-3">@lang('indexuser.cargocarried')</div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($flights=DB::table('flights')->where('userid', Auth::user()->id)->orderBy('etd', 'DESC')->paginate(10) as $flight)
+                        @foreach($flights as $flight)
                             <tr>
                                 <td>
                                     <span class="fw-semibold">{{$flight->flightnumber}}</span>
@@ -161,10 +161,10 @@
                                     <span class="fs-sm text-muted">{{$flight->ICAOarrival}}</span>
                                 </td>
                                 <td>
-                                    <span class="fw-semibold text-warning">{{$flight->etd}}z</span>
+                                    <span class="fs-sm text-muted">{{$flight->etd}}z</span>
                                 </td>
                                 <td class="d-none d-sm-table-cell fw-medium">
-                                    {{$flight->eta}}z
+                                    <span class="fs-sm text-muted">{{$flight->eta}}z</span>
                                 </td>
                             </tr>
                         @endforeach
@@ -189,30 +189,26 @@
                     <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                         <thead>
                         <tr class="text-uppercase">
-                            <th>@lang('flightsmod.flightnumber')</th>
-                            <th class="d-none d-xl-table-cell">@lang('flightsmod.departureapt')</th>
-                            <th>@lang('flightsmod.arrivalapt')</th>
-                            <th>@lang('flightsmod.etd')</th>
-                            <th>@lang('flightsmod.eta')</th>
+                            <th>@lang('hangarmod.name')</th>
+                            <th>@lang('hangarmod.registration')</th>
+                            <th>@lang('acftmodelsmod.ICAOCode')</th>
+                            <th>@lang('indexuser.flightsflown')</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($flights=DB::table('flights')->where('userid', Auth::user()->id)->orderBy('etd', 'DESC')->paginate(10) as $flight)
+                        @foreach($top5aircraft as $aircraft)
                             <tr>
                                 <td>
-                                    <span class="fw-semibold">{{$flight->flightnumber}}</span>
+                                    <span class="fw-semibold">{{$aircraft->aircraft->name}}</span>
                                 </td>
                                 <td>
-                                    <span class="fs-sm text-muted">{{$flight->ICAOdeparture}}</span>
+                                    <span class="fs-sm text-muted">{{$aircraft->aircraft->acftregistration}}</span>
+                                </td>
+                                <td>
+                                    <span class="fs-sm text-muted">{{$aircraft->aircraft->ICAOCode}}</span>
                                 </td>
                                 <td class="d-none d-xl-table-cell">
-                                    <span class="fs-sm text-muted">{{$flight->ICAOarrival}}</span>
-                                </td>
-                                <td>
-                                    <span class="fw-semibold text-warning">{{$flight->etd}}z</span>
-                                </td>
-                                <td class="d-none d-sm-table-cell fw-medium">
-                                    {{$flight->eta}}z
+                                    <span class="fs-sm text-muted">{{$aircraft->total}}</span>
                                 </td>
                             </tr>
                         @endforeach

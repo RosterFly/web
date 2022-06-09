@@ -18,8 +18,8 @@
                     <th class="d-none d-xl-table-cell">@lang('hangarmod.name')</th>
                     <th>@lang('hangarmod.ICAOCode')</th>
                     <th style="width: 100px"></th>
-                    <th></th>
-                    <th></th>
+                    <th style="width: 25px"></th>
+                    <th style="width: 25px"></th>
                 </tr>
                 </thead>
                 <tbody>

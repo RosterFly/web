@@ -23,6 +23,7 @@ return [
     'hoursflown'=>'Hours Flown',
     'next10flights'=>'Next 10 Flights',
     'top5aircraftsflown'=>'Top 5 Aircrafts Flown',
+    'flightsflown'=>'Flights Flown',
     'viewallflights'=>'View All Flights',
 
 ];

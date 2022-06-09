@@ -3,6 +3,7 @@
 use App\Http\Controllers\AircraftModelsController;
 use App\Http\Controllers\FlightsController;
 use App\Http\Controllers\HangarsController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,7 @@ Route::get('locale/{lang}', function ($locale){session()->put('locale', $locale)
 Route::group([
     'middleware' => ['auth','web'],
 ], function(){
-    Route::view('/home', 'index')->name('user.index');
+    Route::get('/home', [IndexController::class, 'index'])->name('user.index');
     Route::view('/edit-profile', 'profile_edit')->name('edit.profile');
 
     Route::group(['prefix' => 'flights'], function () {

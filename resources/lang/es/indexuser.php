@@ -23,6 +23,7 @@ return [
     'hoursflown'=>'Horas de vuelo',
     'next10flights'=>'Próximos 10 vuelos',
     'top5aircraftsflown'=>'Top 5 aviones volados',
+    'flightsflown'=>'Vuelos volados',
     'viewallflights'=>'Ver todos los vuelos',
 
 ];

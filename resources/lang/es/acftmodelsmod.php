@@ -24,6 +24,7 @@ return [
     'fixedwing'=>'Ala fija',
     'airplane'=>'Avión',
     'helicopter'=>'Helicoptero',
+    'error'=> 'Si encuentras algun error, reportalo a: ',
     'save'=>'Guardar',
     'create'=>'Crear modelo de avión',
 ];

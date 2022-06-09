@@ -19,7 +19,6 @@ return [
     'flighthistory'=>'Flight History',
     'registration'=>'Registration',
     'ICAOCode'=>'ICAO Code',
-    'error'=> 'If you find some error, report it at',
     'save'=>'Save',
     'create'=>'Create Aircraft',
 ];

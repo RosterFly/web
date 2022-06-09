@@ -24,6 +24,7 @@ return [
     'fixedwing'=>'Fixed Wing',
     'airplane'=>'Airplane',
     'helicopter'=>'Helicopter',
+    'error'=> 'If you find some error, report it at: ',
     'save'=>'Save',
     'create'=>'Create Aircraft Model',
 ];

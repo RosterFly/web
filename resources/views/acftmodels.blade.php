@@ -44,7 +44,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <center><a class="fs-sm text-muted"> <a class="fs-sm text-muted" href="mailto:issues@rosterfly.es?Subject=Aircraft Model Issue">issues@rosterfly.es</a></a></center>
+                    <center><a class="fs-sm text-muted"> @lang('acftmodelsmod.error') <a class="fs-sm text-muted" href="mailto:issues@rosterfly.es?Subject=Aircraft Model Issu&body=Aircraft Model Error%0D%0AICAO Code:%0D%0AError:">issues@rosterfly.es</a></a></center>
                     <br>
                     <div>
                         {{$acftmodels->links()}}
