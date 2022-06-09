@@ -11,5 +11,13 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'welcome'=>'Bienvenido/a, ',
+    'registeredusers'=>'Usuarios registrados',
+    'managedflights'=>'Vuelos gestionados',
+    'passengerscarried'=>'Pasajeros transportados',
+    'fuelused'=>'Combustible usado',
+    'totalflights'=>'Vuelos totales',
+    'next10flights'=>'Próximos 10 vuelos',
+    'viewallflights'=>'Ver todos los vuelos',
 
 ];
