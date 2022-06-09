@@ -19,7 +19,7 @@ return [
     'menuFaq' => 'FAQ',
     'menuContact' => 'CONTACTO',
     'btnLogin' => 'INICIAR SESIÓN',
-    'header' => 'RosterFly, gestiona tus vuelos, fuera y dentro del avión',
+    'header' => '<b>Roster</b>Fly, gestiona tus vuelos, fuera y dentro del avión',
     'headerDespription' => 'La aplicación necesaria para el control diario de tus vuelos y los datos de estos. ¡Registrate y disfruta de las novedades!',
     'highlights' => 'Novedades',
     'features' => '¡Nueva interfaz!',

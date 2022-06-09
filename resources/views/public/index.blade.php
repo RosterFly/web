@@ -62,7 +62,7 @@
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1><b>Roster</b>Fly, gestiona tus vuelos, fuera y dentro del avión</h1>
+            <h1>@lang('index.header')</h1>
             <p class="tagline">@lang('index.headerDespription')</p>
         </div>
         &nbsp;

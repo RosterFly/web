@@ -21,7 +21,7 @@ class IndexController extends Controller
         $hours=0;
         $passengersbyuser = $flight->sum('passengers');
         $cargobyuser = $flight->sum('cargo');
-        $flights = $flight->orderBy('etd', 'DESC')->paginate(10);
+        $flights = $flight->where('etd','>=', Carbon::now()->format('Y-m-d H:i:s'))->orderBy('etd', 'DESC')->paginate(10);
         $top5aircraft = Flight::selectRaw('aircraftid, count(*) as total')
             ->groupBy('aircraftid')
             ->orderBy('total', 'desc')

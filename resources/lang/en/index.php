@@ -19,7 +19,7 @@ return [
     'menuFaq' => 'FAQ',
     'menuContact' => 'CONTACT US',
     'btnLogin' => 'LOGIN',
-    'header' => 'RosterFly, manage your flights, on and off the plane',
+    'header' => '<b>Roster</b>Fly, manage your flights',
     'headerDespription' => 'The necessary application for the daily control of your flights and their data. Register and enjoy the news!',
     'highlights' => 'News',
     'features' => '¡New Interface!',
