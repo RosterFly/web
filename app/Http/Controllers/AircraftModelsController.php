@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AircraftModelRequest;
+use App\Http\Requests\StoreAircraftModelRequest;
 use App\Models\AircraftModel;
 use Illuminate\Http\Request;
 
@@ -19,7 +19,7 @@ class AircraftModelsController extends Controller
         return view('create_acftmodels');
     }
 
-    public function store(AircraftModelRequest $request)
+    public function store(StoreAircraftModelRequest $request)
     {
         AircraftModel::create($request->validated());
         return back()->with('success', 'Aircraft model created successfully');

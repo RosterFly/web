@@ -44,6 +44,8 @@
                         @endforeach
                         </tbody>
                     </table>
+                    <center><a class="fs-sm text-muted">If you find some error, report it at <a class="fs-sm text-muted" href="mailto:issues@rosterfly.es?Subject=Aircraft Model Issue">issues@rosterfly.es</a></a></center>
+                    <br>
                     <div>
                         {{$acftmodels->links()}}
                     </div>
