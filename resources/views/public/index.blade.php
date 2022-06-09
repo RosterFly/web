@@ -349,7 +349,6 @@
 
     </div>
 
-    </div>
     <div class="py-5" id="contact">
         <div class="container">
             <div class="row">
