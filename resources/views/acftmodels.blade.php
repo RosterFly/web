@@ -15,11 +15,11 @@
                     <table class="table table-striped table-hover table-borderless table-vcenter fs-sm">
                         <thead>
                         <tr class="text-uppercase">
-                            <th>ICAO Code</th>
-                            <th class="d-none d-xl-table-cell">Aircraft Model</th>
-                            <th>IATA Code</th>
-                            <th>Manufacturer</th>
-                            <th>Type</th>
+                            <th>@lang('acftmodelsmod.ICAOCode')</th>
+                            <th>@lang('acftmodelsmod.acftmodel')</th>
+                            <th>@lang('acftmodelsmod.IATACode')</th>
+                            <th>@lang('acftmodelsmod.acftmanufacturer')</th>
+                            <th>@lang('acftmodelsmod.type')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <center><a class="fs-sm text-muted">If you find some error, report it at <a class="fs-sm text-muted" href="mailto:issues@rosterfly.es?Subject=Aircraft Model Issue">issues@rosterfly.es</a></a></center>
+                    <center><a class="fs-sm text-muted"> <a class="fs-sm text-muted" href="mailto:issues@rosterfly.es?Subject=Aircraft Model Issue">issues@rosterfly.es</a></a></center>
                     <br>
                     <div>
                         {{$acftmodels->links()}}
